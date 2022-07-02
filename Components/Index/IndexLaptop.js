@@ -16,6 +16,7 @@ import {
 import { AiOutlinePlus } from "react-icons/ai";
 import Image from "next/image";
 export default function IndexLaptop(options) {
+  
   const video = useRef();
   useEffect(() => {
     video.current.playbackRate = 0.5;

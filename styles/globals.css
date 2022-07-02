@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+a:hover{
+  color: rgb(25, 95, 0);
+}
+a:visited{
+  color: rgb(21, 78, 0);
+}

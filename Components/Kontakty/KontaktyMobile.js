@@ -1,0 +1,293 @@
+import { List, ListItem, Table, Text } from "@mantine/core";
+import Footer from "../UI/Footer";
+import MainScreen from "../UI/MainScreenMobile";
+import { AiOutlinePhone } from "react-icons/ai";
+import { MdPhone, MdAlternateEmail } from "react-icons/md";
+export default function KontaktyMobile() {
+  return (
+    <div>
+      <MainScreen label="Kontakty" image="/images/prodejna.jpg" />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "3vh 5vw 3vh 5vw",
+          height: "fitContent",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <Text
+          weight={600}
+          size="xl"
+          sx={{
+            color: "#545454",
+            fontSize: "1.5rem",
+            marginRight: "auto",
+            marginLeft: "auto",
+            textAlign: "center",
+          }}
+        >
+          Výroba a prodej
+        </Text>
+        <Text
+          weight={500}
+          size="xl"
+          sx={{
+            color: "#545454",
+            fontSize: "1.25rem",
+            marginRight: "auto",
+            marginLeft: "auto",
+            textAlign: "center",
+          }}
+        >
+          Provozní doba
+        </Text>
+        <Table>
+          <thead>
+            <tr>
+              <th>Den</th>
+              <th>Otevírací doba</th>
+            </tr>
+          </thead>
+          <tbody style={{ color: "#545454", fontWeight: "400" }}>
+            <tr>
+              <td>Pondělí - Pátek</td>
+              <td>8:00 - 11:00</td>
+            </tr>
+            <tr>
+              <td>Pondělí - Pátek ( dle telefonické dohody)</td>
+              <td>12:00 - 17:00</td>
+            </tr>
+            <tr>
+              <td>Sobota - Neděle a mimo pracovní dobu</td>
+              <td> dle telefonické dohody</td>
+            </tr>
+          </tbody>
+        </Table>
+        <div
+          style={{
+            margin: "5vh 0",
+            gap: "3vh",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Text
+            weight={500}
+            size="xl"
+            sx={{
+              color: "#545454",
+              fontSize: "1.25rem",
+              marginRight: "auto",
+              marginLeft: "auto",
+              textAlign: "center",
+            }}
+          >
+            Adresa
+          </Text>
+          <Text
+            weight={400}
+            size="xl"
+            sx={{
+              color: "#545454",
+              fontSize: "1rem",
+              textAlign: "center",
+              width: "100%",
+            }}
+          >
+            Areál se nachází na rohu ulic Mladoboleslavská a Štěpánovská.
+          </Text>
+          <Text
+            weight={400}
+            size="xl"
+            sx={{
+              color: "#545454",
+              fontSize: "1rem",
+              textAlign: "center",
+              width: "100%",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            Polystyren sypaný - Richard Humeš Štěpánovská 330 190 17 Praha 9 -
+            Vinoř
+          </Text>
+          <div
+            class="gmap_canvas"
+            style={{
+              width: "100%",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <iframe
+              title="mapa"
+              style={{ borderRadius: "3px" }}
+              width={window.innerWidth}
+              height={window.innerHeight * 0.4}
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=%C5%A0t%C4%9Bp%C3%A1novsk%C3%A1%20330%2019017%20Praha%209%20%E2%80%93%20Vino%C5%99&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>
+          <div
+            style={{
+              margin: "5vh 0",
+              gap: "3vh",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Text
+              weight={500}
+              size="xl"
+              sx={{
+                color: "#545454",
+                fontSize: "1.25rem",
+                marginRight: "auto",
+                marginLeft: "auto",
+                textAlign: "center",
+              }}
+            >
+              Kontakty
+            </Text>
+            <List spacing="xs" icon={<MdPhone color="rgb(25, 95, 0)" />}>
+              <ListItem>
+                <Text
+                  weight={400}
+                  size="xl"
+                  sx={{
+                    color: "#545454",
+                    fontSize: "1rem",
+                    textAlign: "center",
+                    width: "100%",
+                  }}
+                >
+                  Telefon 1: +420 723 513 638
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  weight={400}
+                  size="xl"
+                  sx={{
+                    color: "#545454",
+                    fontSize: "1rem",
+                    textAlign: "center",
+                    width: "100%",
+                  }}
+                >
+                  Telefon 2: +420 737 226 697
+                </Text>
+              </ListItem>
+              <ListItem icon={<MdAlternateEmail color="rgb(25, 95, 0)" />}>
+                <Text
+                  weight={400}
+                  size="xl"
+                  sx={{
+                    color: "#545454",
+                    fontSize: "1rem",
+                    textAlign: "center",
+                    width: "100%",
+                  }}
+                >
+                  Email: info@polystyrensypany.cz
+                </Text>
+              </ListItem>
+            </List>
+            <Text weight="bold">
+              Než se k nám rozjedete, je vždy lepší zavolat předem, abychom byli
+              na provozovně a nevyřizovali zakázku v terénu.
+            </Text>
+          </div>
+          <div
+            style={{
+              margin: " 0",
+              gap: "3vh",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Text
+              weight={600}
+              size="xl"
+              sx={{
+                color: "#545454",
+                fontSize: "1.5rem",
+                marginRight: "auto",
+                marginLeft: "auto",
+                textAlign: "center",
+              }}
+            >
+              Korespondenční adresa
+            </Text>
+            <Text
+              weight={400}
+              size="xl"
+              sx={{
+                color: "#545454",
+                fontSize: "1rem",
+                textAlign: "center",
+                width: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              Olešnická 511/23 197 00 Praha 9
+            </Text>
+            <Text
+              weight={400}
+              size="xl"
+              sx={{
+                color: "#545454",
+                fontSize: "1rem",
+                textAlign: "center",
+                width: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              <em>Na této adrese je možný výdej zboží pouze po předchozí telefonické dohodě</em>
+              </Text>
+              <div
+            class="gmap_canvas"
+            style={{
+              width: "100%",
+              height: "100%",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <iframe
+              title="mapa"
+              style={{ borderRadius: "3px" }}
+              width={window.innerWidth}
+              height={window.innerHeight * 0.4}
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Ole%C5%A1nick%C3%A1%20511/23%20197%2000%20Praha%209&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>
+         <List icon=" ">
+            <ListItem> <strong>IČ</strong>: 68529058</ListItem>
+            <ListItem><strong>DIČ</strong>: CZ6903264720</ListItem>
+            <ListItem>Jsme plátci DPH</ListItem>
+
+         </List>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}
