@@ -357,6 +357,7 @@ export default function IndexMobile(props) {
           span={12}
           sx={{ width: "100%", height: "80vh", gap: "2vh", margin: "5vh 0" }}
         >
+       
           <Link href="/drcenypolystyren-bily">
           <Grid.Col
             span={12}
@@ -384,7 +385,7 @@ export default function IndexMobile(props) {
                 padding: "",
               }}
             >
-              XPS
+              EPS Bílý
             </Text>
             </Paper>
           </Grid.Col>
@@ -414,7 +415,7 @@ export default function IndexMobile(props) {
                 padding: "",
               }}
             >
-              XPS
+              EPS Šedý
             </Text>
             </Paper>
           </Grid.Col>
@@ -451,6 +452,34 @@ export default function IndexMobile(props) {
           </Grid.Col>
           </Link>
         </Grid>
+        <Button shadow="xl"
+           variant="gradient" gradient={{from: "teal", to: "lime"}}
+             sx={{
+              
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              borderRadius: "3px",
+              width: "100%",
+              marginTop: "-2vh",
+              padding: "3vh 0",
+              
+              
+            }}>
+            <Text
+              weight={400}
+              size="sm"
+              sx={{
+                color: "#fff",
+                fontSize: "1.5rem",
+                
+               
+                
+              }}
+            >
+              Sortiment
+            </Text>
+            </Button>
       </div>
       <Footer />
     </div>
