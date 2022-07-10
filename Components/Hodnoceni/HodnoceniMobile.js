@@ -4,7 +4,8 @@ import Footer from "../UI/Footer";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 
-export default function HodnoceniMobile() {
+export default function HodnoceniMobile(props) {
+    let {device} = props;
     const form = useForm({
         initialValues: {
           jmeno: "",
@@ -28,10 +29,10 @@ mail.href = "mailto:info@polystyrensypany.cz?subject= Recenze na produkt " + val
 mail.click();
         }
     const [produkty, setProdukty] = useState(["EPS Bílý", "EPS Šedý", "XPS"])
-    const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}]
+    const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}]
     return (
         <div>
-        <MainScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" />
+        <MainScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" device={device} />
         <div style={{
           width: "100vw",
           height: "fitContent",
@@ -45,10 +46,10 @@ mail.click();
         >
          Chcete-li nám poslat hodnocení, můžete k tomu využít <strong style={{color: "#195f00"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na Googlu zde.
         </Text>
-        <Grid span={12}>
+        <Grid span={device !== "laptop" ? 12 : 3 }>
         {hodnoceni && hodnoceni.map((item, index) => {
             return(
-                <Grid.Col>
+                <Grid.Col span={device !== "laptop" ? 12 : 3 }>
             <Card shadow="xl" style={{ width: "100%", height: "fitContent", marginBottom: "3vh" }}>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "2vh", padding: "0" }}>
             <Group spacing="xs">
@@ -71,13 +72,13 @@ mail.click();
         
         })}
         </Grid>
-        <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", textAlign: "center" }}>Formulář</Text>
-        <form onSubmit={form.onSubmit(submitHandler)}>
+        <Text weight={700} size="xl" sx={device !== "laptop" ? { color: "#545454", fontSize: "1.5rem", textAlign: "center" } : { color: "#545454", fontSize: "3rem", textAlign: "center" }}>Formulář</Text>
+        <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {} : {display: "flex", flexDirection: "column", alignItems: "right", width: "50%", gap: "1vh", alignSelf: "center"}}>
             <div style={{display: "flex", gap : "5vw"}}>
-            <InputWrapper label="Jméno" required>
+            <InputWrapper label="Jméno" required sx={{width: "50%"}}>
                 <Input    {...form.getInputProps('jmeno')}/>
             </InputWrapper>
-            <InputWrapper label="Příjmení" required>
+            <InputWrapper label="Příjmení" required sx={{width: "50%"}}>
                 <Input    {...form.getInputProps('prijmeni')}/>
             </InputWrapper>
             </div>
@@ -89,16 +90,16 @@ mail.click();
             </InputWrapper>
             <InputWrapper label="Produkt">
                 <Select data={produkty} placeholder="Vyberte produkt"    {...form.getInputProps('produkt')}
-      nothingFound="Nothing found"
+      nothingFound="Produkt nebyl nalezen"
       searchable
       creatable
       getCreateLabel={(query) => `+ Create ${query}`}
       onCreate={(query) => setProdukty((current) => [...current, query])} />
             </InputWrapper>
             <InputWrapper label="Slovní hodnocení" required   >
-                <Textarea  {...form.getInputProps('slovni_hodnoceni')} />
+                <Textarea  {...form.getInputProps('slovni_hodnoceni')} autosize="true"/>
             </InputWrapper>
-            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: "100%", marginTop: "3vh" }}>Odeslat</Button>
+            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={device !== "laptop" ? { width: "100%", marginTop: "3vh" } : { width: "25%", marginTop: "3vh", alignSelf: "end"}}>Odeslat</Button>
         </form>
         </div>
         <Footer />
