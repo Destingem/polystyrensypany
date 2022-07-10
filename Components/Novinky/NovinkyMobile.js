@@ -1,6 +1,6 @@
 import { Button, Group, Paper, Text } from "@mantine/core";
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 
 
 export default function NovinkyMobile() {

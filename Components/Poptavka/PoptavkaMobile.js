@@ -1,5 +1,5 @@
 import 'dayjs/locale/cs';
-import MainScreen from "../UI/MainScreenMobile"
+import MainScreen from "../UI/MainScreen"
 import { useForm } from "@mantine/form";
 import SubheaderText from "../UI/SubheaderText"
 import {Input, InputWrapper, Button, NumberInput, Select, Textarea, MultiSelect, Switch, Space} from "@mantine/core"

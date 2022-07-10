@@ -1,12 +1,12 @@
 
-
+import Footer from "../UI/Footer"
+import MainScreen from "../UI/MainScreen"
+import OnasMobile from "./OnasMobile"
 export default function OnasLaptop(){
 
     return(
         <>
-            <div>
-                <h1>OnasLaptop</h1>
-            </div>
+          <OnasMobile device="laptop"/>
         </>
     )
 }

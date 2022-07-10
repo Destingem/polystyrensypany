@@ -1,6 +1,6 @@
 import { List, ListItem, Table, Text } from "@mantine/core";
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import { AiOutlinePhone } from "react-icons/ai";
 import { MdPhone, MdAlternateEmail } from "react-icons/md";
 export default function KontaktyMobile() {

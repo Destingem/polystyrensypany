@@ -1,4 +1,4 @@
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import {Text, Card, Space, Divider} from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";

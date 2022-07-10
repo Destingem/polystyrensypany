@@ -1,4 +1,4 @@
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import {Text, Card, Space, Divider, Grid, Group, Badge, Input, InputWrapper, Textarea, NumberInput, Select, Button} from "@mantine/core";
 import Footer from "../UI/Footer";
 import { useForm } from "@mantine/form";

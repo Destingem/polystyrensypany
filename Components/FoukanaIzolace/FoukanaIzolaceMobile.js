@@ -1,4 +1,4 @@
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import {Table, Text} from "@mantine/core";
 import BasicText from "../UI/BasicText";
 import SubheaderText from "../UI/SubheaderText";

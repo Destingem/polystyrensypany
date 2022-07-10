@@ -1,5 +1,5 @@
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import {Text, List, ListItem} from "@mantine/core"
 import Image from "next/image";
 import {BsCircle} from "react-icons/bs";

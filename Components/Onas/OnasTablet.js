@@ -1,10 +1,11 @@
+import OnasMobile from "./OnasMobile";
 
 
 export default function OnasTablet(){
 
     return(
-        <div>
-            <h1>OnasTablet</h1>
-        </div>
+       <>
+        <OnasMobile device="tablet" />
+       </>
     )
 }

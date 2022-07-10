@@ -1,4 +1,4 @@
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import Footer from "../UI/Footer";
 import {Text, List, ListItem} from "@mantine/core";
 import Image from "next/image";

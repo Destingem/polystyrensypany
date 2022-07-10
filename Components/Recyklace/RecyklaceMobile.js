@@ -1,5 +1,5 @@
 import { List, ListItem, Space, Text } from "@mantine/core";
-import MainScreen from "../UI/MainScreenMobile";
+import MainScreen from "../UI/MainScreen";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
 import Footer from "../UI/Footer";
 
