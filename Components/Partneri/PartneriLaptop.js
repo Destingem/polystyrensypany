@@ -1,12 +1,10 @@
 
-
+import PartneriMobile from "./PartneriMobile.js";
 export default function PartneriLaptop(){
 
     return(
         <>
-            <div>
-                <h1>PartneriLaptop</h1>
-            </div>
+           <PartneriMobile device="laptop"/>
         </>
     )
 }

@@ -1,10 +1,9 @@
+import PartneriMobile from "./PartneriMobile";
 
 
 export default function PartneriTablet(){
 
     return(
-        <div>
-            <h1>PartneriTablet</h1>
-        </div>
+        <PartneriMobile device="tablet"/>
     )
 }
