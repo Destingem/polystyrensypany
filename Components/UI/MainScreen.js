@@ -4,7 +4,7 @@ import {Text} from "@mantine/core"
 export default function MainScreen(props) {
   let labelSx = {color: "#545454", fontSize: "4rem"}
   if (props.device == "laptop") {
-    labelSx = {color: "#545454", fontSize: "8rem"}
+    labelSx = {color: "#545454", fontSize: "6rem"}
   }
   if (props.device == "tablet") {
     labelSx = {color: "#545454", fontSize: "8rem"}

@@ -20,3 +20,10 @@ a:hover{
 a:visited{
   color: rgb(21, 78, 0);
 }
+
+.link:hover{
+  color: rgb(25, 95, 0);
+}
+.link:visited{
+  color: rgb(21, 78, 0);
+}
