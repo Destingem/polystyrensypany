@@ -1,9 +1,7 @@
 
-
+import FoukanaIzolaceMobile from './FoukanaIzolaceMobile.js';
 export default function FoukanaIzolaceLaptop() {
     return (
-        <div>
-        <h1>FoukanaIzolaceLaptop</h1>
-        </div>
+       <FoukanaIzolaceMobile device="laptop"/>
     );
     }
