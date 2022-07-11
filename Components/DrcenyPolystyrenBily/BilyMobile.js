@@ -37,7 +37,7 @@ export default function BilyMobile(props) {
                 
             </List>
            <Link href="/poptavka_form"><Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Poptat EPS polystyren bílý</Button></Link>
-            {device !== "laptop" ? <><Image src="/images/bily.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            {device == "mobile" ? <><Image src="/images/bily.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             <Image src="/images/EPS_bily.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             
             <Image src="/images/polystyren_jemny_detail.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />

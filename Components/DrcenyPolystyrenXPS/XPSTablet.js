@@ -1,9 +1,8 @@
+import XPSMobile from "./XPSMobile";
 
 
 export default function XPSTablet() {
     return (
-        <div>
-        <h1>XPSTablet</h1>
-        </div>
+       <XPSMobile device="tablet"/>
     );
     }

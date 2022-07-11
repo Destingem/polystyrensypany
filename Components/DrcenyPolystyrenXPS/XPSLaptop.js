@@ -1,9 +1,7 @@
 
-
+import XPSMobile from './XPSMobile.js';
 export default function XPSLaptop() {
   return (
-    <div>
-      <h1>XPSLaptop</h1>
-    </div>
+    <XPSMobile device="laptop"/>
   );
 }
