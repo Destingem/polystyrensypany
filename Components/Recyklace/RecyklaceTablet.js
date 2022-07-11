@@ -1,9 +1,8 @@
+import RecyklaceMobile from "./RecyklaceMobile";
 
 
 export default function RecyklaceTablet() {
   return (
-    <div>
-      <h1>RecyklaceTablet</h1>
-    </div>
+    <RecyklaceMobile device="tablet" />
   );
 }

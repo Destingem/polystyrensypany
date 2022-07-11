@@ -2,6 +2,7 @@ import { List, ListItem, Space, Text } from "@mantine/core";
 import MainScreen from "../UI/MainScreen";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
 import Footer from "../UI/Footer";
+import Link from "next/link";
 
 export default function RecyklaceMobile(props) {
   let { device } = props;
@@ -36,17 +37,19 @@ export default function RecyklaceMobile(props) {
             color: "#545454",
             fontSize: "1.5rem",
             marginRight: "auto",
-            marginLeft: "5vw",
-            textAlign: "left",
+            marginLeft: device === "laptop" ? "auto" : "0",
+            textAlign: device !== "laptop" ? "left" : "center",
           }}
         >
           Recyklace se stala běžnou součástí života a my jsme rádi, že i my
           můžeme přispět
         </Text>
+        {device === "laptop" && <Space h="xl" />}
         <List
           center
           icon={<BsCircle color="rgb(25, 95, 0)" />}
           sx={{ textAlign: "left" }}
+          spacing={device === "laptop" ? "xl" : ""}
         >
           {pointy &&
             pointy.map((item, index) => {
@@ -58,7 +61,7 @@ export default function RecyklaceMobile(props) {
                     sx={{
                       color: "#545454",
                       fontSize: "1rem",
-                      margin: "2vh 5vw 2vh 5vw",
+                      margin: device === "laptop" ? "0" : "2vh 5vw 2vh 5vw",
                     }}
                   >
                     {item}
@@ -67,13 +70,16 @@ export default function RecyklaceMobile(props) {
               );
             })}
         </List>
-        <Text
+        <Space h="xl" />
+       <div style={{display: "flex"}}>
+      <div>
+      <Text
           size="xl"
           weight={700}
           sx={{
             color: "#545454",
-            fontSize: "8vw",
-            textAlign: "center",
+            fontSize: device !== "laptop" ? "3rem" : "2rem",
+            textAlign: device !== "laptop" ? "center" :"left",
             marginBottom: "2vh",
           }}
         >
@@ -89,6 +95,7 @@ export default function RecyklaceMobile(props) {
             sx={{
               color: "rgb(25, 95, 0)",
               fontSize: "1rem",
+              textAlign: device !== "laptop" ? "center" :"left",
             }}
           >
             Vzor pro stavební firmy
@@ -100,6 +107,7 @@ export default function RecyklaceMobile(props) {
           sx={{
             color: "#545454",
             fontSize: "0.8rem",
+            textAlign: device !== "laptop" ? "center" :"left",
           }}
         >
           <em>
@@ -119,6 +127,7 @@ export default function RecyklaceMobile(props) {
             sx={{
               color: "rgb(25, 95, 0)",
               fontSize: "1rem",
+              textAlign: device !== "laptop" ? "center" :"left",
             }}
           >
             Povolení Magistrátu hlavního města Prahy nakládání s odpady
@@ -129,8 +138,8 @@ export default function RecyklaceMobile(props) {
           weight={700}
           sx={{
             color: "#545454",
-            fontSize: "8vw",
-            textAlign: "center",
+            fontSize: device !== "laptop" ? "3rem" : "2rem",
+            textAlign: device !== "laptop" ? "center" :"left",
             marginBottom: "2vh",
           }}
         >
@@ -142,6 +151,7 @@ export default function RecyklaceMobile(props) {
           sx={{
             color: "#545454",
             fontSize: "1rem",
+            textAlign: device !== "laptop" ? "center" :"left",
           }}
         >
           Polystyrenový odpad k recyklaci přijímáme na adrese naší provozovny
@@ -153,14 +163,31 @@ export default function RecyklaceMobile(props) {
           sx={{
             color: "#545454",
             fontSize: "1rem",
+            textAlign: device !== "laptop" ? "center" :"left",
           }}
         >
-          Štěpánovská 330 19017 Praha 9 – Vinoř
+        <Link href="/kontakty">  Štěpánovská 330 19017 Praha 9 – Vinoř</Link>
           
         </Text>
+      </div>
+      {device == "laptop" && <div class="gmap_canvas" style={{ height: "100%", alignItems: "center", display: "flex", flexDirection: "column", marginLeft: "auto"}}>
+            <iframe
+            title="mapa"
+              style={{ borderRadius: "3px" }}
+              width={window.innerWidth * 0.3}
+              height={window.innerHeight * 0.4}
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=%C5%A0t%C4%9Bp%C3%A1novsk%C3%A1%20330%2019017%20Praha%209%20%E2%80%93%20Vino%C5%99&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>}
+       </div>
         
       </div>
-      <div class="gmap_canvas" style={{width: "100%", height: "100%", alignItems: "center", display: "flex", flexDirection: "column"}}>
+      {device !== "laptop" && <div class="gmap_canvas" style={{width: "100%", height: "100%", alignItems: "center", display: "flex", flexDirection: "column"}}>
             <iframe
             title="mapa"
               style={{ borderRadius: "3px" }}
@@ -173,7 +200,7 @@ export default function RecyklaceMobile(props) {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-          </div>
+          </div>}
       <Footer />
     </div>
   );
