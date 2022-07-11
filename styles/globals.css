@@ -14,6 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+a{
+  color:rgb(21, 78, 0);
+  font-weight: bold;
+}
 a:hover{
   color: rgb(25, 95, 0);
 }
