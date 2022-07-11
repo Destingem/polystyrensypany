@@ -3,7 +3,8 @@ import MainScreen from "../UI/MainScreen";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
 import Footer from "../UI/Footer";
 
-export default function RecyklaceMobile() {
+export default function RecyklaceMobile(props) {
+  let { device } = props;
   const pointy = [
     "Naším způsobem zpracování vracíme polystyren zpět do stavebnictví jako plnohodnotnou tepelnou izolaci",
     "Likvidaci polystyrenu provádíme zdarma",

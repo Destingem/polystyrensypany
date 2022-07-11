@@ -2,11 +2,13 @@ import 'dayjs/locale/cs';
 import MainScreen from "../UI/MainScreen"
 import { useForm } from "@mantine/form";
 import SubheaderText from "../UI/SubheaderText"
-import {Input, InputWrapper, Button, NumberInput, Select, Textarea, MultiSelect, Switch, Space} from "@mantine/core"
+import {Input, InputWrapper, Button, NumberInput, Select, Textarea, MultiSelect, Switch, Space, Progress} from "@mantine/core"
 import { useState } from "react";
 import Footer from "../UI/Footer"
 import { DatePicker } from "@mantine/dates";
-export default function PoptavkaMobile() {
+export default function PoptavkaMobile(props) {
+  
+    let {device} = props;
     const [produkty, setProdukty] = useState(["zásyp do podlah", "zásyp do stropů", "zásyp do krovů a střech", "zásyp do vnitřních příček domu", "zásyp dilatační spáry", "zásyp do dutých cihel", "zateplení šachty vzduchotechniky", "zateplení akumulační nádrže", "do betonu", "náplň do sedacích vaků", "sněžení", "ostatní"  ]) 
     const form = useForm(
         {
@@ -20,9 +22,12 @@ export default function PoptavkaMobile() {
     }
     return (
         <div>
-        <MainScreen label="Poptávka" image="/images/polystyren_jemny_detail2.png"/>
+        <MainScreen label="Poptávka" image="/images/polystyren_jemny_detail2.png" device={device}/>
+        
         <div style={{ display:"flex", flexDirection: "row", textAlign: "center", padding: "3vh 5vw 3vh 5vw"}}>
-        <form onSubmit={form.onSubmit(submitHandler)} style={{textAlign: "left"}}>
+       
+        <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {textAlign: "left",  marginLeft: "auto", marginRight: "auto"} : {textAlign: "left", display: "flex", gap: "5vw", marginLeft: "auto", marginRight: "auto"}}>
+        <div >
         <SubheaderText>Poptávkový formulář</SubheaderText>
         <Space h="3vh"/>
       
@@ -32,7 +37,7 @@ export default function PoptavkaMobile() {
         <MultiSelect data={produkty} {...form.getInputProps("ucel")} required />
         </InputWrapper>
         <div style={{display: "flex", gap: "5vw"}}>
-        <InputWrapper label="Poptávané množství" sx={{width: "75%"}} required>
+        <InputWrapper label="Poptávané množství" sx={{width: device !== "laptop" || "tablet" ? "75%" : "75%" }} required>
         <NumberInput placeholder="" formatter={value => {value}} {...form.getInputProps("mnozstvi")} required/>
         </InputWrapper>
         <InputWrapper label="Jednotka" sx={{width: "25%"}} required>
@@ -53,10 +58,12 @@ export default function PoptavkaMobile() {
     />
         </InputWrapper>
         <InputWrapper label="Další specifikace" >
-            <Textarea {...form.getInputProps("specifikace")} />
+            <Textarea sx={device == "laptop" && {minHeight: "15vh !important"}} {...form.getInputProps("specifikace")} />
         </InputWrapper>
+        </div>
         <Space h="3vh"/>
-        <SubheaderText>Kontaktní údaje</SubheaderText>
+       <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+       <SubheaderText>Kontaktní údaje</SubheaderText>
         <Space h="3vh"/>
             <div style={{display: "flex", gap : "5vw"}}>
 
@@ -87,7 +94,9 @@ export default function PoptavkaMobile() {
                 <Input    {...form.getInputProps('email')} required/>
             </InputWrapper>
             
-            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: "100%", marginTop: "3vh" }}>Odeslat</Button>
+            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device === "laptop" ? "100%" : "100%", marginTop: "auto", marginTop: "2vh" }}>Odeslat</Button>
+       </div>
+      
         </form>
         </div>
         <Footer />

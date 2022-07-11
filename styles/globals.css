@@ -31,3 +31,6 @@ a:visited{
 .link:visited{
   color: rgb(21, 78, 0);
 }
+textarea{
+  min-height: 15vh !important;  
+}
