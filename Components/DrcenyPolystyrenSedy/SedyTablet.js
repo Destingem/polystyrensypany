@@ -1,9 +1,7 @@
 
-
+import SedyMobile from './SedyMobile.js';
 export default function SedyTablet() {
     return (
-        <div>
-        <h1>SedyTablet</h1>
-        </div>
+        <SedyMobile device="tablet"/>
     );
     }
