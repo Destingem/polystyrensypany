@@ -11,12 +11,7 @@ export default function BilyMobile(props) {
         <div>
         <MainScreen  polysyp={true} label="EPS bílý" image="/images/bily_c.png" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
-            Polystyren sypaný - jemný EPS 
-            </Text>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
-            Možnosti využití: Vysypání otvorů dutých cihel (HELUZ, POROTHERM a další) zlepšuje tepelněizolační vlastnosti obvodového zdiva.
-            </Text>
+           
             
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.25rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný Polystyren sypaný - EPS bílý - základní vlastnosti
