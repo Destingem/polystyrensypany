@@ -124,6 +124,11 @@ export default function NavbarLaptop(props) {
             </Link>
             </MenuItem>
             <MenuItem>
+            <Link href="/eps-jemny">
+              <p> Polystyren sypaný - EPS jemný</p>
+            </Link>
+            </MenuItem>
+            <MenuItem>
             <Link href="/drcenypolystyren-sedy">
               <p>Polystyren sypaný - EPS šedý</p>
             </Link>
