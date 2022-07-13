@@ -1,5 +1,9 @@
-export default function EPSJemnyMobile(){
+import MainScreen from "../UI/MainScreen";
+export default function EPSJemnyMobile(props){
+    let device = props.device;
     return(
-        <>Mobile</>
+       <div>
+        <MainScreen device={device} polysyp={true} label={"EPS jemný"} />
+       </div>
     )
 }

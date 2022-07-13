@@ -9,7 +9,7 @@ export default function BilyMobile(props) {
     const items = ["zrnitost 0,5-2mm", "váha cca 5kg/300l/1 pytel"]
     return (
         <div>
-        <MainScreen label="Polystyren sypaný - EPS bílý" image="/images/bily_c.png" />
+        <MainScreen  polysyp={true} label="EPS bílý" image="/images/bily_c.png" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný - jemný EPS 

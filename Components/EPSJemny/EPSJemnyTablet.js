@@ -1,5 +1,7 @@
+import EPSJemnyMobile from "./EPSJemnyMobile";
+
 export default function EPSJemnyTablet(){
     return(
-        <>Tablet</>
+       <EPSJemnyMobile device="tablet" />
     )
 }

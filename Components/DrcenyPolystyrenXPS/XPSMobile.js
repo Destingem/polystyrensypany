@@ -13,7 +13,7 @@ export default function XPSMobile(props) {
     "žádná nasákavost vlhkosti"]
     return (
         <div>
-        <MainScreen label="Polystyren sypaný - XPS" image="/images/barevny_c.png" device={device} />
+        <MainScreen label="XPS" image="/images/barevny_c.png" device={device}  polysyp={true}/>
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto",marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný, drcený - XPS

@@ -1,5 +1,6 @@
+import EPSJemnyMobile from './EPSJemnyMobile.js';
 export default function EPSJemnyLaptop(){
     return(
-        <>Laptop</>
+       <EPSJemnyMobile device="laptop" />
     )
 }

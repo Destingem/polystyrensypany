@@ -8,7 +8,7 @@ import MultipleItemMobile from "../MultipleItemMobile";
 import {useWindowScroll} from "@mantine/hooks";
 export default function NavbarTablet(props) {
   const itemsOnas = [{href: "/o_nas", label: "O nás"}, {href: "/certifikat", label: "Certifikáty"}, {href: "/partneri", label: "Partneři"}, {href: "/hodnoceni", label: "Hodnocení zákazníky"}];
-  const itemsSortiment = [{href: "/sortiment", label: "Přehled sortimentu"}, {href: "/drcenypolystyren-bily", label: "Polystyren sypaný - EPS bílý"},{href: "/eps-jemny", label: "EPS Jemný"} ,{href: "/drcenypolystyren-sedy", label: "Polystyren sypaný - EPS šedý"}, {href: "/drcenypolystyren-XPS", label: "Polystyren sypaný - XPS"}, {href: "/foukana-izolace", label: "Foukaná izolace"}];  
+  const itemsSortiment = [{href: "/sortiment", label: "Přehled sortimentu"}, {href: "/drcenypolystyren-bily", label: "Polystyren sypaný - EPS bílý"},{href: "/eps-jemny", label: "Polystyren sypaný - EPS jemný"} ,{href: "/drcenypolystyren-sedy", label: "Polystyren sypaný - EPS šedý"}, {href: "/drcenypolystyren-XPS", label: "Polystyren sypaný - XPS"}, {href: "/foukana-izolace", label: "Foukaná izolace"}];  
   const [opened, setOpened] = useState(false);
     const title = opened ? "Close navigation" : "Open navigation";
     var [scroll, scrollTo] = useWindowScroll();
