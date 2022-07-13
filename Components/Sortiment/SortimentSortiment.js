@@ -2,7 +2,7 @@ import {Grid, Paper, Text} from "@mantine/core"
 import Link from "next/link"
 export default function SortimentSortiment(props){
     let {device} = props
-    let polystyreny = [{name: "XPS", image: "/images/barevny_c.png", url: "/drcenypolystyren-XPS"}, {name: "EPS Šedý", image: "/images/sedy_c.png", url: "/drcenypolystyren-sedy"}, {name: "EPS Bílý", image: "/images/bily_c.png", url: "/drcenypolystyren-bily"}]
+    let polystyreny = [{name: "Polystyren sypaný - XPS", image: "/images/barevny_c.png", url: "/drcenypolystyren-XPS"}, {name: "Polystyren sypaný - EPS šedý", image: "/images/sedy_c.png", url: "/drcenypolystyren-sedy"}, {name: "Polystyren sypaný - EPS bílý", image: "/images/bily_c.png", url: "/drcenypolystyren-bily"}]
     return(
         <div style={{marginTop: "5vh"}}>
         <Text weight={600} size="xl" sx={props.headingSx}>
@@ -34,7 +34,7 @@ export default function SortimentSortiment(props){
                 size="sm"
                 sx={props.labelSx}
               >
-                EPS Bílý
+                Polystyren sypaný - EPS bílý
               </Text>
               </Paper>
             </Grid.Col>
@@ -59,7 +59,7 @@ export default function SortimentSortiment(props){
                 size="sm"
                 sx={props.labelSx}
               >
-                EPS Šedý
+                Polystyren sypaný - EPS šedý
               </Text>
               </Paper>
             </Grid.Col>
@@ -85,7 +85,7 @@ export default function SortimentSortiment(props){
                 size="sm"
                 sx={props.labelSx}
               >
-                XPS
+                Polystyren sypaný - XPS
               </Text>
               </Paper>
             </Grid.Col>

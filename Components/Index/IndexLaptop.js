@@ -324,7 +324,7 @@ export default function IndexLaptop(options) {
               width="100px"
               height="100px" />
              
-                <Text sx={{position: "absolute", margin: "auto"}}  weight={500}>EPS Bílý</Text>
+                <Text sx={{position: "absolute", margin: "auto"}}  weight={500}>Polystyren sypaný - EPS bílý</Text>
                 
              
               </Grid.Col>
@@ -334,7 +334,7 @@ export default function IndexLaptop(options) {
               width="100px"
               height="100px" />
                
-                <Text sx={{position: "", margin: "auto", top: "50%", zIndex: "14000"}} weight={500}>EPS Šedý</Text>
+                <Text sx={{position: "", margin: "auto", top: "50%", zIndex: "14000"}} weight={500}>Polystyren sypaný - EPS šedý</Text>
                 
         
              
@@ -344,7 +344,7 @@ export default function IndexLaptop(options) {
               <Image src="/images/XPS.png"  layout="responsive"
               width="100px"
               height="100px" />
-              <Text sx={{position: "", margin: "auto", top: "50%", zIndex: "14000"}} weight={500}>XPS</Text>
+              <Text sx={{position: "", margin: "auto", top: "50%", zIndex: "14000"}} weight={500}>Polystyren sypaný - XPS</Text>
               </Grid.Col>
             </Grid>
         </div>

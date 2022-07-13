@@ -20,7 +20,7 @@ import MultipleItemMobile from "../MultipleItemMobile";
 
 export default function NavBarMobile(props) {
   const itemsOnas = [{href: "/o_nas", label: "O nás"}, {href: "/certifikat", label: "Certifikáty"}, {href: "/partneri", label: "Partneři"}, {href: "/hodnoceni", label: "Hodnocení zákazníky"}];
-  const itemsSortiment = [{href: "/sortiment", label: "Přehled sortimentu"}, {href: "/drcenypolystyren-bily", label: "EPS Bílý"}, {href: "/drcenypolystyren-sedy", label: "EPS Šedý"}, {href: "/drcenypolystyren-XPS", label: "XPS"}, {href: "/foukana-izolace", label: "Foukaná izolace"}];
+  const itemsSortiment = [{href: "/sortiment", label: "Přehled sortimentu"}, {href: "/drcenypolystyren-bily", label: "Polystyren sypaný - EPS bílý"},{href: "/eps-jemny", label: "EPS Jemný"} ,{href: "/drcenypolystyren-sedy", label: "Polystyren sypaný - EPS šedý"}, {href: "/drcenypolystyren-XPS", label: "Polystyren sypaný - XPS"}, {href: "/foukana-izolace", label: "Foukaná izolace"}];
   const [opened, setOpened] = useState(false);
   const title = opened ? "Close navigation" : "Open navigation";
   var [scroll, scrollTo] = useWindowScroll();
@@ -64,18 +64,16 @@ export default function NavBarMobile(props) {
           
           title={
             <Link href="/">
-              <div className={styles.header_mobile} style={{}}>
-                <img
-                  src="/images/finalLogo.png"
-                  width={"15%"}
-                  style={{ aspectRatio: 1 }}
-                  alt="logo"
-                />
-                <Text size="xl" sx={{ whiteSpace: "nowrap" }}>
-                  Polystyren sypaný
-                </Text>
-              </div>
-            </Link>
+          <div className={styles.header_mobile}>
+            <img
+              src="/images/logo_stranky.jpg"
+             width="60%"
+             
+              alt="logo"
+            />
+            
+          </div>
+        </Link>
           }
           padding="xl"
           size="full"

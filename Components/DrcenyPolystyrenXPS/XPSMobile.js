@@ -13,7 +13,7 @@ export default function XPSMobile(props) {
     "žádná nasákavost vlhkosti"]
     return (
         <div>
-        <MainScreen label="XPS" image="/images/barevny_c.png" device={device} />
+        <MainScreen label="Polystyren sypaný - XPS" image="/images/barevny_c.png" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto",marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný, drcený - XPS
@@ -44,7 +44,7 @@ export default function XPSMobile(props) {
             })}
                 
             </List>
-            <Link href="/poptavka_form"><Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Poptat XPS polystyren</Button></Link>
+            <Link href="/poptavka_form"><Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Poptat Polystyren sypaný - XPS polystyren</Button></Link>
             {device == "mobile" ? <><Image src="/images/barevny.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             <Image src="/images/XPS_pytel.png" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></>
             : <Grid justify="center">

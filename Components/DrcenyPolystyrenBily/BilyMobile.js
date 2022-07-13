@@ -9,7 +9,7 @@ export default function BilyMobile(props) {
     const items = ["zrnitost 0,5-2mm", "váha cca 5kg/300l/1 pytel"]
     return (
         <div>
-        <MainScreen label="EPS Bílý" image="/images/bily_c.png" />
+        <MainScreen label="Polystyren sypaný - EPS bílý" image="/images/bily_c.png" />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný - jemný EPS 
@@ -19,7 +19,7 @@ export default function BilyMobile(props) {
             </Text>
             
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.25rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
-            Polystyren sypaný EPS Bílý - základní vlastnosti
+            Polystyren sypaný Polystyren sypaný - EPS bílý - základní vlastnosti
             </Text>
             <List spacing="xs"
           center

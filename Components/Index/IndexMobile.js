@@ -385,7 +385,7 @@ export default function IndexMobile(props) {
                 padding: "",
               }}
             >
-              EPS Bílý
+              Polystyren sypaný - EPS bílý
             </Text>
             </Paper>
           </Grid.Col>
@@ -415,7 +415,7 @@ export default function IndexMobile(props) {
                 padding: "",
               }}
             >
-              EPS Šedý
+              Polystyren sypaný - EPS šedý
             </Text>
             </Paper>
           </Grid.Col>
@@ -446,7 +446,7 @@ export default function IndexMobile(props) {
                 padding: "",
               }}
             >
-              XPS
+              Polystyren sypaný - XPS
             </Text>
             </Paper>
           </Grid.Col>

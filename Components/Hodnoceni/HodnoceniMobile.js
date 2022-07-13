@@ -44,8 +44,8 @@ export default function HodnoceniMobile(props) {
     function submitHandler(values) {
         props.handleSubmit(values);
     }
-    const [produkty, setProdukty] = useState(["EPS Bílý", "EPS Šedý", "XPS"])
-    const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}]
+    const [produkty, setProdukty] = useState(["Polystyren sypaný - EPS bílý", "Polystyren sypaný - EPS šedý", "Polystyren sypaný - XPS"])
+    const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}]
     return (
         <div>
         <MainScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" device={device} />

@@ -42,7 +42,7 @@ export default function NavbarLaptop(props) {
             }}
           >
             <div
-              style={{ display: "block", minWidth: "50%", minHeight: "100%" }}
+              style={{ display: "block", minWidth: "60%", minHeight: "100%" }}
             >
               {" "}
               <Image
@@ -120,17 +120,17 @@ export default function NavbarLaptop(props) {
             <Menu.Label>Produkty</Menu.Label>
             <MenuItem>
             <Link href="/drcenypolystyren-bily">
-              <p> EPS Bílý</p>
+              <p> Polystyren sypaný - EPS bílý</p>
             </Link>
             </MenuItem>
             <MenuItem>
             <Link href="/drcenypolystyren-sedy">
-              <p>EPS Šedý</p>
+              <p>Polystyren sypaný - EPS šedý</p>
             </Link>
             </MenuItem>
             <MenuItem>
             <Link href="/drcenypolystyren-XPS">
-              <p> XPS</p>
+              <p> Polystyren sypaný - XPS</p>
             </Link>
             </MenuItem>
             <Divider />
