@@ -1,10 +1,14 @@
 import MainScreen from "../UI/MainScreen";
-import {Text, Card, Space, Divider, Grid, Group, Badge, Input, InputWrapper, Textarea, NumberInput, Select, Button} from "@mantine/core";
+import {Text, Card, Space, Divider, Grid, Group, Badge, Input, InputWrapper, Textarea, NumberInput, Select, Button, Alert} from "@mantine/core";
 import Footer from "../UI/Footer";
 import { useForm } from "@mantine/form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useWindowScroll } from "@mantine/hooks";
+import { FiAlertTriangle } from "react-icons/fi";
 
 export default function HodnoceniMobile(props) {
+    const [scroll, setScroll] = useWindowScroll()
+    const [feedback, setFeedback] = useState({type: "", message: ""});
     let {device} = props;
     const form = useForm({
         initialValues: {
@@ -21,13 +25,25 @@ export default function HodnoceniMobile(props) {
         
         },
       })
-
-      var submitHandler = (values) => {
-        console.log(values);
-        var mail = document.createElement("a");
-mail.href = "mailto:info@polystyrensypany.cz?subject= Recenze na produkt " + values.produkt + "&body=" + "Jméno: "  + values.jmeno + "%0A Příjmení: " + values.prijmeni + "%0A Společnost: "  + values.spolecnost + "%0A"+  "Číselné hodnocení: " + values.ciselne_hodnoceni + "%0A Slovní hodnocení: " + values.slovni_hodnoceni;
-mail.click();
+      useEffect(()=> {
+        setFeedback(props.feedback)
+     
+    
+    }, [props.feedback])
+    useEffect(()=> {
+        if (feedback.type === "success"){
+            form.reset();
+            setScroll({x: 0, y: 0})
+            setTimeout(()=> {
+                setFeedback({type: "", message: ""})
+            }, [5000])
+        } else if (feedback.type === "error"){
+            setScroll({x: 0, y: 0})
         }
+    }, [feedback])
+    function submitHandler(values) {
+        props.handleSubmit(values);
+    }
     const [produkty, setProdukty] = useState(["EPS Bílý", "EPS Šedý", "XPS"])
     const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren EPS Bílý", firma: "Gogol a.s."}]
     return (
@@ -46,6 +62,8 @@ mail.click();
         >
          Chcete-li nám poslat hodnocení, můžete k tomu využít <strong style={{color: "#195f00"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na Googlu zde.
         </Text>
+        {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
+       { feedback && feedback.type === "success" && <Alert type="success" color="green" icon={<FiAlertTriangle/>}>{feedback.message}</Alert>}
         <Grid span={device !== "laptop" ? 12 : 3 }>
         {hodnoceni && hodnoceni.map((item, index) => {
             return(

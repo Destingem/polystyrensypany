@@ -1,8 +1,9 @@
+
 import PoptavkaMobile from "./PoptavkaMobile";
 
 
-export default function PoptavkaLaptop() {
+export default function PoptavkaLaptop(props) {
     return (
-        <PoptavkaMobile device="laptop" />
+        <PoptavkaMobile device="laptop" {...props} />
     );
 }

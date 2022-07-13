@@ -1,8 +1,8 @@
 import HodnoceniMobile from "./HodnoceniMobile";
 
 
-export default function HodnoceniTablet() {
+export default function HodnoceniTablet(props) {
     return (
-        <HodnoceniMobile device="tablet"/>
+        <HodnoceniMobile device="tablet" {...props}/>
     );
 }

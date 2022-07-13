@@ -42,27 +42,19 @@ export default function NavbarLaptop(props) {
             }}
           >
             <div
-              style={{ display: "block", minWidth: "13%", minHeight: "100%" }}
+              style={{ display: "block", minWidth: "50%", minHeight: "100%" }}
             >
               {" "}
               <Image
-                src="/images/finalLogo.png"
-                width={100}
-                height={100}
-                style={{ aspectRatio: 1 }}
+                src="/images/logo_stranky.jpg"
+                width={94}
+                height={23}
+                
                 alt="logo"
                 layout="responsive"
               />
             </div>
-            <Text
-              color="#545454"
-              weight={600}
-              size="xl"
-              sx={{ fontSize: "2rem", margin: 0, whiteSpace: "nowrap" }}
-              component="h1"
-            >
-              Polystyren sypaný
-            </Text>
+          
           </div>
         </Link>
         <Grid

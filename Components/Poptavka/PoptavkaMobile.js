@@ -2,31 +2,69 @@ import 'dayjs/locale/cs';
 import MainScreen from "../UI/MainScreen"
 import { useForm } from "@mantine/form";
 import SubheaderText from "../UI/SubheaderText"
-import {Input, InputWrapper, Button, NumberInput, Select, Textarea, MultiSelect, Switch, Space, Progress} from "@mantine/core"
-import { useState } from "react";
+import {Input, InputWrapper, Button, NumberInput, Select, Textarea, MultiSelect, Switch, Space, Progress, Alert} from "@mantine/core"
+import { useEffect, useRef, useState } from "react";
 import Footer from "../UI/Footer"
 import { DatePicker } from "@mantine/dates";
+import {FiAlertTriangle} from 'react-icons/fi';
+import { useReducedMotion, useWindowScroll } from '@mantine/hooks';
 export default function PoptavkaMobile(props) {
-  
+    const dumbBtn = useRef()
     let {device} = props;
+    const [scroll, setScroll] = useWindowScroll()
+    const [feedback, setFeedback] = useState({type: "", message: ""});
     const [produkty, setProdukty] = useState(["zásyp do podlah", "zásyp do stropů", "zásyp do krovů a střech", "zásyp do vnitřních příček domu", "zásyp dilatační spáry", "zásyp do dutých cihel", "zateplení šachty vzduchotechniky", "zateplení akumulační nádrže", "do betonu", "náplň do sedacích vaků", "sněžení", "ostatní"  ]) 
     const form = useForm(
         {
             initialValues: {
-                a: ""
+           
+                ucel: [],
+                mnozstvi: 0,
+                jednotka: "ks",
+                termin: "",
+                doprava: false,
+                specifikace: "",
+                jmeno: "",
+                prijmeni: "",
+                funkce: "",
+                spolecnost: "",
+                adresa: "",
+                telefon: "",
+                email: "",
             }
         }
     )
     function submitHandler(values) {
-        console.log(values)
+        props.handleSubmit(values);
+        form.setFieldValue("mnozstvi", 0);
     }
+    useEffect(()=> {
+        setFeedback(props.feedback)
+       
+     
+    
+    }, [props.feedback])
+    useEffect(()=> {
+        if (feedback.type === "success"){
+            form.reset();
+            setScroll({x: 0, y: 0})
+            setTimeout(()=> {
+                setFeedback({type: "", message: ""})
+            }, [5000])
+        } else if (feedback.type === "error"){
+            setScroll({x: 0, y: 0})
+        }
+    }, [feedback])
     return (
         <div>
         <MainScreen label="Poptávka" image="/images/polystyren_jemny_detail2.png" device={device}/>
         
-        <div style={{ display:"flex", flexDirection: "row", textAlign: "center", padding: "3vh 5vw 3vh 5vw"}}>
-       
+        <div style={{ display:"flex", flexDirection: "column", textAlign: "center", padding: "3vh 5vw 3vh 5vw"}}>
+        {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
+       { feedback && feedback.type === "success" && <Alert type="success" color="green" icon={<FiAlertTriangle/>}>{feedback.message}</Alert>}
         <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {textAlign: "left",  marginLeft: "auto", marginRight: "auto"} : {textAlign: "left", display: "flex", gap: "5vw", marginLeft: "auto", marginRight: "auto"}}>
+        
+     
         <div >
         <SubheaderText>Poptávkový formulář</SubheaderText>
         <Space h="3vh"/>
@@ -60,7 +98,7 @@ export default function PoptavkaMobile(props) {
         <InputWrapper label="Další specifikace" >
             <Textarea sx={device == "laptop" && {minHeight: "15vh !important"}} {...form.getInputProps("specifikace")} />
         </InputWrapper>
-        </div>
+        <Button type="submit" ref={dumbBtn}  sx={{display: "none"}}/>        </div>
         <Space h="3vh"/>
        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
        <SubheaderText>Kontaktní údaje</SubheaderText>

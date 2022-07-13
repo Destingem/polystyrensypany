@@ -40,14 +40,12 @@ export default function NavBarMobile(props) {
         <Link href="/">
           <div className={styles.header_mobile}>
             <img
-              src="/images/finalLogo.png"
-              width={"15%"}
-              style={{ aspectRatio: 1 }}
+              src="/images/logo_stranky.jpg"
+             width="60%"
+             
               alt="logo"
             />
-            <Text size="xl" sx={{ whiteSpace: "nowrap" }}>
-              Polystyren sypaný
-            </Text>
+            
           </div>
         </Link>
       )}
