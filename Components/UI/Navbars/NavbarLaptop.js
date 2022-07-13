@@ -77,27 +77,27 @@ export default function NavbarLaptop(props) {
             }}
             onClose={handlers.close}
           >
-            <MenuItem>
               <Link href="/o_nas">
+            <MenuItem>
                 <p>O nás</p>
+            </MenuItem>
               </Link>
-            </MenuItem>
             <Divider />
-            <MenuItem>
             <Link href="/certifikat">
+            <MenuItem>
               <p>Certifikáty</p>
-            </Link>
             </MenuItem>
-            <MenuItem>
+            </Link>
             <Link href="/partneri">
-              <p>Partneři</p>
-            </Link>
-            </MenuItem>
             <MenuItem>
-            <Link href="/hodnoceni">
-              <p>Hodnocení zákazníky</p>
-            </Link>
+              <p>Partneři</p>
             </MenuItem>
+            </Link>
+            <Link href="/hodnoceni">
+            <MenuItem>
+              <p>Hodnocení zákazníky</p>
+            </MenuItem>
+            </Link>
           </Menu>
           <Menu
            zIndex={13000}
@@ -111,41 +111,44 @@ export default function NavbarLaptop(props) {
             }}
             onClose={handlers2.close}
           >
+          <Link href="/sortiment">
             <MenuItem>
-            <Link href="/sortiment">
+            
               <p> Přehled sortimentu</p>
-            </Link>
+            
             </MenuItem>
+            </Link>
             <Divider />
             <Menu.Label>Produkty</Menu.Label>
-            <MenuItem>
             <Link href="/drcenypolystyren-bily">
+            <MenuItem>
+           
               <p> Polystyren sypaný - EPS bílý</p>
-            </Link>
             </MenuItem>
-            <MenuItem>
+            </Link>
             <Link href="/eps-jemny">
+            <MenuItem>
               <p> Polystyren sypaný - EPS jemný</p>
-            </Link>
             </MenuItem>
-            <MenuItem>
+            </Link>
             <Link href="/drcenypolystyren-sedy">
-              <p>Polystyren sypaný - EPS šedý</p>
-            </Link>
-            </MenuItem>
             <MenuItem>
-            <Link href="/drcenypolystyren-XPS">
-              <p> Polystyren sypaný - XPS</p>
-            </Link>
+              <p>Polystyren sypaný - EPS šedý</p>
             </MenuItem>
+            </Link>
+            <Link href="/drcenypolystyren-XPS">
+            <MenuItem>
+              <p> Polystyren sypaný - XPS</p>
+            </MenuItem>
+            </Link>
             <Divider />
             <Menu.Label>Služby</Menu.Label>
 
-            <MenuItem>
             <Link href="/foukana-izolace">
+            <MenuItem>
               <p>Foukaná izolace</p>
-            </Link>
             </MenuItem>
+            </Link>
           </Menu>
 
           <Link href="/novinky">
