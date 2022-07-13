@@ -44,7 +44,7 @@ export default function XPSMobile(props) {
             })}
                 
             </List>
-            <Link href="/poptavka_form"><Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Poptat Polystyren sypaný - XPS polystyren</Button></Link>
+            <Link href="/ceny#polystyren-drceny-XPS"><Button variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník pro XPS polystyren drcený</Button></Link>
             {device == "mobile" ? <><Image src="/images/barevny.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             <Image src="/images/XPS_pytel.png" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></>
             : <Grid justify="center">

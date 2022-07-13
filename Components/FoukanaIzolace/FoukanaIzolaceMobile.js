@@ -123,7 +123,7 @@ export default function FoukanaIzolaceMobile(props) {
             </tr>
           </tbody>
         </Table>
-        <Link href="/poptavka_form"><Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Poptat foukanou izolaci</Button></Link>
+        <Link href="/ceny#foukana-izolace"><Button variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník pro foukanou izolaci</Button></Link>
       </div>
       <Footer />
     </div>
