@@ -44,7 +44,7 @@ export default function SedyMobile(props) {
             })}
                 
             </List>
-            <Link href="/ceny#polystyren-sypany-EPS-sedy"><Button variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "20%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník pro EPS polystyren šedý</Button></Link>
+            <Link href="/ceny#polystyren-sypany-EPS-sedy"><Button variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "15%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník</Button></Link>
             {device == "mobile" ? <><Image src="/images/sedy.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             <Image src="/images/sedy_pytel.png" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></> : 
             <Grid sx={{justifyContent: "center"}}>
