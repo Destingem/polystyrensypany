@@ -1,9 +1,12 @@
-import { Button, Text } from "@mantine/core";
+import { Button, Text, List, ListItem } from "@mantine/core";
 import MainScreen from "../UI/MainScreen";
 import Image from "next/image";
 import Link from "next/link";
+import { BsCircle } from "react-icons/bs";
 export default function EPSJemnyMobile(props){
     let device = props.device;
+    const items = ["zrnitost 0,5-2mm", "váha cca 5kg/300l/1 pytel"]
+  
     return(
        <div>
         <MainScreen device={device} polysyp={true} label={"EPS jemný"} image="images/polystyrenestructure.jpg" />
@@ -11,6 +14,21 @@ export default function EPSJemnyMobile(props){
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
             Polystyren sypaný - jemný EPS 
             </Text>
+            <List spacing="xs"
+          center
+          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          sx={{ textAlign: "left" }}>
+            {items && items.map((item, index) => {
+                return (
+                    <ListItem key={index}>
+                        <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: "auto", textAlign: "left" }}>
+                            {item}
+                        </Text>
+                    </ListItem>
+                )
+            })}
+                
+            </List>
             <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Možnosti využití: Vysypání otvorů dutých cihel (HELUZ, POROTHERM a další) zlepšuje tepelněizolační vlastnosti obvodového zdiva.
             </Text>

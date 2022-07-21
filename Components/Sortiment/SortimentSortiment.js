@@ -5,9 +5,7 @@ export default function SortimentSortiment(props){
     let polystyreny = [{name: "Polystyren sypaný - XPS", image: "/images/barevny_c.png", url: "/drcenypolystyren-XPS"}, {name: "Polystyren sypaný - EPS šedý", image: "/images/sedy_c.png", url: "/drcenypolystyren-sedy"}, {name: "Polystyren sypaný - EPS bílý", image: "/images/bily_c.png", url: "/drcenypolystyren-bily"}]
     return(
         <div style={{marginTop: "5vh"}}>
-        <Text weight={600} size="xl" sx={props.headingSx}>
-            Sortiment
-          </Text>
+       
         {device !== "laptop" ? <Grid
             span={12}
             sx={{ width: "100%", height: "80vh", gap: "2vh", margin: "5vh 0" }}
