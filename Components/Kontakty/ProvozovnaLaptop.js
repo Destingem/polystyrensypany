@@ -122,7 +122,7 @@ export default  function ProvozovnaLaptop() {
             textAlign: "left",
           }}
         >
-          Adresa
+          Adresa provozovny
         </Text>
         <Text
           weight={400}

@@ -57,7 +57,7 @@ export default function ProvozovnaMobile() {
               textAlign: "center",
             }}
           >
-            Adresa
+             Adresa provozovny
           </Text>
           <Text
             weight={400}
