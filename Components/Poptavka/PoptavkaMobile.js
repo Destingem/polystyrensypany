@@ -8,6 +8,7 @@ import Footer from "../UI/Footer"
 import { DatePicker } from "@mantine/dates";
 import {FiAlertTriangle} from 'react-icons/fi';
 import { useReducedMotion, useWindowScroll } from '@mantine/hooks';
+import DefaultScreen from "../UI/DefaultScreen"
 export default function PoptavkaMobile(props) {
     const dumbBtn = useRef()
     let {device} = props;
@@ -57,7 +58,7 @@ export default function PoptavkaMobile(props) {
     }, [feedback])
     return (
         <div>
-        <MainScreen label="Poptávka" image="/images/polystyren_jemny_detail2.png" device={device}/>
+        <DefaultScreen label="Poptávka" image="/images/polystyren_jemny_detail2.png" device={device}/>
         
         <div style={{ display:"flex", flexDirection: "column", textAlign: "center", padding: "3vh 5vw 3vh 5vw"}}>
         {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
@@ -132,7 +133,7 @@ export default function PoptavkaMobile(props) {
                 <Input    {...form.getInputProps('email')} required/>
             </InputWrapper>
             
-            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={{ width: device === "laptop" ? "100%" : "100%", marginTop: "auto", marginTop: "2vh" }}>Odeslat</Button>
+            <Button type="submit" variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device === "laptop" ? "100%" : "100%", marginTop: "auto", marginTop: "2vh" }}>Odeslat</Button>
        </div>
       
         </form>

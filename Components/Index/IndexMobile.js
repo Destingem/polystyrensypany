@@ -453,7 +453,7 @@ export default function IndexMobile(props) {
           </Link>
         </Grid>
         <Button shadow="xl"
-           variant="gradient" gradient={{from: "teal", to: "lime"}}
+           variant="gradient" gradient={{from: "#327b62", to: "teal"}}
              sx={{
               
               justifyContent: "center",

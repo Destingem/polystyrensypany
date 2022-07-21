@@ -3,7 +3,7 @@ import MainScreen from "../UI/MainScreen";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
 import Footer from "../UI/Footer";
 import Link from "next/link";
-
+import DefaultScreen from "../UI/DefaultScreen";
 export default function RecyklaceMobile(props) {
   let { device } = props;
   const pointy = [
@@ -19,7 +19,7 @@ export default function RecyklaceMobile(props) {
   ];
   return (
     <div>
-      <MainScreen label="Recyklace" image="/images/polystyrenovy_odpad.png" />
+      <DefaultScreen label="Recyklace" image="/images/polystyrenovy_odpad.png" device={device} />
       <div
         style={{
           display: "flex",

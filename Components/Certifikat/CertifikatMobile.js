@@ -1,4 +1,5 @@
 import MainScreen from "../UI/MainScreen";
+import DefaultScreen from "../UI/DefaultScreen";
 import { Text, List, ListItem, Space } from "@mantine/core";
 import Link from "next/link";
 import Footer from "../UI/Footer";
@@ -7,7 +8,7 @@ export default function CertifikatMobile(props) {
   let headerSx = device !== "tablet" ? device !== "laptop" ? {color: "#545454", fontSize: "4rem", fontWeight: "700" } : {color: "#545454", fontSize: "3rem", fontWeight: "500", textAlign: "left"} : {color: "#545454", fontSize: "2rem", fontWeight: "500", textAlign: "center"};
   return (
     <div>
-      <MainScreen
+      <DefaultScreen
         label="Certifikáty"
         image="/images/polystyren_jemny_detail2.png"
         device={props.device}

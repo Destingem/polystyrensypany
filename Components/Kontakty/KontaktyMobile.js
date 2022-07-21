@@ -5,11 +5,12 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { MdPhone, MdAlternateEmail } from "react-icons/md";
 import ProvozovnaLaptop from "./ProvozovnaLaptop";
 import ProvozovnaMobile from "./ProvozovnaMobile";
+import DefaultScreen from "../UI/DefaultScreen";
 export default function KontaktyMobile(props) {
   let {device} = props;
   return (
     <div>
-      <MainScreen label="Kontakty" image="/images/prodejna.jpg" device={device} />
+      <DefaultScreen label="Kontakty" device={device} />
       <div
         style={{
           display: "flex",

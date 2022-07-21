@@ -1,6 +1,6 @@
 import { Button, Grid, Group, Paper, Text } from "@mantine/core";
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreen";
+import DefaultScreen from "../UI/DefaultScreen";
 
 
 export default function NovinkyMobile(props) {
@@ -8,7 +8,7 @@ export default function NovinkyMobile(props) {
     const novinky = [{date: "1.3.2022", title: "Dovolená", text: "Od 29.7.2021 do 4.8.2021 máme dovolenou. Od 5.8.2021 se na Vás budeme opět těšit.", image: "/images/bily.png", priloha: {title: "PDF s rozpisy dovolené např.", url: "/images/bily.png"}}, {date: "1.3.2022", title: "Dovolená", text: "Od 29.7.2021 do 4.8.2021 máme dovolenou. Od 5.8.2021 se na Vás budeme opět těšit.", image: "/images/bily.png", priloha: {title: "PDF s rozpisy dovolené např.", url: "/images/bily.png"}} , {date: "1.3.2022", title: "Dovolená", text: "Od 29.7.2021 do 4.8.2021 máme dovolenou. Od 5.8.2021 se na Vás budeme opět těšit.", image: "/images/bily.png", priloha: {title: "PDF s rozpisy dovolené např.", url: "/images/bily.png"}} , {date: "1.3.2022", title: "Dovolená", text: "Od 29.7.2021 do 4.8.2021 máme dovolenou. Od 5.8.2021 se na Vás budeme opět těšit.", image: "/images/bily.png", priloha: {title: "PDF s rozpisy dovolené např.", url: "/images/bily.png"}}  ];
     return (
         <div>
-               <MainScreen label="Novinky" image="/images/polystyrenestructure.jpg" device={device}/>
+               <DefaultScreen label="Novinky" image="/images/polystyrenestructure.jpg" device={device}/>
            <Grid style={{
         
           

@@ -5,7 +5,7 @@ import { useForm } from "@mantine/form";
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "@mantine/hooks";
 import { FiAlertTriangle } from "react-icons/fi";
-
+import DefaultScreen from "../UI/DefaultScreen";
 export default function HodnoceniMobile(props) {
     const [scroll, setScroll] = useWindowScroll()
     const [feedback, setFeedback] = useState({type: "", message: ""});
@@ -48,7 +48,7 @@ export default function HodnoceniMobile(props) {
     const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}]
     return (
         <div>
-        <MainScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" device={device} />
+        <DefaultScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" device={device} />
         <div style={{
           width: "100vw",
           height: "fitContent",
@@ -117,7 +117,7 @@ export default function HodnoceniMobile(props) {
             <InputWrapper label="Slovní hodnocení" required   >
                 <Textarea  {...form.getInputProps('slovni_hodnoceni')} autosize="true"/>
             </InputWrapper>
-            <Button type="submit" variant="gradient" gradient={{from: "teal", to: "lime"}} size="lg" sx={device !== "laptop" ? { width: "100%", marginTop: "3vh" } : { width: "25%", marginTop: "3vh", alignSelf: "end"}}>Odeslat</Button>
+            <Button type="submit" variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={device !== "laptop" ? { width: "100%", marginTop: "3vh" } : { width: "25%", marginTop: "3vh", alignSelf: "end"}}>Odeslat</Button>
         </form>
         </div>
         <Footer />

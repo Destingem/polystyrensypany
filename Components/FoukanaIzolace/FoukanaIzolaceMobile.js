@@ -4,11 +4,12 @@ import BasicText from "../UI/BasicText";
 import SubheaderText from "../UI/SubheaderText";
 import Footer from "../UI/Footer";
 import Link from "next/link";
+import DefaultScreen from "../UI/DefaultScreen";
 export default function FoukanaIzolaceMobile(props) {
   let { device } = props;
   return (
     <div>
-      <MainScreen
+      <DefaultScreen
         label="Foukaná Izolace"
         image="/images/polystyrenestructure.jpg"
         device={device}

@@ -3,12 +3,12 @@ import {Text, Card, Space, Divider} from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../UI/Footer";
-
+import DefaultScreen from "../UI/DefaultScreen";
 export default function PartneriMobile(props){
     let {device} = props;
     return(
         <div style={{ display: "flex", flexDirection: "column", textAlign: "center" }}>
-        <MainScreen label="Partneři" image="/images/polystyren_jemny_detail2.png" device={props.device}/>
+        <DefaultScreen label="Partneři" image="/images/polystyren_jemny_detail2.png" device={props.device}/>
             <div style={{
           width: "100vw",
           height: "fitContent",

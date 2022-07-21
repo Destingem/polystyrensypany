@@ -1,5 +1,5 @@
 import Navbar from "../../Components/UI/Navbar";
-import MainScreen from "../UI/MainScreen";
+import DefaultScreen from "../../Components/UI/DefaultScreen";
 import { Text, Divider, Space } from "@mantine/core";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,7 +11,7 @@ export default function OnasMobile(props) {
     <div
       style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
     >
-      <MainScreen label="O nás" image="/images/polystyrenestructure.jpg" device={props.device}/>
+      <DefaultScreen label="O nás" image="/images/polystyrenestructure.jpg" device={props.device}/>
       <section
         style={{
           width: "100vw",
