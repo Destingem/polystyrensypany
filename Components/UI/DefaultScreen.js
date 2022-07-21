@@ -34,9 +34,9 @@ export default function MainScreen(props) {
           </div>}
     {props.device !== "laptop" && <div style={{width: "100vw", height: "60vh", backgroundImage: "url(/images/mobiledefault.png)", textAlign: "center", objectFit: "cover", display: "flex", flexDirection: "column", backgroundSize: "cover", backgroundPosition: "bottom"}}>
     <NavBar />
-          <div className="centered" style={{marginTop: "25vh",marginBottom: "15vh",display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}}>
+          <div className="centered" style={{marginTop: "12vh",marginBottom: "10vh",display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "3vh", overflow: "hidden"}}>
        <div>
-       <Image src="/images/mobilelogo.png" style={{width: "100%", height: "100%", objectFit: "cover"}} layout="responsive" width={400} height={79}/>
+       <Image src="/images/mobilelogo.png" layout="responsive" width={400} height={79}/>
        </div>
          
           {props.polysyp && <Text component="h1" sx={labelSx2}>Polystyren sypaný</Text>}
