@@ -24,6 +24,7 @@ export default function FooterLaptop() {
     {name: "Služby", to: "/foukana-izolace", sublinks: [
         {name: "Foukaná izolace", to: "/foukana-izolace"},
     ]},
+    {name: "Další", to: "/", sublinks: [{name: "Novinky", to: "/novinky"},{name: "Poptávka", to: "/poptavka_form"}, {name: "Recyklace", to: "/likvidace-recyklace"} ,{name: "Kontakty", to: "/kontakty"}]},
   ];
   return (
     <div
