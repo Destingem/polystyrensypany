@@ -50,6 +50,19 @@
     align-items: center;
     padding: 3vw 5vw 3vw 5vw;
     text-align: center;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.sixthSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vw 5vw 3vw 5vw;
+    text-align: center;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: white;
 }
 .list ul > li > div{
     display: flex;
@@ -64,4 +77,18 @@ li.listItem > div{
     align-items: center !important;
     
     
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    height: fit-content;
+    padding-bottom: 3vh;
+}
+.progress > li > button{
+    color: #3f7b63;
+    background: #3f7b63;
+}
+.splide__arrow svg{
+    fill: #3f7b63 !important;
 }

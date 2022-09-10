@@ -34,3 +34,10 @@ a:visited{
 textarea{
   min-height: 15vh !important;  
 }
+.splide__pagination__page{
+  background-color: #3f7b63 !important;
+}
+.splide__pagination__page.is-active{
+  background-color: #3f7b63 !important;
+  opacity: 1 !important;
+}

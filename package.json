@@ -22,6 +22,7 @@
     "@mantine/prism": "^4.2.9",
     "@mantine/spotlight": "^4.2.9",
     "@react-icons/all-files": "^4.1.0",
+    "@splidejs/react-splide": "^0.7.10",
     "@testing-library/react": "^13.3.0",
     "cypress": "^10.2.0",
     "dayjs": "^1.11.3",
