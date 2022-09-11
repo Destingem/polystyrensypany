@@ -3,16 +3,16 @@ import PolyCard from "./MobileComponents/PolyCard";
 import Link from "next/link";
 import { Button, Text, Grid } from "@mantine/core";
 export default function SortimentMobile(props) {
-  let {device} = props;
+  let {device, button_text} = props;
   return (
     <div className={styles.sixthSection} style={{ backgroundColor: "white" }}>
-      <Text size="xl" weight={600} sx={device !== "laptop" ? { color: "black", fontSize: "12vw" } : { color: "black", fontSize: "3em", marginRight: "auto", color: "rgb(84, 84, 84)" }}>
+      {button_text && <Text size="xl" weight={600} sx={device !== "laptop" ? { color: "black", fontSize: "12vw" } : { color: "black", fontSize: "3em", marginRight: "auto", color: "rgb(84, 84, 84)" }}>
         Sortiment
-      </Text>
+      </Text>}
       <Grid
-       style={{alignItems: "center"}}
+       style={{alignItems: "top"}}
        span={12}
-        sx={{ width: "100%", height: "fitContent", gap: device !== "laptop" ? "2vh" : "0", margin: "5vh 0", alignItems: "center" }}
+        sx={{ width: "100%", height: "fitContent", gap: device !== "laptop" ? "2vh" : "0", margin: "5vh 0", alignItems: "top"}}
       >
 
         <Grid.Col span={device !== "laptop" ? 12 : 4}>
@@ -51,7 +51,7 @@ export default function SortimentMobile(props) {
           </Grid.Col>
 
       </Grid>
-      <Button
+      {button_text && <Button
         shadow="xl"
         variant="gradient"
         gradient={{ from: "#327b62", to: "teal" }}
@@ -78,7 +78,7 @@ export default function SortimentMobile(props) {
         >
           Sortiment
         </Text>
-      </Button>
+      </Button>}
     </div>
   );
 }

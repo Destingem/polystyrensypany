@@ -1,10 +1,10 @@
-import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
+import { Card, Image, Text, Badge, Button, Group, Space } from '@mantine/core';
 import Link from 'next/link';
 // image="" header="" text="" buttonText=""
 export default function PolyCard(props){
     let {image, header, text, buttonText, link, device} = props;
     return(
-        <Card shadow="sm" p="lg" radius="md" withBorder>
+        <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: "100% !important", display: "flex", flexDirection: "column"}}>
         <Card.Section>
           <Image
             src={image.url}
@@ -21,9 +21,9 @@ export default function PolyCard(props){
         <Text size="sm" color="dimmed">
          {text}
         </Text>
-  
+        <Space h="xl" />
        <Link href={link}>
-       <Button variant="light" color="teal" fullWidth mt="md" radius="md">
+       <Button variant="light" color="teal" fullWidth mt="md" radius="md" sx={{marginTop: "auto !important",}}>
           {buttonText}
         </Button>
        </Link>

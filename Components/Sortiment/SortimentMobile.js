@@ -1,12 +1,6 @@
 import Footer from "../UI/Footer"
-import MainScreen from "../UI/MainScreen"
 import {List, ListItem, Text, Grid, Paper, Space, Box} from "@mantine/core"
-import {BsCircle } from "react-icons/bs"
-import IndexDivider from "../UI/IndexDivider"
-import Link from "next/link"
-import SortimentVyuziti from "./SortimentVyuziti"
-import SortimentSortiment from "./SortimentSortiment"
-import Image from "next/image"
+import Sortiment from "../Index/Sortiment"
 import DefaultScreen from "../UI/DefaultScreen"
 export default function SortimentMobile(props){
   let {device} = props
@@ -34,7 +28,7 @@ export default function SortimentMobile(props){
                
                 {device === "laptop" && <Space h="xl" />}
              
-     <SortimentSortiment device={device} />
+     <Sortiment device={device} button_text={false}/>
                 </div>
             <Footer />
         </div>
