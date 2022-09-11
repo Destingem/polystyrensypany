@@ -12,25 +12,8 @@ export default function IndexMobile(props) {
   const video = useRef();
   return (
     <div className={styles.main}>
-      <nav>
-        <NavBar />
-      </nav>
-      <video
-        ref={video}
-        autoPlay
-        loop
-        speed
-        muted
-        height="100px"
-        style={{
-          height: "60vh",
-          width: "100vw",
-          maxWidth: "100%",
-        }}
-        className={styles.video}
-      >
-        <source src="video/video4.mp4" />
-      </video>
+      
+     
      <MobileMainScreen />
       <SubTextMobile />
      <Text1 />

@@ -6,7 +6,7 @@ export default  function SubTextMobile() {
       <Text
         size="sm"
         sx={{
-          color: "#545454",
+          color: "#e5e5e5",
           fontSize: "1rem",
           marginTop: "0vh",
           padding: "",
