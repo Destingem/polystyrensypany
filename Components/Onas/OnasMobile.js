@@ -10,7 +10,7 @@ export default function OnasMobile(props) {
   let textSx = device !== "laptop" ? { color: "#545454", fontSize: "1rem", textAlign: "left" } : { color: "#545454", textAlign: "left"}
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+      style={{ display: "flex", flexDirection: "column", textAlign: "left" }}
     >
       <DefaultScreen label="O nás" image="/images/polystyrenestructure.jpg" device={props.device}/>
       <section
@@ -31,7 +31,7 @@ export default function OnasMobile(props) {
         <Space h="xl" /><Text
           size="lg"
           weight={400}
-          sx={{ color: "#545454", fontSize: "1rem",textAlign: "center" }}
+          sx={{ color: "#545454", fontSize: "1rem",textAlign: "left" }}
         >
           V roce 2009 jsem začal pracovat ve firmě na likvidaci odpadu. Firma
           krom jiného svážela i zbytkový polystyren ze stavebnictví, jehož
@@ -39,11 +39,11 @@ export default function OnasMobile(props) {
           polystyrenu, přemýšlel jsem co s tím. Nápad na sebe nenechal dlouho
           čekat…
         </Text>
-        <Divider my="xl" label="Label in the center" labelPosition="center" />
+        <Divider my="xl" label="" labelPosition="center" />
         <Text
           size="lg"
           weight={400}
-          sx={{ color: "#545454", fontSize: "1rem", textAlign: "center" }}
+          sx={{ color: "#545454", fontSize: "1rem", textAlign: "left" }}
         >
           Bydlím ve starém rodinném domku z roku 1937, dům není zateplený, má i
           problémy s vlhkostí, takže potřebuje ideální izolaci, která bude
@@ -56,7 +56,7 @@ export default function OnasMobile(props) {
         <Text
           size="lg"
           weight={400}
-          sx={{ color: "#545454", fontSize: "1rem", textAlign: "center" }}
+          sx={{ color: "#545454", fontSize: "1rem", textAlign: "left" }}
         >
           Následně na to jsem zkusil sypaný polystyren prodávat a zdařilo se.
           Dodnes si pamatuji na svého prvního zákazníka, který potřeboval sypaný
@@ -69,7 +69,7 @@ export default function OnasMobile(props) {
         <Text
           size="lg"
           weight={400}
-          sx={{ color: "#545454", fontSize: "1rem", textAlign: "center" }}
+          sx={{ color: "#545454", fontSize: "1rem", textAlign: "left" }}
         >
           Když k nám dnes přijede zákazník na doporučení, je to pro mě velká
           radost a utvrzení, že výroba kvalitní sypané tepelné izolace má smysl.
@@ -80,7 +80,7 @@ export default function OnasMobile(props) {
         <Text
           size="lg"
           weight={500}
-          sx={{ color: "#545454", fontSize: "1rem", textAlign: "center" }}
+          sx={{ color: "#545454", fontSize: "1rem", textAlign: "left" }}
         >
           Byla by škoda nevyužít všechny vlastnosti a přednosti, které
           polystyren sypaný, drcený má.
