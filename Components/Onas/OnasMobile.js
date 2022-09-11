@@ -12,7 +12,7 @@ export default function OnasMobile(props) {
     <div
       style={{ display: "flex", flexDirection: "column", textAlign: "left" }}
     >
-      <DefaultScreen label="O nás" image="/images/polystyrenestructure.jpg" device={props.device}/>
+      <DefaultScreen label="O nás" image="/images/backgroundBall1.png" device={props.device}/>
       <section
         style={{
           width: "100vw",

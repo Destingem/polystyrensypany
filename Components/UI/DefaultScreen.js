@@ -3,12 +3,12 @@ import {Space, Text} from "@mantine/core"
 import Image from "next/image";
 
 export default function MainScreen(props) {
-  let labelSx = {color: "white", fontSize: "3rem", margin: "0"}
+  let labelSx = {color: "white", fontSize: "3rem", margin: "0", marginTop: "auto", marginBottom: "auto"}
   if (props.device == "laptop") {
     labelSx = {color: "white", fontSize: "5rem", marginTop: "0", margin: "0"}
   }
   if (props.device == "tablet") {
-    labelSx = {color: "white", fontSize: "6rem", marginTop: "0"}
+    labelSx = {color: "white", fontSize: "6rem", marginTop: "0", marginTop: "auto", marginBottom: "auto"}
   }
  
   let labelSx2 = {color: "white", fontSize: "2rem"}
@@ -32,12 +32,10 @@ export default function MainScreen(props) {
           
 
           </div>}
-    {props.device !== "laptop" && <div style={{width: "100vw", height: "60vh", backgroundImage: "url(/images/mobiledefault.png)", textAlign: "center", objectFit: "cover", display: "flex", flexDirection: "column", backgroundSize: "cover", backgroundPosition: "bottom"}}>
+    {props.device !== "laptop" && <div style={{width: "100vw", height: "60vh", backgroundImage: "url(/images/backgroundBall1.png)", textAlign: "center", objectFit: "cover", display: "flex", flexDirection: "column", backgroundSize: "cover", backgroundPosition: "bottom"}}>
     <NavBar />
           <div className="centered" style={{marginTop: "12vh",marginBottom: "10vh",display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "3vh", overflow: "hidden"}}>
-       <div>
-       <Image src="/images/mobilelogo.png" layout="responsive" width={400} height={79}/>
-       </div>
+       
          
           {props.polysyp && <Text component="h1" sx={labelSx2}>Polystyren sypaný</Text>}
           <div style={{backgroundColor: "#3a7b61", maxHeight: "100%", padding: "0 auto 0 auto", minWidth: "100%", marginLeft: "auto", marginRight: "auto", textAlign: "center"}}>
