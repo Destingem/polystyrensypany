@@ -1,7 +1,8 @@
+import SortimentMobile from "./SortimentMobile"
 export default function SortimentTablet(){
     return(
-        <div>
-            <h1>SortimentTablet</h1>
-        </div>
+        <>
+            <SortimentMobile device="tablet" />
+        </>
     )
 }

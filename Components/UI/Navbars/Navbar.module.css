@@ -61,22 +61,22 @@
    
 }
 .header_laptop > * > * > p{
-    color: #327b62;
+    color: #eeee;
     font-weight: 600;
     transition: 0.5s;
 }
 .header_laptop > * > p{
-    color: #327b62;
+    color: #eeee;
     font-weight: 600;
     transition: 0.5s;
 }
 .header_laptop > * > p:hover{
-    color: black;
+    color: #cccccc;
     font-weight: 600;
     cursor: pointer;
 }
 .header_laptop > * > * > p:hover{
-    color: black;
+    color: #cccccc;
     font-weight: 600;
     cursor: pointer;
 }

@@ -7,7 +7,7 @@ import SubTextMobile from "./MobileComponents/SubTextMobile";
 import Text1 from "./MobileComponents/Text1";
 import DuvodyMobile from "./MobileComponents/DuvodyMobile";
 import Vyuziti from "./MobileComponents/Vyuziti";
-import SortimentMobile from "./MobileComponents/SortimentMobile";
+import Sortiment from "./Sortiment";
 export default function IndexMobile(props) {
   const video = useRef();
   return (
@@ -36,7 +36,7 @@ export default function IndexMobile(props) {
      <Text1 />
      <DuvodyMobile />
      <Vyuziti />
-     <SortimentMobile />
+     <Sortiment />
       <Footer />
     </div>
   );

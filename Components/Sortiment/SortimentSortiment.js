@@ -2,7 +2,7 @@ import {Grid, Paper, Text} from "@mantine/core"
 import Link from "next/link"
 export default function SortimentSortiment(props){
     let {device} = props
-    let polystyreny = [{name: "Polystyren sypaný - XPS", image: "/images/barevny_c.png", url: "/drcenypolystyren-XPS"}, {name: "Polystyren sypaný - EPS šedý", image: "/images/sedy_c.png", url: "/drcenypolystyren-sedy"}, {name: "Polystyren sypaný - EPS bílý", image: "/images/bily_c.png", url: "/drcenypolystyren-bily"}]
+    let polystyreny = [{name: "Polystyren sypaný - XPS", image: "/images/XPS.jpg", url: "/drcenypolystyren-XPS"}, {name: "Polystyren sypaný - EPS šedý", image: "/images/sedy2.jpg", url: "/drcenypolystyren-sedy"}, {name: "Polystyren sypaný - EPS bílý", image: "/images/bily.jpg", url: "/drcenypolystyren-bily"}]
     return(
         <div style={{marginTop: "5vh"}}>
        

@@ -22,10 +22,11 @@ export default function NavbarLaptop(props) {
     <div
       className={styles.main_laptop}
       style={{
-        backgroundColor: scroll.y > 0 && "rgba(84, 84, 84, 0.5)",
+        backgroundColor: scroll.y > 0 ? "rgba(50, 123, 98, 0.7)" : "rgba(50, 123, 98, 0.3)",
         position: "fixed",
         zIndex: "12000",
         transition: scroll.y > 0 ? "2s" : "0.5s",
+        backdropFilter: "",
       }}
     >
       <div className={styles.header_laptop}>

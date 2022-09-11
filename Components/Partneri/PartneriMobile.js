@@ -18,7 +18,7 @@ export default function PartneriMobile(props){
         }}>
         <Text size="xl" weight={400} sx={{ color: "#545454", fontSize: "1rem", marginBottom: "2vh" }}>Zde Vám budeme postupně představovat partnery, kteří používají naší izolaci pro realizaci svých zakázek.</Text>
        <Space h={30} />
-        <div style={device !== "laptop" ? {display: "flex", flexDirection: "column", gap: "2vh"} : {display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <div style={device !== "laptop" ? device !== "tablet" ? {display: "flex", flexDirection: "column", gap: "2vh"} : {display: "flex", flexDirection: "row", gap: "2vh"} : {display: "flex", alignItems: "center", justifyContent: "center"}}>
             
         <Link href="https://www.drevostavby-myhome.cz" >
                

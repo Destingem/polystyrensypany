@@ -2,13 +2,13 @@ import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 import Link from 'next/link';
 // image="" header="" text="" buttonText=""
 export default function PolyCard(props){
-    let {image, header, text, buttonText, link} = props;
+    let {image, header, text, buttonText, link, device} = props;
     return(
         <Card shadow="sm" p="lg" radius="md" withBorder>
         <Card.Section>
           <Image
             src={image.url}
-            height={160}
+            height={device !== "laptop" ? 160 : "30vh"}
             alt={image.alt}
           />
         </Card.Section>

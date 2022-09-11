@@ -34,7 +34,7 @@ export default function SortimentMobile(props){
                
                 {device === "laptop" && <Space h="xl" />}
              
-     <SortimentSortiment device={device} headingSx={headingSx} labelSx={labelSx}/>
+     <SortimentSortiment device={device} />
                 </div>
             <Footer />
         </div>

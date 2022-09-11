@@ -2,12 +2,12 @@
 
 .main {
   height: fit-content;
-  padding: 4rem 0;
+  padding:  0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
 }
 
 .footer {
@@ -132,30 +132,35 @@
   padding-bottom: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
  
 }
 .second{
+ min-height: 10vh;
   width: 100%;
   height: fit-content;
   display: flex;
-  background-color: #fff;
-  flex-direction: column;
-  padding: 5vh 35vw 5vh 5vw;
+ 
+  flex-direction: row;
+  
 }
 .third{
   width: 100%;
   height: fit-content;
   display: flex;
-  background-color: #fafafa;
+  background-color: white;
   flex-direction: column;
   padding: 5vh 5vw 5vh 5vw;
+
 }
 .fourth{
   width: 100%;
   height: fit-content;
   display: flex;
-  background-color: #fafafa;
+  background-color: whitesmoke;
   gap: 5vw;
   padding: 5vh 5vw 5vh 5vw;
 }
@@ -172,9 +177,12 @@
   list-style-type: none;
   display: flex;
   align-items: center;
+  gap: 2vw;
 }
 .duvody{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 1vh;
+  justify-content: space-between;
   
 }

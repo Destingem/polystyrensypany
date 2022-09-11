@@ -2,6 +2,7 @@ import Navbar from "../../Components/UI/Navbar";
 import DefaultScreen from "../../Components/UI/DefaultScreen";
 import { Text, Divider, Space } from "@mantine/core";
 import Link from "next/link";
+import {AiOutlineLink} from "react-icons/ai"
 import Image from "next/image";
 import Footer from "../../Components/UI/Footer";
 export default function OnasMobile(props) {
@@ -165,7 +166,7 @@ export default function OnasMobile(props) {
           Od dubna 2012 poskytujeme <strong>strojové zafoukání</strong> naší izolace
         </Text>
         <Space h="xl" />
-        <Text size="lg" weight={400} sx={textSx}>Od roku 2013 jsme uvedeni v globální firemní databázi <Link href="https://cz.kompass.com/c/polystyren-sypany-richard-humes/cz046098/"><strong style={{color: "#e5312a"}}>KOMPASS</strong></Link>, která nám pomáhá zlepšit naše prodejní a marketingové aktivity.</Text>
+        <Text size="lg" weight={400} sx={textSx}>Od roku 2013 jsme uvedeni v globální firemní databázi <Link href="https://cz.kompass.com/c/polystyren-sypany-richard-humes/cz046098/"><strong style={{color: "#e5312a"}}>KOMPASS <AiOutlineLink /></strong></Link>, která nám pomáhá zlepšit naše prodejní a marketingové aktivity.</Text>
         <Space h="xl" />
         <Text size="lg" weight={400} sx={textSx}>V srpnu 2015 jsme obdrželi Certifikát - prověřená společnost". Tímto certifikátem se můžou pochlubit firmy, které nemají žádné negativní ohlasy od zákazníků a obchodních partnerů. Je to pro nás další ujištění, že to děláme dobře.</Text>
         <Space h="xl" />
