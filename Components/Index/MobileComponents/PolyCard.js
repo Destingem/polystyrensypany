@@ -1,5 +1,6 @@
-import { Card, Image, Text, Badge, Button, Group, Space } from '@mantine/core';
+import { Card,  Text, Badge, Button, Group, Space } from '@mantine/core';
 import Link from 'next/link';
+import Image from 'next/image';
 // image="" header="" text="" buttonText=""
 export default function PolyCard(props){
     let {image, header, text, buttonText, link, device} = props;
@@ -8,8 +9,10 @@ export default function PolyCard(props){
         <Card.Section>
           <Image
             src={image.url}
-            height={device !== "laptop" ? 160 : "30vh"}
+            height={device !== "laptop" ? 3 : 3}
+            width={device !== "laptop" ? 4 : 4}
             alt={image.alt}
+            layout="responsive"
           />
         </Card.Section>
   
