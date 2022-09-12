@@ -29,16 +29,16 @@ export default function MultipleItemMobile(props) {
           alignitems: "center",
           textAlign: "right",
           borderBottom: "none !important",
-          gap: "10%",
+          gap: "5%",
         }}
       >
         {props &&
           props.items &&
           props.items.map((item, index) => {
             return (
-              <Paper mb="xl">
+              <Paper mb="sm">
                 <Link href={item.href}>
-                  <Text size="lg" sx={{ fontWeight: 400, color: "#545454" }}>
+                  <Text size="md" sx={{ fontWeight: 400, color: "#545454" }}>
                     {item.label}
                   </Text>
                 </Link>

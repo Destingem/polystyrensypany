@@ -119,6 +119,7 @@ export default function NavbarLaptop(props) {
             
             </MenuItem>
             </Link>
+            
             <Divider />
             <Menu.Label>Produkty</Menu.Label>
             <Link href="/drcenypolystyren-bily">
@@ -142,6 +143,14 @@ export default function NavbarLaptop(props) {
               <p> Polystyren sypaný - XPS</p>
             </MenuItem>
             </Link>
+            <Divider />
+            <Link href="/ceny">
+            <MenuItem>
+            
+            <p> Ceník</p>
+          
+          </MenuItem>
+          </Link>
             <Divider />
             <Menu.Label>Služby</Menu.Label>
 
