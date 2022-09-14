@@ -2,7 +2,7 @@ import MainScreen from "../UI/MainScreen";
 import {Text, Card, Space, Divider, Grid, Group, Badge, Input, InputWrapper, Textarea, NumberInput, Select, Button, Alert} from "@mantine/core";
 import Footer from "../UI/Footer";
 import { useForm } from "@mantine/form";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "@mantine/hooks";
 import { FiAlertTriangle } from "react-icons/fi";
 import DefaultScreen from "../UI/DefaultScreen";
@@ -16,7 +16,7 @@ export default function HodnoceniMobile(props) {
           prijmeni: "",
           spolecnost: "",
           produkt: "",
-          ciselne_hodnoceni: "",
+          ciselne_hodnoceni: 0,
           slovni_hodnoceni: "",
 
         },
@@ -37,12 +37,15 @@ export default function HodnoceniMobile(props) {
             setTimeout(()=> {
                 setFeedback({type: "", message: ""})
             }, [5000])
+         
         } else if (feedback.type === "error"){
             setScroll({x: 0, y: 0})
         }
     }, [feedback])
     function submitHandler(values) {
+        
         props.handleSubmit(values);
+      
     }
     const [produkty, setProdukty] = useState(["Polystyren sypaný - EPS bílý", "Polystyren sypaný - EPS šedý", "Polystyren sypaný - XPS"])
     const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}]
@@ -104,7 +107,7 @@ export default function HodnoceniMobile(props) {
                 <Input    {...form.getInputProps('spolecnost')} />
             </InputWrapper>
             <InputWrapper label="Číselné hnodnocení" required>
-                <NumberInput min={0} max={10} placeholder="od 0 do 10"    {...form.getInputProps('ciselne_hodnoceni')}/>
+                <NumberInput min={0} max={10} placeholder="od 0 do 10"   {...form.getInputProps('ciselne_hodnoceni')} value={form.values.ciselne_hodnoceni}  />
             </InputWrapper>
             <InputWrapper label="Produkt">
                 <Select data={produkty} placeholder="Vyberte produkt"    {...form.getInputProps('produkt')}

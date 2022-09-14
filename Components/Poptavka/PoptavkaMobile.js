@@ -10,8 +10,10 @@ import {FiAlertTriangle} from 'react-icons/fi';
 import { useReducedMotion, useWindowScroll } from '@mantine/hooks';
 import DefaultScreen from "../UI/DefaultScreen"
 export default function PoptavkaMobile(props) {
+ 
     const dumbBtn = useRef()
     let {device} = props;
+    const numberRef = useRef(null);	
     const [scroll, setScroll] = useWindowScroll()
     const [feedback, setFeedback] = useState({type: "", message: ""});
     const [produkty, setProdukty] = useState(["zásyp do podlah", "zásyp do stropů", "zásyp do krovů a střech", "zásyp do vnitřních příček domu", "zásyp dilatační spáry", "zásyp do dutých cihel", "zateplení šachty vzduchotechniky", "zateplení akumulační nádrže", "do betonu", "náplň do sedacích vaků", "sněžení", "ostatní"  ]) 
@@ -20,9 +22,9 @@ export default function PoptavkaMobile(props) {
             initialValues: {
            
                 ucel: [],
-                mnozstvi: 0,
+                mnozstvi: null,
                 jednotka: "ks",
-                termin: "",
+                termin: null,
                 doprava: false,
                 specifikace: "",
                 jmeno: "",
@@ -38,6 +40,9 @@ export default function PoptavkaMobile(props) {
     function submitHandler(values) {
         props.handleSubmit(values);
         form.setFieldValue("mnozstvi", 0);
+        form.reset()
+        numberRef.current.value = null;
+      
     }
     useEffect(()=> {
         setFeedback(props.feedback)
@@ -77,7 +82,7 @@ export default function PoptavkaMobile(props) {
         </InputWrapper>
         <div style={{display: "flex", gap: "5vw"}}>
         <InputWrapper label="Poptávané množství" sx={{width: device !== "laptop" || "tablet" ? "75%" : "75%" }} required>
-        <NumberInput placeholder="" formatter={value => {value}} {...form.getInputProps("mnozstvi")} required/>
+        <NumberInput placeholder="" formatter={value => {value}} {...form.getInputProps("mnozstvi")} required value={form.values.mnozstvi} ref={numberRef}/>
         </InputWrapper>
         <InputWrapper label="Jednotka" sx={{width: "25%"}} required>
         <Select min={1} max={9999} step={1} data={["ks", "m3"]} defaultValue="ks" {...form.getInputProps("jednotka")} required/>
@@ -85,12 +90,12 @@ export default function PoptavkaMobile(props) {
         </div>
         
         <InputWrapper label="Požadovaný termín dodání" required >
-        <DatePicker locale="cs"  {...form.getInputProps("termin")} required/>
+        <DatePicker locale="cs"  {...form.getInputProps("termin")} required  value={form.values.termin}/>
         </InputWrapper>
         <InputWrapper label="S dopravou" required>
         <Switch 
        color="lime"
-      
+      checked={form.values.doprava}
         size="xl"
         onLabel="Ano" offLabel="Ne"
        {...form.getInputProps("doprava")}
@@ -123,7 +128,7 @@ export default function PoptavkaMobile(props) {
                 <Input    {...form.getInputProps('spolecnost')}/>
             </InputWrapper>
             </div>
-            <InputWrapper label="Kontaktní adresa" required>
+            <InputWrapper label="Dodací adresa" required>
                 <Input    {...form.getInputProps('adresa')} required/>
             </InputWrapper>
             <InputWrapper label="Telefonní číslo" required>

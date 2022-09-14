@@ -1,26 +1,71 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
-export default async function handler(req, res){
-
+export default async function handler(req, res) {
   //  console.log(req);
-    console.log(JSON.parse(req.body));
-    res.status(201).send("OK");
-    let testAccount = await nodemailer.createTestAccount();
-    let transporter = nodemailer.createTransport({
-        host: "smtp.ethereal.email",
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-          user: testAccount.user, // generated ethereal user
-          pass: testAccount.pass, // generated ethereal password
-        },
-      });
-      let info = await transporter.sendMail({
-        from: '"Polystyren sypaný - objednávky bot" <obednavkybot@example.com>', // sender address
-        to: "ondrej.zaplatilek@gmail.com, baz@example.com", // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: "<b>Hello world?</b>", // html body
-      });
-      console.log(info);
+
+  let objednavka = JSON.parse(req.body);
+console.log(objednavka);
+  let {
+    ucel,
+    mnozstvi,
+    jednotka,
+    termin,
+    doprava,
+    specifikace,
+    jmeno,
+    prijmeni,
+    funkce,
+    spolecnost,
+    adresa,
+    telefon,
+    email,
+  } = objednavka;
+  res.status(201).send("OK");
+
+  let transporter = nodemailer.createTransport({
+    host: "smtp.eu.mailgun.org",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.USER_mail, // generated ethereal user
+      pass: process.env.USER_pass, // generated ethereal password
+    },
+  });
+  let subject = "Objednávka - " + jmeno + " " + prijmeni;
+  let html =
+    "<h1>Objednávka</h1><p>Ucel: " +
+    ucel +
+    "</p><p>Mnozstvi: " +
+    mnozstvi +
+    " " +
+    jednotka +
+    "</p><p>Termin: " +
+    termin +
+    "</p><p>Doprava: " +
+    doprava +
+    "</p><p>Specifikace: " +
+    specifikace +
+    "</p><p>Jmeno: " +
+    jmeno +
+    "</p><p>Prijmeni: " +
+    prijmeni +
+    "</p><p>Funkce: " +
+    funkce +
+    "</p><p>Spolecnost: " +
+    spolecnost +
+    "</p><p>Adresa: " +
+    adresa +
+    "</p><p>Telefon: " +
+    telefon +
+    "</p><p>Email: " +
+    email +
+    "</p>";
+  let info = await transporter.sendMail({
+    from: '"Polystyren sypaný - objednávky bot" <obednavkybot@example.com>', // sender address
+    to: "ondrej.zaplatilek@gmail.com", // list of receivers
+    subject, // Subject line
+    text: html, // plain text body
+    html, // html body
+  });
+  console.log(info);
 }
