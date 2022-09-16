@@ -80,9 +80,9 @@ export default function Vyuziti(){
           </Text>
           
         </div>
-        <div style={{ minWidth: "30%", marginTop: "12vh" }}>
+        <div style={{ minWidth: "30%", marginTop: "auto", marginBottom: "5vh" }}>
           <Image
-            src="/images/podlaha.png"
+            src="/images/podlaha.jpg"
             layout="responsive"
             width="100px"
             height="100px"

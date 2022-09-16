@@ -113,7 +113,7 @@ export default function BilyMobile(props) {
             <Image src="/images/polystyren_jemny_detail.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             <Grid.Col span={4}>
-            <Image src="/images/polystyren_jemny_detail2.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/Polystyren_sypany_bily.jpg" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             </Grid>}
         </div>

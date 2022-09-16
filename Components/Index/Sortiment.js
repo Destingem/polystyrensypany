@@ -41,7 +41,7 @@ export default function SortimentMobile(props) {
 
           <Grid.Col  span={device !== "laptop" ? 12 : 4}>
             <PolyCard
-              image={{ url: "/images/XPS.jpg", alt: "Polystyren drcený XPS" }}
+              image={{ url: "/images/XPS2.jpg", alt: "Polystyren drcený XPS" }}
               header="Polystyren drcený XPS"
               text="Polystyren sypaný XPS (extrudovaný) je vodě odolný. Tuto izolaci doporučujeme pod úroveň terénu - zasypání drenážních trubek, zásyp do podlahy, izolace okolo bazénů."
               buttonText="Více o drceném XPS"

@@ -1,7 +1,8 @@
-import { List, ListItem, Space, Text } from "@mantine/core";
+import { Grid, List, ListItem, Space, Text } from "@mantine/core";
 import SubHeading1 from "../UI/SubHeading1";
 import Footer from "../UI/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import DefaultScreen from "../UI/DefaultScreen";
 export default function RecyklaceMobile(props) {
   let { device } = props;
@@ -69,6 +70,10 @@ export default function RecyklaceMobile(props) {
               );
             })}
         </List>
+        <div style={{ display: "flex", justifyContent: "center", gap: "3%", margin: "5vh 0"}}>
+          <div style={{minWidth: "25%",}}><Image src="/images/polystyren_recyklace.jpg"  style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
+          <div style={{minWidth: "25%"}}><Image src="/images/recyklace_odpad.jpg"  style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
+        </div>
         <Space h="xl" />
        <div style={{display: "flex"}}>
       <div>

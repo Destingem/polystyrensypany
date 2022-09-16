@@ -230,7 +230,7 @@ export default function SortimentVyuziti(props) {
         
         </div>
         <div style={{width: "40%", height: "60%"}}>
-       <Image src="/images/podlaha.png" height={300} width={400} layout={"responsive"} />
+       <Image src="/images/podlaha.jpg" height={300} width={400} layout={"responsive"} />
        </div>
      </div>
       <div style={{width: "70%", marginRight: "auto", gap: "2vh", display: "flex", flexDirection: "column"}}>

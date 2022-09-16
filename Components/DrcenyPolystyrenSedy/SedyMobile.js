@@ -13,6 +13,8 @@ export default function SedyMobile(props) {
         <div>
         <DefaultScreen label="Polystyren sypaný - EPS šedý" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
+           <div style={{display: "flex", flexDirection: device !== "laptop" ? "column" : "row"}}>
+            <div>
             <Heading device={device}>
             Polystyren sypaný, drcený - Polystyren sypaný - EPS šedý
             </Heading>
@@ -45,6 +47,11 @@ export default function SedyMobile(props) {
             })}
                 
             </List>
+            </div>
+            <div style={{minWidth: "30%", marginTop: "auto", marginBottom: "auto"}}>
+                <Image src="/images/sedy_zatepleni.jpg" layout="responsive" width={4} height={3} />
+            </div>
+           </div>
             <Link href="/ceny#polystyren-sypany-EPS-sedy"><Button variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "15%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník</Button></Link>
             {device == "mobile" ? <><Image src="/images/sedy.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             <Image src="/images/sedy_pytel.png" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></> : 
