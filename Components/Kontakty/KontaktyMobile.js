@@ -1,11 +1,10 @@
 import { List, ListItem, Space, Table, Text } from "@mantine/core";
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreen";
-import { AiOutlinePhone } from "react-icons/ai";
-import { MdPhone, MdAlternateEmail } from "react-icons/md";
+import SubHeading1 from "../UI/SubHeading1";
 import ProvozovnaLaptop from "./ProvozovnaLaptop";
 import ProvozovnaMobile from "./ProvozovnaMobile";
 import DefaultScreen from "../UI/DefaultScreen";
+import Heading from "../UI/Heading";
 export default function KontaktyMobile(props) {
   let {device} = props;
   return (
@@ -21,21 +20,12 @@ export default function KontaktyMobile(props) {
           textAlign: "center",
         }}
       >
-        <Text
-          weight={600}
-          size="xl"
-          sx={{
-            color: "#545454",
-            fontSize: device !== "laptop" ? "1.5rem" : "2rem",
-            marginRight: "auto",
-            marginLeft: device !== "laptop" ? "auto" : "",
-            textAlign: device !== "laptop" ? "center" : "left",
-          }}
+        <Heading device={device}
         >
           Výroba a prodej
-        </Text>
+        </Heading>
         <Space size="xl" />
-       {device !== "laptop" ? <ProvozovnaMobile />: <ProvozovnaLaptop />}
+       {device !== "laptop" ? <ProvozovnaMobile device={device}/>: <ProvozovnaLaptop device={device}/>}
      {device !== "laptop" ?   <div
             style={{
               margin: " 0",
@@ -44,19 +34,10 @@ export default function KontaktyMobile(props) {
               flexDirection: "column",
             }}
           >
-            <Text
-              weight={600}
-              size="xl"
-              sx={{
-                color: "#545454",
-                fontSize: device !== "laptop" ? "1.5rem" : "2rem",
-                marginRight: "auto",
-                marginLeft: "auto",
-                textAlign: "center",
-              }}
+            <SubHeading1 device={device}
             >
               Korespondenční adresa
-            </Text>
+            </SubHeading1>
             <Text
               weight={400}
               size="xl"
@@ -123,19 +104,10 @@ export default function KontaktyMobile(props) {
               flexDirection: "column",
             }}
           >
-            <Text
-              weight={600}
-              size="xl"
-              sx={{
-                color: "#545454",
-                fontSize: device !== "laptop" ? "1.5rem" : "2rem",
-                marginRight: "auto",
-               
-                textAlign: "left",
-              }}
+            <SubHeading1 device={device}
             >
               Korespondenční adresa
-            </Text>
+            </SubHeading1>
            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
           <div style={{width: "50%"}}>
           <Text

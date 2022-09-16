@@ -72,7 +72,7 @@ export default function PoptavkaMobile(props) {
         
      
         <div >
-        <SubheaderText>Poptávkový formulář</SubheaderText>
+        <SubheaderText device={device}>Poptávkový formulář</SubheaderText>
         <Space h="3vh"/>
       
 
@@ -107,7 +107,7 @@ export default function PoptavkaMobile(props) {
         <Button type="submit" ref={dumbBtn}  sx={{display: "none"}}/>        </div>
         <Space h="3vh"/>
        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
-       <SubheaderText>Kontaktní údaje</SubheaderText>
+       <SubheaderText device={device}>Kontaktní údaje</SubheaderText>
         <Space h="3vh"/>
             <div style={{display: "flex", gap : "5vw"}}>
 

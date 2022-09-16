@@ -1,10 +1,11 @@
-import MainScreen from "../UI/MainScreen";
+
 import Footer from "../UI/Footer";
 import {Text, List, ListItem, Grid, Button, Space} from "@mantine/core";
 import Image from "next/image";
-import {BsCircle} from "react-icons/bs"
 import Link from "next/link";
 import SortimentVyuziti from "../Sortiment/SortimentVyuziti";
+import Heading from "../UI/Heading";
+import DefaultScreen from "../UI/DefaultScreen";
 export default function BilyMobile(props) {
 
     let {device} = props;
@@ -23,34 +24,20 @@ export default function BilyMobile(props) {
     "znemožňuje uhnízdění hlodavců",
     "příjemný na dotyk",
     "cenově dostupný"]
-    let headingSx =  device !== "laptop" ? { color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: "auto", textAlign: "center" } : { color: "#545454", fontSize: "3rem", textAlign: "left", marginRight:"auto" }
-    let labelSx = device !== "laptop" ? {
-      color: "#fff",
-      fontSize: "10vw",
-      marginTop: "0vh",
-      padding: "",
-    }: {
-      color: "#fff",
-      fontSize: "3rem",
-      marginTop: "0vh",
-      padding: "",
-      position: "absolute",
-      marginLeft: "auto",
-      cursor: "pointer",
-    }
+    
     return (
         <div>
-        <MainScreen  polysyp={true} label="EPS bílý" image="/images/bily_c.png" device={device} />
+        <DefaultScreen  label="Polystyren sypaný - EPS bílý" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
            
             
-            <Text weight={600} size="xl" sx={headingSx}>
+            <Heading device={device}>
             Polystyren sypaný EPS bílý - základní vlastnosti
-            </Text>
+            </Heading>
             {device !== "laptop" &&   <List
                 spacing="xs"
           center
-          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          icon={ <div style={{backgroundColor: "#216a55", borderRadius: "", aspectRatio: 1, width: "4vw", justifyContent:  "center", alignItems: "center", display: "flex", minWidth: "10%"}} />}
           sx={{ textAlign: "left" }}
         >
           {pointy &&
@@ -76,7 +63,7 @@ export default function BilyMobile(props) {
         <List
                 spacing={"xs"}
           center
-          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          icon={ <div style={{backgroundColor: "#216a55", borderRadius: "", aspectRatio: 1, width: "1vw", justifyContent:  "center", alignItems: "center", display: "flex", minWidth: "10%"}} />}
           sx={{ textAlign: "left" , width: "50%"}}
         >
           {pointy &&
@@ -99,14 +86,14 @@ export default function BilyMobile(props) {
             })}
         </List>
        <div style={{width: "40%", height: "60%"}}>
-       <Image src="/images/sedy.png" height={300} width={400} layout={"responsive"} />
+       <Image src="/images/bily.jpg" height={300} width={400} layout={"responsive"} />
        </div>
         </div>}
         <Space h="xl" />   
        <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "3vh"}}>
-       <Text weight={600} size="xl" sx={headingSx}>
+       <Heading weight={600} size="xl" device={device} style={{marginRight: device == "laptop" ? "auto" : ""}}>
                 Využití
-                </Text>
+                </Heading>
             
             <SortimentVyuziti device={device} />
      

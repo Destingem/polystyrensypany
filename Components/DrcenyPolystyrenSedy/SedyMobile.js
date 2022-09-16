@@ -1,20 +1,21 @@
 import Footer from "../UI/Footer";
-import MainScreen from "../UI/MainScreen";
+import DefaultScreen from "../UI/DefaultScreen";
 import {Text, List, ListItem, Grid, Button} from "@mantine/core"
 import Image from "next/image";
 import {BsCircle} from "react-icons/bs";
 import Link from "next/link";
+import Heading from "../UI/Heading";
 export default function SedyMobile(props) {
     let {device} = props;
     const items = ["tepelná vodivost od 0,031W/mk",
     "tepelný odpor R= od 3,15 při zásypu 10cm"]
     return (
         <div>
-        <MainScreen label="EPS šedý" image="/images/sedy_c.png" device={device}  polysyp={true}/>
+        <DefaultScreen label="Polystyren sypaný - EPS šedý" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto",marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
+            <Heading device={device}>
             Polystyren sypaný, drcený - Polystyren sypaný - EPS šedý
-            </Text>
+            </Heading>
             <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Polystyren sypaný Polystyren sypaný - EPS šedý obsahuje grafit, který odráží teplo zpět k jeho zdroji a tak zvyšuje izolační účinek. Šedý polystyren je vhodný pro dodatečné zateplení starších domů, pasivních a nízkoenergetických domů.U této izolace jsou deklarovány lepší tepelně izolační vlastnosti.
             </Text>
@@ -26,12 +27,12 @@ export default function SedyMobile(props) {
             <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Při aplikaci a skladování je nutné se vyhnout přímému slunečnímu záření.
             </Text>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.25rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
+            <Heading device={device}>
             Polystyren sypaný Polystyren sypaný - EPS šedý - tepelné vlastnosti
-            </Text>
+            </Heading>
             <List spacing="xs"
           center
-          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          icon={ <div style={{backgroundColor: "#216a55", borderRadius: "", aspectRatio: 1, width: "2vw", justifyContent:  "center", alignItems: "center", display: "flex", minWidth: "10%"}} />}
           sx={{ textAlign: "left" }}>
             {items && items.map((item, index) => {
                 return (

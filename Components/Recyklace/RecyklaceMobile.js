@@ -1,6 +1,5 @@
 import { List, ListItem, Space, Text } from "@mantine/core";
-import MainScreen from "../UI/MainScreen";
-import { BsCircle, BsCircleFill } from "react-icons/bs";
+import SubHeading1 from "../UI/SubHeading1";
 import Footer from "../UI/Footer";
 import Link from "next/link";
 import DefaultScreen from "../UI/DefaultScreen";
@@ -34,7 +33,7 @@ export default function RecyklaceMobile(props) {
           weight={600}
           size="xl"
           sx={{
-            color: "#545454",
+            color: "rgb(33, 106, 85)",
             fontSize: "1.5rem",
             marginRight: "auto",
             marginLeft: device === "laptop" ? "auto" : "0",
@@ -47,7 +46,7 @@ export default function RecyklaceMobile(props) {
         {device === "laptop" && <Space h="xl" />}
         <List
           center
-          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          icon={ <div style={{backgroundColor: "#216a55", borderRadius: "", aspectRatio: 1, width: device === "laptop" ? "2vw" : "5vw", justifyContent:  "center", alignItems: "center", display: "flex", minWidth: "10%"}} />}
           sx={{ textAlign: "left" }}
           spacing={device === "laptop" ? "xl" : ""}
         >
@@ -73,18 +72,11 @@ export default function RecyklaceMobile(props) {
         <Space h="xl" />
        <div style={{display: "flex"}}>
       <div>
-      <Text
-          size="xl"
-          weight={700}
-          sx={{
-            color: "#545454",
-            fontSize: device !== "laptop" ? "3rem" : "2rem",
-            textAlign: device !== "laptop" ? "center" :"left",
-            marginBottom: "2vh",
-          }}
+      <SubHeading1 device={device}
+          
         >
           Dokumenty
-        </Text>
+        </SubHeading1>
         <a
           href="/documents/ZPO_vzor_170604.xls"
           download={"ZPO_vzor_170604.xls"}

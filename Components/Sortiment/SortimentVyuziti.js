@@ -3,6 +3,7 @@ import SortimentText from "./SortimentText";
 import IndexDivider from "../UI/IndexDivider";
 import Image from "next/image";
 import Link from "next/link";
+import SubHeading1 from "../UI/SubHeading1";
 export default function SortimentVyuziti(props) {
 
 
@@ -11,19 +12,10 @@ export default function SortimentVyuziti(props) {
     <>
       {props.device !== "laptop" && (
         <>
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
+          <SubHeading1 device={props.device}>
+          
             Stavebnictví
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="xl"
@@ -92,19 +84,11 @@ export default function SortimentVyuziti(props) {
             Podívejte se na  <Link href="/hodnoceni" >hodnocení našich zákazníků.</Link>
           </SortimentText>
           <IndexDivider />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
+          <SubHeading1 device={props.device}>
+          
+          
             Nábytkářský průmysl
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="sm"
@@ -121,19 +105,10 @@ export default function SortimentVyuziti(props) {
             kuličkami nevznikal prach a nečistoty.
           </Text>
           <IndexDivider />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
+          <SubHeading1 device={props.device}>
+          
             Zahrádkářství
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="sm"
@@ -148,19 +123,11 @@ export default function SortimentVyuziti(props) {
             k jejímu odlehčení.
           </Text>
           <IndexDivider />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
+          <SubHeading1
+            
           >
             Zábavní průmysl
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="sm"
@@ -176,19 +143,10 @@ export default function SortimentVyuziti(props) {
             děti - náhrada vody v bazénu.
           </Text>
           <IndexDivider />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
+          <SubHeading1 device={props.device}>
+           
             A další
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="sm"
@@ -209,18 +167,9 @@ export default function SortimentVyuziti(props) {
         <>
      <div style={{display: "flex", justifyContent: "space-between", gap: "5vw", alignItems: "center"}}>
         <div style={{width: "70%"}}>
-        <Text
-            weight={500}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
+        <SubHeading1 device={props.device}>
             Stavebnictví
-          </Text>
+          </SubHeading1>
           <Space h="md" />
           <Text
             weight={400}
@@ -287,18 +236,10 @@ export default function SortimentVyuziti(props) {
       <div style={{width: "70%", marginRight: "auto", gap: "2vh", display: "flex", flexDirection: "column"}}>
         
             <div>
-            <Text
-            weight={400}
-            size="xl"
-            sx={{
-                color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
+            <SubHeading1 device={props.device}>
+          
             Nábytkářský průmysl
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
            sx={{textAlign: "left", fontSize: "1rem"}}>
@@ -311,18 +252,10 @@ export default function SortimentVyuziti(props) {
             </div>
       
         <div>
-        <Text
-            weight={400}
-            size="xl"
-            sx={{
-                color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
+        <SubHeading1 device={props.device}>
+          
             Zahrádkářství
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             sx={{textAlign: "left", fontSize: "1rem"}}
@@ -333,18 +266,9 @@ export default function SortimentVyuziti(props) {
          
         </div>
           <div>
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-                color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
+          <SubHeading1 device={props.device}>
             Zábavní průmysl
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
              sx={{textAlign: "left", fontSize: "1rem"}}
@@ -356,18 +280,10 @@ export default function SortimentVyuziti(props) {
           </div>
        
          <div>
-         <Text
-            weight={400}
-            size="xl"
-            sx={{
-                color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
+         <SubHeading1 device={props.device}>
+          
             A další
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
            sx={{textAlign: "left", fontSize: "1rem"}}

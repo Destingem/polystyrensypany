@@ -5,6 +5,7 @@ import Link from "next/link";
 import {AiOutlineLink} from "react-icons/ai"
 import Image from "next/image";
 import Footer from "../../Components/UI/Footer";
+import Heading from "../UI/Heading";
 export default function OnasMobile(props) {
   let {device} = props
   let textSx = device !== "laptop" ? { color: "#545454", fontSize: "1rem", textAlign: "left" } : { color: "#545454", textAlign: "left"}
@@ -20,14 +21,15 @@ export default function OnasMobile(props) {
           display: "flex",
           flexDirection: "column",
           padding: "3vh 5vw 3vh 5vw",
+          justifyContent: device !== "laptop" ? "center" : "",
         }}
       >
         
         
        {device !== "laptop" ? <>
-       <Text size="xl" weight={700} sx={{ color: "#545454", fontSize: device !== "laptop" ? "8vw" : "4rem", textAlign: device === "laptop" && "left"  }}>
+       <Heading device={device}>
           Jak to všechno začalo
-        </Text>
+        </Heading>
         <Space h="xl" /><Text
           size="lg"
           weight={400}
@@ -84,14 +86,14 @@ export default function OnasMobile(props) {
         >
           Byla by škoda nevyužít všechny vlastnosti a přednosti, které
           polystyren sypaný, drcený má.
-        </Text></>  :<div style={{display: "flex", justifyContent: "space-between"}}>
-        <div style={{width: "70%"}}>
-        <Space h={30}/>
-        <Text size="xl" weight={500} sx={{ color: "#545454", fontSize: device ==! "laptop" ? "8vw" : "3rem", textAlign: device === "laptop" && "left"  }}>
+        </Text><Space h="xl" /><Image src="/images/risa.jpg" width={4} height={3} layout="responsive" /></>  :<> <Text size="xl" weight={500} sx={{ color: "#545454", fontSize: device ==! "laptop" ? "8vw" : "3rem", textAlign: device === "laptop" ? "left" : "center", margin: "0"  }} component="h2">
           Jak to všechno začalo
-        </Text>
+        </Text><div style={{display: "flex", justifyContent: "space-between", gap: "5vw"}}>
+        <div style={{width: "70%", alignItems: "center", display: "flex"}}>
+        <Space h={30}/>
+       
         <Space h="xl"/>
-        <Text align="left" size="lg" sx={{color: "#545454"}}>
+        <Text align="left" size="lg" sx={{color: "#545454"}} component="p">
         V roce 2009 jsem začal pracovat ve firmě na likvidaci odpadu. Firma
           krom jiného svážela i zbytkový polystyren ze stavebnictví, jehož
           likvidace byla nákladná. Vždy když jsem viděl neskladnou hromadu
@@ -121,24 +123,25 @@ export default function OnasMobile(props) {
         </Text>
         </div>
         
-        <Image src="/images/risa_pytle.png" width={600} height={600} />
-        </div>}
+       <div style={{width: "30%"}}> <Image src="/images/risa.jpg" width={4} height={3} layout="responsive" /></div>
+        </div></>}
       </section>
       <section  style={{
-          width: "100vw",
+          
           height: "fitContent",
           display: "flex",
           flexDirection: "column",
           padding: "0vh 5vw 3vh 5vw",
         }}>
-        <Text size="xl" weight={500} sx={device !== "laptop" ? { color: "#545454", fontSize: "8vw" } : { color: "#545454", fontSize: "3rem", textAlign: "left" }}>
+        <Heading device={device}>
           POLYSTYREN SYPANÝ
-        </Text>
+        </Heading>
         <Space h={30}/>
         <Text
           size="lg"
           weight={400}
           sx={textSx}
+          component="p"
         >
           {" "}
           Náš produkt <strong>POLYSTYREN SYPANÝ</strong> je zaregistrován v Programu Ministerstva

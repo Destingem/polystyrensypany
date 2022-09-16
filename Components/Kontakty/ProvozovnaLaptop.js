@@ -1,21 +1,14 @@
 import {Table, Text, List, ListItem} from "@mantine/core";
 import { MdPhone, MdAlternateEmail } from "react-icons/md";
-export default  function ProvozovnaLaptop() {
+import SubHeading1 from "../UI/SubHeading1";
+export default  function ProvozovnaLaptop(props) {
+  let {device} = props;
     return <div style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
       <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
-        <Text
-          weight={500}
-          size="xl"
-          sx={{
-            color: "#545454",
-            fontSize: "1.5rem",
-            marginRight: "auto",
-   
-            textAlign: "left",
-          }}
+        <SubHeading1 device={device}
         >
           Provozní doba
-        </Text>
+        </SubHeading1>
         <Table sx={{height: "50%"}}>
           <thead>
             <tr>
@@ -39,19 +32,10 @@ export default  function ProvozovnaLaptop() {
           </tbody>
         </Table>
       
-          <Text
-            weight={500}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.5rem",
-              marginRight: "auto",
-         
-              textAlign: "left",
-            }}
+          <SubHeading1 device={device}
           >
             Kontakty
-          </Text>
+          </SubHeading1>
           <List spacing="xs" icon={<MdPhone color="rgb(25, 95, 0)" />} sx={{textAlign: "left"}}>
             <ListItem>
               <Text
@@ -111,19 +95,10 @@ export default  function ProvozovnaLaptop() {
           flexDirection: "column",
         }}
       >
-        <Text
-          weight={500}
-          size="xl"
-          sx={{
-            color: "#545454",
-            fontSize: "1.5rem",
-            marginRight: "auto",
-         
-            textAlign: "left",
-          }}
+        <SubHeading1 device={device}
         >
           Adresa provozovny
-        </Text>
+        </SubHeading1>
         <Text
           weight={400}
           size="xl"

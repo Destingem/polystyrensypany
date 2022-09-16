@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "@mantine/hooks";
 import { FiAlertTriangle } from "react-icons/fi";
 import DefaultScreen from "../UI/DefaultScreen";
+import Heading from "../UI/Heading";
 export default function HodnoceniMobile(props) {
     const [scroll, setScroll] = useWindowScroll()
     const [feedback, setFeedback] = useState({type: "", message: ""});
@@ -93,7 +94,7 @@ export default function HodnoceniMobile(props) {
         
         })}
         </Grid>
-        <Text weight={700} size="xl" sx={device !== "laptop" ? { color: "#545454", fontSize: "1.5rem", textAlign: "center" } : { color: "#545454", fontSize: "3rem", textAlign: "center" }}>Formulář</Text>
+        <Heading device={device} align="center">Formulář</Heading>
         <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {} : {display: "flex", flexDirection: "column", alignItems: "right", width: "50%", gap: "1vh", alignSelf: "center"}}>
             <div style={{display: "flex", gap : "5vw"}}>
             <InputWrapper label="Jméno" required sx={{width: "50%"}}>

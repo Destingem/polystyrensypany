@@ -4,9 +4,10 @@ import { Text, List, ListItem, Space } from "@mantine/core";
 import Link from "next/link";
 import Footer from "../UI/Footer";
 import { AiOutlineLink } from "react-icons/ai";
+import Heading from "../UI/Heading";
 export default function CertifikatMobile(props) {
   let {device} = props;
-  let headerSx = device !== "tablet" ? device !== "laptop" ? {color: "#545454", fontSize: "2rem", fontWeight: "700" } : {color: "#545454", fontSize: "3rem", fontWeight: "500", textAlign: "left"} : {color: "#545454", fontSize: "2rem", fontWeight: "500", textAlign: "center"};
+ 
   return (
     <div>
       <DefaultScreen
@@ -24,9 +25,9 @@ export default function CertifikatMobile(props) {
           textAlign: "center",
         }}
       >
-        <Text size="xl"  sx={headerSx}>
+        <Heading device={device}>
           Protokoly o zkouškách a stavebně technické osvědčení
-        </Text>
+        </Heading>
         <List sx={device !== "laptop" ? {}: {textAlign: "left", color: "#545454", fontWeight: "400"} } icon={<Space h={0} />}>
           <ListItem>
             <Link href="/images/certifikat.pdf">
@@ -49,9 +50,9 @@ export default function CertifikatMobile(props) {
             </Link>
           </ListItem>
         </List>
-        <Text size="xl" weight={700} sx={headerSx}>
+        <Heading device={device}>
           Netechnické certifikace
-        </Text>
+        </Heading>
         <ListItem sx={device !== "laptop" ? {}: {textAlign: "left", color: "#545454", fontWeight: "400"} } icon={<Space h={0} />}>
           <Link href="/images/certifikat_proverena_spolecnost.pdf">
             <Text class="link" component="p">Certifikát - Prověřená společnost <AiOutlineLink/> </Text>

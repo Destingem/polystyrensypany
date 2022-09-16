@@ -1,21 +1,14 @@
 import {Table, Text, List, ListItem} from "@mantine/core";
 import { MdPhone, MdAlternateEmail } from "react-icons/md";
-export default function ProvozovnaMobile() {
+import SubHeading1 from "../UI/SubHeading1";
+export default function ProvozovnaMobile(props) {
+  let device = props.device;
       return(
          <>
-        <Text
-          weight={500}
-          size="xl"
-          sx={{
-            color: "#545454",
-            fontSize: "1.25rem",
-            marginRight: "auto",
-            marginLeft: "auto",
-            textAlign: "center",
-          }}
+        <SubHeading1 device={device}
         >
           Provozní doba
-        </Text>
+        </SubHeading1>
         <Table>
           <thead>
             <tr>
@@ -46,19 +39,10 @@ export default function ProvozovnaMobile() {
             flexDirection: "column",
           }}
         >
-          <Text
-            weight={500}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.25rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
+          <SubHeading1 device={device}
           >
              Adresa provozovny
-          </Text>
+          </SubHeading1>
           <Text
             weight={400}
             size="xl"
@@ -117,19 +101,10 @@ export default function ProvozovnaMobile() {
               flexDirection: "column",
             }}
           >
-            <Text
-              weight={500}
-              size="xl"
-              sx={{
-                color: "#545454",
-                fontSize: "1.25rem",
-                marginRight: "auto",
-                marginLeft: "auto",
-                textAlign: "center",
-              }}
+            <SubHeading1 device={device}
             >
               Kontakty
-            </Text>
+            </SubHeading1>
             <List spacing="xs" icon={<MdPhone color="rgb(25, 95, 0)" />}>
               <ListItem>
                 <Text

@@ -1,9 +1,9 @@
-import MainScreen from "../UI/MainScreen";
-
+import DefaultScreen from "../UI/DefaultScreen";
+import Heading from "../UI/Heading";
 import {Text, List, ListItem, Grid, Button} from "@mantine/core";
 import Image from "next/image";
 import Footer from "../UI/Footer";
-import {BsCircle} from "react-icons/bs";
+
 import Link from "next/link";
 export default function XPSMobile(props) {
     let device = props.device;
@@ -13,11 +13,11 @@ export default function XPSMobile(props) {
     "žádná nasákavost vlhkosti"]
     return (
         <div>
-        <MainScreen label="XPS" image="/images/barevny_c.png" device={device}  polysyp={true}/>
+        <DefaultScreen label="Polystyren sypaný - XPS" device={device} />
         <div style={{ display: "flex", flexDirection: "column", padding: "3vh 5vw 3vh 5vw", gap: "3vh"}}>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.5rem", marginRight: "auto",marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
+            <Heading device={device}>
             Polystyren sypaný, drcený - XPS
-            </Text>
+            </Heading>
             <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Polystyren sypaný XPS (extrudovaný) je vodě odolný. Tuto izolaci doporučujeme pod úroveň terénu - zasypání drenážních trubek, zásyp do podlahy, izolace okolo bazénů.
             </Text>
@@ -26,12 +26,12 @@ export default function XPSMobile(props) {
 
 
             </Text>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.25rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "center" }}>
+            <Heading device={device}>
             Polystyren sypaný XPS - základní vlastnosti
-            </Text>
+            </Heading>
             <List spacing="xs"
           center
-          icon={<BsCircle color="rgb(25, 95, 0)" />}
+          icon={ <div style={{backgroundColor: "#216a55", borderRadius: "", aspectRatio: 1, width: "2vw", justifyContent:  "center", alignItems: "center", display: "flex", minWidth: "10%"}} />}
           sx={{ textAlign: "left" }}>
             {items && items.map((item, index) => {
                 return (
