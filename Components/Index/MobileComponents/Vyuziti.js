@@ -4,8 +4,9 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AiOutlineRight } from "react-icons/ai";
 
-export default function Vyuziti(){
-
+export default function Vyuziti(props){
+let {vyuziti} = props
+console.log(vyuziti);
     return(
         <div className={styles.fifthSection}>
         <Text size="xl" weight={600} sx={{ color: "black", fontSize: "10vw", color: "#545454" }}>
@@ -28,10 +29,7 @@ export default function Vyuziti(){
                   textAlign: "center",
                 }}
               >
-                Sypaný polystyren využíváme ve stavebnictví jako tepelnou izolaci.
-                Sypaná tepelná izolace je vhodná k zateplení domu, do všech špatně
-                přístupných míst, stropů, podlah, krovů, střech, obvodových stěn a
-                vnitřních příček.
+                 {vyuziti.attributes.Stavebnictvi}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -48,10 +46,7 @@ export default function Vyuziti(){
                   textAlign: "center",
                 }}
               >
-                Sypaný polystyren objevili i majitelé sedacích vaků. Nakupují u nás
-                sypaný polystyren jako náhradní náplň do sedacích vaků. Pro tento účel
-                třídíme a zpracováváme zcela čistý polystyren, aby mezi kuličkami
-                nevznikal prach a nečistoty.
+         {vyuziti.attributes.Nabytkarsky_prumysl}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -68,7 +63,7 @@ export default function Vyuziti(){
                   textAlign: "center",
                 }}
               >
-                Sypaný polystyren využívají zahrádkáři jako příměs do jílovité půdy k jejímu odlehčení.
+               {vyuziti.attributes.Zahradkarstvi}
               </Text>
               </SplideSlide>
              <SplideSlide className={styles.slide}>
@@ -85,7 +80,7 @@ export default function Vyuziti(){
                   textAlign: "center",
                 }}
               >
-                Sypaný polystyren používají filmaři, organizátoři zábavných akcí, divadelníci pro umělé sněžení. Nebo na různých zábavných akcích pro děti - náhrada vody v bazénu.
+                 {vyuziti.attributes.Zabavni_prumysl}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -102,7 +97,7 @@ export default function Vyuziti(){
                   textAlign: "center",
                 }}
               >
-               Sypaný polystyren používají různé společnosti k vyplnění balíků s křehkým zbožím. Náš polystyren tak cestoval například do New Yorku s křišťálovým lustrem nebo s pivem do Indie.
+                 {vyuziti.attributes.Dalsi}
               </Text>
               </SplideSlide>
        </SplideTrack>

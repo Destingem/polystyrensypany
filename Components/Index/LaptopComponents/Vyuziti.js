@@ -6,8 +6,9 @@ import HeadingWithIcon from "./HeadingWithIcon";
 import {TbBrandAirtable} from "react-icons/tb"
 import {SiGumtree} from "react-icons/si"
 import {BsSnow} from "react-icons/bs"
-export default function Vyuziti(){
-
+export default function Vyuziti(props){
+    let {vyuziti} = props
+    console.log(vyuziti.attributes);
     return(
         <div className={styles.fourth}>
         <div>
@@ -30,38 +31,20 @@ export default function Vyuziti(){
          <HeadingWithIcon icon={<IoConstruct style={{ color: "#fff", fontSize: "2em" }}/>}>Stavebnictví</HeadingWithIcon>
         
           <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
-            Text 3a - Sypaný polystyren využíváme ve stavebnictví jako
-            tepelnou izolaci. Sypaná tepelná izolace je vhodná k zateplení
-            domu, do všech špatně přístupných míst, stropů, podlah, krovů,
-            střech, obvodových stěn a vnitřních příček.
+          {vyuziti.attributes.Stavebnictvi}
           </Text>
-          <List>
-            <ListItem>
-              Při výrobě sypaného polystyrenu vybíjíme statiku, takže
-              polystyren na vás nenaskáče, teče jako lavina a dostane se
-              opravdu všude.
-            </ListItem>
-            <ListItem>
-              Využití je široké nejen pro novostavby, ale hlavně pro starší
-              domy, které mají problém s vlhkostí. Vzduch mezi kuličkami
-              odvádí vlhkost až do ztracena. Stavba tzv. dýchá a nevytváří se
-              plísně.
-            </ListItem>
-          </List>
+         
           <HeadingWithIcon icon={<TbBrandAirtable style={{ color: "#fff", fontSize: "2em" }}/>}>Nábytkářský průmysl</HeadingWithIcon>
           <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
-            Text 3b - Sypaný polystyren objevili i majitelé sedacích vaků.
-            Nakupují u nás sypaný polystyren jako náhradní náplň do sedacích
-            vaků. Pro tento účel třídíme a zpracováváme zcela čistý
-            polystyren, aby mezi kuličkami nevznikal prach a nečistoty.
+          {vyuziti.attributes.Nabytkarsky_prumysl}
           </Text>
           <HeadingWithIcon icon={<SiGumtree style={{ color: "#fff", fontSize: "2em" }}/>}>Zahrádkářství</HeadingWithIcon>
           <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
-          Sypaný polystyren využívají zahrádkáři jako příměs do jílovité půdy k jejímu odlehčení.
+          {vyuziti.attributes.Zahradkarstvi}
           </Text>
           <HeadingWithIcon icon={<BsSnow style={{ color: "#fff", fontSize: "2em" }}/>}>Zábavní průmysl</HeadingWithIcon>
           <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
-          Sypaný polystyren používají filmaři, organizátoři zábavných akcí, divadelníci pro umělé sněžení. Nebo na různých zábavných akcích pro děti - náhrada vody v bazénu.
+          {vyuziti.attributes.Zabavni_prumysl}
           </Text>
           <Text
         element="h3"
@@ -75,7 +58,7 @@ export default function Vyuziti(){
         A další
       </Text>
           <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
-          Sypaný polystyren používají různé společnosti k vyplnění balíků s křehkým zbožím. Náš polystyren tak cestoval například do New Yorku s křišťálovým lustrem nebo s pivem do Indie.
+          {vyuziti.attributes.Dalsi}
 
           </Text>
           

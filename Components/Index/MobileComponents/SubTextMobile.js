@@ -1,6 +1,6 @@
 import { Text } from "@mantine/core";
 import styles from "./IndexMobile.module.css"
-export default  function SubTextMobile() {
+export default  function SubTextMobile(props) {
     return <div className={styles.secondSection}>
 
       <Text
@@ -12,9 +12,7 @@ export default  function SubTextMobile() {
           padding: "",
         }}
       >
-        Polystyren sypaný pro zateplení domu je ta pravá izolace. Doporučíme
-        jak izolaci polystyren sypaný použít k zateplení domu se značnou
-        úsporou nákladů.
+        {props.podnadpis}
       </Text>
     </div>;
   }

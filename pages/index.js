@@ -8,9 +8,8 @@ import { Media } from "../Components/Media";
 import NavBar from "../Components/UI/Navbar";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-  
-  const video = useRef()
+export default function Home(props) {
+ 
   useEffect(() => {
     var _gaq = _gaq || [];
 
@@ -76,14 +75,44 @@ export default function Home() {
         src="https://ssl.google-analytics.com/ga.js"
       ></script>
       <Media between={["zero", "mobile"]}>
-     <IndexMobile />
+     <IndexMobile {...props}/>
       </Media>
       <Media between={["mobile", "tablet"]}>
-       <IndexTablet />
+       <IndexTablet {...props}/>
       </Media>
       <Media between={["tablet", "laptop"]}>
-       <IndexLaptop />
+       <IndexLaptop {...props}/>
       </Media>
     </div>
   );
 }
+export async function getStaticProps() {
+  let fetched = await fetch("http://localhost:1337/api/sortiment-karty?populate=*", {
+    headers: {
+    Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
+    }
+  })
+  let data = await fetched.json()
+  let fetchedVyuziti = await fetch("http://localhost:1337/api/hlavni-strana-vyuziti?populate=*",{
+    headers: {
+    Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
+    }
+  })
+  let dataVyuziti = await fetchedVyuziti.json()
+
+  let fetchedPodnadpis = await fetch("http://localhost:1337/api/hlavni-strana-podnadpis?populate=*",{
+    headers: {
+    Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
+    }
+  })
+  let dataPodnadpis = await fetchedPodnadpis.json()
+  
+    return {
+      props: {
+        sortiment: data.data ? data.data : [],
+        vyuziti: dataVyuziti.data ? dataVyuziti.data : [],
+        podnadpis: dataPodnadpis.data ? dataPodnadpis.data.attributes.Text : [],
+      },
+      revalidate: 10,
+    };
+  }

@@ -20,9 +20,9 @@ import MainScreen from "./LaptopComponents/MainScreen";
 import Subtext from "./LaptopComponents/Subtext";
 import Duvody from "./LaptopComponents/Duvody";
 import Vyuziti from "./LaptopComponents/Vyuziti";
-export default function IndexLaptop(options) {
+export default function IndexLaptop(props) {
   
-  
+
   return (
     <div style={{ maxWidth: "100%", overflow: "hidden"}}>
     
@@ -32,10 +32,10 @@ export default function IndexLaptop(options) {
       <nav><NavBar /> </nav>
        <MainScreen />
        </div>
-        <Subtext />
+        <Subtext podnadpis={props.podnadpis}/>
         <Duvody />
-        <Vyuziti />
-        <Sortiment device="laptop" />
+        <Vyuziti vyuziti={props.vyuziti}/>
+        <Sortiment device="laptop" sortiment={props.sortiment} />
       </main>
 
       <footer>

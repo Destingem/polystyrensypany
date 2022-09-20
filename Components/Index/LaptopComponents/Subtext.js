@@ -8,9 +8,7 @@ export default function Subtext(props) {
          <div style={{width: "80%", backgroundColor: "rgba(63,123,99,1)", padding:" 5vh 35vw 5vh 5vw"}}>
            
          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "#eeee" }}>
-            Zateplujete dům? Nechce se Vám složitě vyměřovat prostor k
-            zateplení? Standardní izolace se Vám zdají nákladné? Pak sypaný
-            polystyren je pro Vás to pravé řešení.
+            {props.podnadpis}
           </Text>
           
          </div>

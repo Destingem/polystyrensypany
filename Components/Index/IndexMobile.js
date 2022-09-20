@@ -9,17 +9,18 @@ import DuvodyMobile from "./MobileComponents/DuvodyMobile";
 import Vyuziti from "./MobileComponents/Vyuziti";
 import Sortiment from "./Sortiment";
 export default function IndexMobile(props) {
-  const video = useRef();
+  let {sortiment} = props
+
   return (
     <div className={styles.main}>
       
      
      <MobileMainScreen />
-      <SubTextMobile />
+      <SubTextMobile podnadpis={props.podnadpis} />
      <Text1 />
      <DuvodyMobile />
-     <Vyuziti />
-     <Sortiment />
+     <Vyuziti vyuziti={props.vyuziti}/>
+     <Sortiment sortiment={sortiment}/>
       <Footer />
     </div>
   );

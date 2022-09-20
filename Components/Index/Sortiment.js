@@ -3,7 +3,7 @@ import PolyCard from "./MobileComponents/PolyCard";
 import Link from "next/link";
 import { Button, Text, Grid } from "@mantine/core";
 export default function SortimentMobile(props) {
-  let {device, button_text} = props;
+  let {device, button_text, sortiment} = props;
   return (
     <div className={styles.sixthSection} style={{ backgroundColor: "white" }}>
       {button_text && <Text size="xl" weight={600} sx={device !== "laptop" ? { color: "black", fontSize: "12vw" } : { color: "black", fontSize: "3em", marginRight: "auto", color: "rgb(84, 84, 84)" }}>
@@ -15,40 +15,23 @@ export default function SortimentMobile(props) {
         sx={{ width: "100%", height: "fitContent", gap: device !== "laptop" ? "2vh" : "0", margin: "5vh 0", alignItems: "top"}}
       >
 
-        <Grid.Col span={device !== "laptop" ? 12 : 4}>
+        {sortiment.map((item, index) => {
+          return(
+            <Grid.Col span={device !== "laptop" ? 12 : 4} key={item.id}>
             <PolyCard
-              image={{ url: "/images/bily.jpg", alt: "Polystyren drcený eps bílý" }}
-              header="Polystyren drcený eps bílý"
-              text="Sypaný polystyren využíváme ve stavebnictví jako tepelnou izolaci. Sypaná tepelná izolace je vhodná k zateplení domu, do všech špatně přístupných míst, stropů, podlah, krovů, střech, obvodových stěn a vnitřních příček"
-              buttonText="Více o drceném bílém"
-              link="/drcenypolystyren-bily"
+              image={{ url: "http://localhost:1337" + item.attributes.fotka_produktu.data.attributes.formats.large.url, alt: item.attributes.fotka_produktu.data.attributes.formats.large.name }}
+              header={item.attributes.nazev_produktu}
+              text={item.attributes.popis}
+              buttonText={item.attributes.popis_tlacitka}
+              link={item.attributes.odkaz}
               device={device}
             />
           </Grid.Col>
+          )
+        })}
+        
 
 
-        <Grid.Col  span={device !== "laptop" ? 12 : 4}>
-            <PolyCard
-              image={{ url: "/images/sedy2.jpg", alt: "Polystyren drcený XPS" }}
-              header="Polystyren drcený šedý"
-              text="Polystyren sypaný - EPS šedý obsahuje grafit, který odráží teplo zpět k jeho zdroji a tak zvyšuje izolační účinek. Šedý polystyren je vhodný pro dodatečné zateplení starších domů, pasivních a nízkoenergetických domů.U této izolace jsou deklarovány lepší tepelně izolační vlastnosti."
-              buttonText="Více o drceném šedém"
-              link="/drcenypolystyren-sedy"
-              device={device}
-            />
-          </Grid.Col>
-
-
-          <Grid.Col  span={device !== "laptop" ? 12 : 4}>
-            <PolyCard
-              image={{ url: "/images/XPS2.jpg", alt: "Polystyren drcený XPS" }}
-              header="Polystyren drcený XPS"
-              text="Polystyren sypaný XPS (extrudovaný) je vodě odolný. Tuto izolaci doporučujeme pod úroveň terénu - zasypání drenážních trubek, zásyp do podlahy, izolace okolo bazénů."
-              buttonText="Více o drceném XPS"
-              device={device}
-              link="/drcenypolystyren-XPS"
-            />
-          </Grid.Col>
 
       </Grid>
       {button_text && <Button

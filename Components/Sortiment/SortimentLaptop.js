@@ -1,6 +1,6 @@
 import SortimentMobile from "./SortimentMobile"
-export default function SortimentLaptop(){
+export default function SortimentLaptop(props){
     return(
-        <SortimentMobile device="laptop" />
+        <SortimentMobile device="laptop" sortiment={props.sortiment} />
     )
 }

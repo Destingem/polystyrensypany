@@ -1,8 +1,8 @@
 import NovinkyMobile from "./NovinkyMobile";
 
 
-export default function NovinkyTablet() {
+export default function NovinkyTablet(props) {
     return (
-        <NovinkyMobile device="tablet" />
+        <NovinkyMobile device="tablet" {...props}/>
     );
     }

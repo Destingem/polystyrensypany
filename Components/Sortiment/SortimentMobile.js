@@ -3,7 +3,7 @@ import {List, ListItem, Text, Grid, Paper, Space, Box} from "@mantine/core"
 import Sortiment from "../Index/Sortiment"
 import DefaultScreen from "../UI/DefaultScreen"
 export default function SortimentMobile(props){
-  let {device} = props
+  let {device, sortiment} = props
   let headingSx =  device !== "laptop" ? { color: "#545454", fontSize: "1.5rem", marginRight: "auto", marginLeft: "auto", textAlign: "center" } : { color: "#545454", fontSize: "3rem", textAlign: "left", marginRight:"auto" }
   let labelSx = device !== "laptop" ? {
     color: "#fff",
@@ -28,7 +28,7 @@ export default function SortimentMobile(props){
                
                 {device === "laptop" && <Space h="xl" />}
              
-     <Sortiment device={device} button_text={false}/>
+     <Sortiment device={device} button_text={false} sortiment={sortiment}/>
                 </div>
             <Footer />
         </div>
