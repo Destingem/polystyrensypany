@@ -1,6 +1,7 @@
 import { Grid, Text } from "@mantine/core";
 import Link from "next/link";
-export default function FooterLaptop() {
+export default function FooterLaptop(props) {
+  let { info } = props;
   let links = [
     {
       name: "O nás",
@@ -90,19 +91,20 @@ export default function FooterLaptop() {
                 component="p"
                 sx={{ color: "white", fontSize: "1vw", margin: "0" }}
               >
-                Telefon 1: +420 723 513 638
+                {info && info.telefon_1}
               </Text>
               <Text
                 component="p"
                 sx={{ color: "white", fontSize: "1vw", margin: "0" }}
               >
-                Telefon 2: +420 737 226 697
+                {info && info.telefon_2}
               </Text>
               <Text
                 component="p"
                 sx={{ color: "white", fontSize: "1vw", margin: "0" }}
               >
-                Mail: info@polystyrensypany.cz
+                {info && info.email_1}
+                {info && info.email_2}
               </Text>
             </Grid.Col>
           </Grid>
@@ -121,8 +123,7 @@ export default function FooterLaptop() {
             component="p"
             sx={{ color: "white", fontSize: "1vw", margin: "0" }}
           >
-            Polystyren sypaný - Richard Humeš
-            <br /> Štěpánovská 330 190 17 Praha 9 - Vinoř
+            {info && info.nazev_spolecnosti}
           </Text>
         </div>
       </div>

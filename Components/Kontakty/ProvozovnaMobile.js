@@ -2,7 +2,9 @@ import {Table, Text, List, ListItem} from "@mantine/core";
 import { MdPhone, MdAlternateEmail } from "react-icons/md";
 import SubHeading1 from "../UI/SubHeading1";
 export default function ProvozovnaMobile(props) {
+  console.log(props);
   let device = props.device;
+  let { provozniDoby, kontaktniUdaje } = props;;
       return(
          <>
         <SubHeading1 device={device}
@@ -17,18 +19,16 @@ export default function ProvozovnaMobile(props) {
             </tr>
           </thead>
           <tbody style={{ color: "#545454", fontWeight: "400" }}>
-            <tr>
-              <td>Pondělí - Pátek</td>
-              <td>8:00 - 11:00</td>
-            </tr>
-            <tr>
-              <td>Pondělí - Pátek ( dle telefonické dohody)</td>
-              <td>12:00 - 17:00</td>
-            </tr>
-            <tr>
-              <td>Sobota - Neděle a mimo pracovní dobu</td>
-              <td> dle telefonické dohody</td>
-            </tr>
+          {props.provozniDoby.map((radek, index) => {
+            return (
+              <tr key={index}>
+                <td>{radek.Den}</td>
+                <td>{radek.Oteviraci_doba}</td>
+              </tr>
+            );
+          })}
+          
+            
           </tbody>
         </Table>
         <div
@@ -43,18 +43,7 @@ export default function ProvozovnaMobile(props) {
           >
              Adresa provozovny
           </SubHeading1>
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1rem",
-              textAlign: "center",
-              width: "100%",
-            }}
-          >
-            Areál se nachází na rohu ulic Mladoboleslavská a Štěpánovská.
-          </Text>
+          
           <Text
             weight={400}
             size="xl"
@@ -67,8 +56,7 @@ export default function ProvozovnaMobile(props) {
               marginRight: "auto",
             }}
           >
-            Polystyren sypaný - Richard Humeš Štěpánovská 330 190 17 Praha 9 -
-            Vinoř
+            {kontaktniUdaje.adresa_provozovny}
           </Text>
           <div
             class="gmap_canvas"
@@ -117,7 +105,7 @@ export default function ProvozovnaMobile(props) {
                     width: "100%",
                   }}
                 >
-                  Telefon 1: +420 723 513 638
+                  {kontaktniUdaje.telefon_1}
                 </Text>
               </ListItem>
               <ListItem>
@@ -131,7 +119,7 @@ export default function ProvozovnaMobile(props) {
                     width: "100%",
                   }}
                 >
-                  Telefon 2: +420 737 226 697
+                  {kontaktniUdaje.telefon_2}
                 </Text>
               </ListItem>
               <ListItem icon={<MdAlternateEmail color="rgb(25, 95, 0)" />}>
@@ -145,7 +133,8 @@ export default function ProvozovnaMobile(props) {
                     width: "100%",
                   }}
                 >
-                  Email: info@polystyrensypany.cz
+                  {kontaktniUdaje.email_1}
+                  {kontaktniUdaje.email_2}
                 </Text>
               </ListItem>
             </List>

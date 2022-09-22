@@ -6,7 +6,7 @@ import ProvozovnaMobile from "./ProvozovnaMobile";
 import DefaultScreen from "../UI/DefaultScreen";
 import Heading from "../UI/Heading";
 export default function KontaktyMobile(props) {
-  let {device} = props;
+  let {device,provozniDoby, kontaktniUdaje} = props;
   return (
     <div>
       <DefaultScreen label="Kontakty" device={device} />
@@ -25,7 +25,7 @@ export default function KontaktyMobile(props) {
           Výroba a prodej
         </Heading>
         <Space size="xl" />
-       {device !== "laptop" ? <ProvozovnaMobile device={device}/>: <ProvozovnaLaptop device={device}/>}
+       {device !== "laptop" ? <ProvozovnaMobile device={device} provozniDoby={provozniDoby} kontaktniUdaje={kontaktniUdaje}/>: <ProvozovnaLaptop device={device} provozniDoby={provozniDoby} kontaktniUdaje={kontaktniUdaje}/>}
      {device !== "laptop" ?   <div
             style={{
               margin: " 0",
@@ -50,7 +50,7 @@ export default function KontaktyMobile(props) {
                 marginRight: "auto",
               }}
             >
-              Olešnická 511/23 197 00 Praha 9
+              {kontaktniUdaje.korespondencni_adresa}
             </Text>
             <Text
               weight={400}
@@ -90,8 +90,8 @@ export default function KontaktyMobile(props) {
             ></iframe>
           </div>
          <List icon=" ">
-            <ListItem> <strong>IČ</strong>: 68529058</ListItem>
-            <ListItem><strong>DIČ</strong>: CZ6903264720</ListItem>
+            <ListItem> <strong>IČ</strong>: {kontaktniUdaje.IC}</ListItem>
+            <ListItem><strong>DIČ</strong>: {kontaktniUdaje.DIC}</ListItem>
             <ListItem>Jsme plátci DPH</ListItem>
 
          </List>
@@ -122,7 +122,7 @@ export default function KontaktyMobile(props) {
                 marginRight: "auto",
               }}
             >
-              Olešnická 511/23 197 00 Praha 9
+               {kontaktniUdaje.korespondencni_adresa}
             </Text>
             <Text
               weight={400}
@@ -140,8 +140,8 @@ export default function KontaktyMobile(props) {
               </Text>
              
          <List icon={" "} sx={{textAlign: "left"}}>
-            <ListItem> <strong>IČ</strong>: 68529058</ListItem>
-            <ListItem><strong>DIČ</strong>: CZ6903264720</ListItem>
+         <ListItem> <strong>IČ</strong>: {kontaktniUdaje.IC}</ListItem>
+            <ListItem><strong>DIČ</strong>: {kontaktniUdaje.DIC}</ListItem>
             <ListItem>Jsme plátci DPH</ListItem>
 
          </List>

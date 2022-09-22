@@ -1,5 +1,6 @@
 import {Text, Grid} from "@mantine/core";
-export default function FooterMobile() {
+export default function FooterMobile(props) {
+  let {info} = props
   return (
     <div
       style={{
@@ -38,19 +39,20 @@ export default function FooterMobile() {
                 component="p"
                 sx={{ color: "#3f7b63", fontSize: "4vw", margin: "0" }}
               >
-                Telefon 1: +420 723 513 638
+                {info && info.telefon_1}
               </Text>
               <Text
                 component="p"
                 sx={{ color: "#3f7b63", fontSize: "4vw", margin: "0" }}
               >
-                Telefon 2: +420 737 226 697
+                {info && info.telefon_2}
               </Text>
               <Text
                 component="p"
                 sx={{ color: "#3f7b63", fontSize: "4vw", margin: "0" }}
               >
-                Mail: info@polystyrensypany.cz
+                {info && info.email_1}
+                {info && info.email_2}
               </Text>
             </Grid.Col>
           </Grid>
@@ -71,8 +73,7 @@ export default function FooterMobile() {
             component="p"
             sx={{ color: "#3f7b63", fontSize: "4vw", margin: "0" }}
           >
-            Polystyren sypaný - Richard Humeš
-            <br /> Štěpánovská 330 190 17 Praha 9 - Vinoř
+           {info && info.nazev_spolecnosti}
           </Text>
         </div>
          </div>

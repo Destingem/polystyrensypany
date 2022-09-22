@@ -1,8 +1,8 @@
 import KontaktyMobile from "./KontaktyMobile";
 
 
-export default function KontaktyLaptop() {
+export default function KontaktyLaptop(props) {
     return (
-        <KontaktyMobile device="laptop" />
+        <KontaktyMobile device="laptop" {...props}/>
     );
 }

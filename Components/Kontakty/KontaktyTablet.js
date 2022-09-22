@@ -1,9 +1,8 @@
+import KontaktyLaptop from "./KontaktyLaptop";
 
 
-export default function KontaktyTablet() {
+export default function KontaktyTablet(props) {
     return (
-        <div>
-        <h1>KontaktyTablet</h1>
-        </div>
+       <KontaktyLaptop  {...props} />
     );
 }

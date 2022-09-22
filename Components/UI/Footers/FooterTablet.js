@@ -1,8 +1,8 @@
 import FooterLaptop from "./FooterLaptop";
 import FooterMobile from "./FooterMobile";
 
-export default function FooterTablet() {
+export default function FooterTablet(props) {
     return(
-       <FooterLaptop />
+       <FooterLaptop info={props.info}/>
     )
 }
