@@ -4,9 +4,10 @@ import MainScreen from "../UI/DefaultScreen";
 import Footer from "../UI/Footer";
 
 export default function CenikMobile(props) {
-    let {device} = props
+    let {device, ceniky} = props
     let h1Sx = { textAlign: device !== "laptop" ? "center" : "left", fontSize: "1.5rem", color: "#487b61" }
     let pSx = device !== "laptop" ? { padding: "0 5vw" } : { textAlign: "left" }
+    console.log(ceniky);
   return (
     <>
       <MainScreen
@@ -32,61 +33,22 @@ export default function CenikMobile(props) {
               <td>Název:</td> <td>Objem</td> <td>Cena bez DPH</td>
               <td>Cena s DPH</td>
             </tr>
-            <tr>
-              <td>
-                <Link href="/drcenypolystyren-bily">
-                  Polystyren sypaný - EPS bílý
-                </Link>
-              </td>
-              <td>1m3</td> <td>1200,-Kč</td>
-              <td>1452,-Kč</td>
-            </tr>
-            <tr>
-              <td>
-                <Link href="/eps-jemny">
-                  Polystyren sypaný - EPS bílý(1pytel)
-                </Link>
-              </td>
-              <td>300l</td> <td>360,-Kč</td>
-              <td>436,-Kč</td>
-            </tr>
-            <tr>
-              <td>
-                <Link href="/drcenypolystyren-sedy">
-                  Polystyren sypaný - EPS šedý-grafitový
-                </Link>
-              </td>
-              <td>1m3</td> <td>1500,-Kč</td>
-              <td>1815,-Kč</td>
-            </tr>
-            <tr>
-              <td>
-                <Link href="/drcenypolystyren-sedy">
-                  Polystyren sypaný - EPS šedý-grafitový(1pytel)
-                </Link>
-              </td>
-              <td>300l</td> <td>450,-Kč</td>
-              <td>545,-Kč</td>
-            </tr>
-
-            <tr>
-              <td>
-                <Link href="/eps-jemny">
-                  Polystyren sypaný - EPS jemný (1pytel)
-                </Link>
-              </td>
-              <td>300l</td> <td>900Kč</td>
-              <td>1089,-Kč</td>
-            </tr>
-            <tr>
-              <td>
-                <Link href="/drcenypolystyren-XPS">
-                  Polystyren sypaný - XPS (1pytel)
-                </Link>
-              </td>
-              <td>300l</td> <td>900Kč</td>
-              <td>1089,-Kč</td>
-            </tr>
+            {ceniky.map((cenik) => {
+              if(cenik.attributes.standardni_cenik_x_zapujcka_stroje == true || !cenik.attributes.radek_tabulky){
+                return
+              }
+              return cenik.attributes.radek_tabulky.map((radek) => {
+                return (
+                  <tr key={radek.id}>
+                    <td>{radek.nazev}</td>
+                    <td>{radek.Objem}</td>
+                    <td>{radek.cena_bez_dph}</td>
+                    <td>{radek.cena_s_dph}</td>
+                  </tr>
+                );
+              })
+            })}
+           
           </tbody>
         </Table>
         <Text
@@ -106,23 +68,20 @@ export default function CenikMobile(props) {
               <td>Množství sypaného polystyrenu</td> <td>Cena bez DPH</td>
               <td>Cena s DPH</td>
             </tr>
-
-            <tr>
-              <td>do 20,10m3</td> <td>800,-Kč</td>
-              <td>968,-Kč</td>
-            </tr>
-            <tr>
-              <td>20,11 - 45,00m3</td> <td>1.600,-Kč</td>
-              <td>1.936,-Kč</td>
-            </tr>
-            <tr>
-              <td>45,01 - 79,80m3</td> <td>2.400,-Kč</td>
-              <td>2.904,-Kč</td>
-            </tr>
-            <tr>
-              <td>nad 79,81m3</td> <td>individuální</td>
-              <td>individuální</td>
-            </tr>
+            {ceniky.map((cenik) => {
+              if(cenik.attributes.standardni_cenik_x_zapujcka_stroje == false || !cenik.attributes.radek_tabulky){
+                return
+              }
+              return cenik.attributes.radek_tabulky.map((radek) => {
+                return (
+                  <tr key={radek.id}>
+                    <td>{radek.nazev}</td>
+                    <td>{radek.cena_bez_dph}</td>
+                    <td>{radek.cena_s_dph}</td>
+                  </tr>
+                );
+              })
+            })}
           </tbody>
         </Table>
         <Text

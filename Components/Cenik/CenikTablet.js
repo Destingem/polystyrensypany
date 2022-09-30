@@ -1,8 +1,8 @@
 import CenikMobile from "./CenikMobile"
-export default function CenikTablet() {
+export default function CenikTablet(props) {
     return(
      <>
-    <CenikMobile device="tablet" />
+    <CenikMobile device="tablet" {...props} />
  </>
     )
  }
