@@ -34,7 +34,7 @@ export async function getStaticProps() {
   let provozniUdaje = await fetchedUdaje.json();
   return {
     props: {
-      provozniDoby: provozniDoby.data ? provozniDoby.data[0].attributes.radek_tabulky : [],
+      provozniDoby: provozniDoby.data && provozniDoby.data[0] ? provozniDoby.data[0].attributes.radek_tabulky : [],
       kontaktniUdaje: provozniUdaje.data ? provozniUdaje.data.attributes : [],
     },
   };
