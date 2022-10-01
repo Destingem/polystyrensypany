@@ -4,7 +4,6 @@ import { useRef } from "react";
 import Footer from "../UI/Footer";
 import MobileMainScreen from "./MobileComponents/MobileMainScreen";
 import SubTextMobile from "./MobileComponents/SubTextMobile";
-import Text1 from "./MobileComponents/Text1";
 import DuvodyMobile from "./MobileComponents/DuvodyMobile";
 import Vyuziti from "./MobileComponents/Vyuziti";
 import Sortiment from "./Sortiment";
