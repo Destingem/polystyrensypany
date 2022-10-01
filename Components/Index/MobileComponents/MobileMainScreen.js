@@ -6,7 +6,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import NavBar from "../../UI/Navbar";
 export default function MobileMainScreen(props){
     return(
-      <div style={{backgroundImage: 'url("/images/backgroundBall1.png")'}}>
+      <div style={{backgroundImage: 'url("/images/mobile_backgroundBall1.png")'}}>
       <nav>
       <NavBar />
     </nav>
