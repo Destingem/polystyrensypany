@@ -19,7 +19,7 @@ export default function SortimentMobile(props) {
           return(
             <Grid.Col span={device !== "laptop" ? 12 : 4} key={item.id}>
             <PolyCard
-              image={{ url: "http://localhost:1337" + item.attributes.fotka_produktu.data.attributes.formats.large.url, alt: item.attributes.fotka_produktu.data.attributes.formats.large.name }}
+              image={{ url: "http://159.89.20.207:1337" + item.attributes.fotka_produktu.data.attributes.formats.large.url, alt: item.attributes.fotka_produktu.data.attributes.formats.large.name }}
               header={item.attributes.nazev_produktu}
               text={item.attributes.popis}
               buttonText={item.attributes.popis_tlacitka}

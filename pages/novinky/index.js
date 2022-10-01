@@ -17,7 +17,7 @@ export default function Novinky(props) {
 
 export async function getStaticProps() {
 
-  let fetched = await fetch("http://localhost:1337/api/novinky?populate=*", {
+  let fetched = await fetch("http://159.89.20.207:1337/api/novinky?populate=*", {
       headers: {
           Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
       }
