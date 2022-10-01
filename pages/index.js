@@ -52,13 +52,13 @@ export default function Home(props) {
         />
         <meta name="robots" content="index, follow" />
         <meta name="Copyright" content="Copyright© 2022 Polystyren sypaný" />
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta  content="text/html; charset=UTF-8" />
         <meta
-          http-equiv="content-type"
+          
           content="application/xhtml+xml; charset=UTF-8"
         />
-        <meta http-equiv="content-style-type" content="text/css" />
-        <meta http-equiv="expires" content="0" />
+        <meta  content="text/css" />
+        <meta  content="0" />
 
         <link rel="icon" href="/images/finalLogo.png" />
       </Head>
