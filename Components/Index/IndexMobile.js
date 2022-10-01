@@ -17,7 +17,7 @@ export default function IndexMobile(props) {
      
      <MobileMainScreen />
       <SubTextMobile podnadpis={props.podnadpis} />
-     <Text1 />
+   
      <DuvodyMobile />
      <Vyuziti vyuziti={props.vyuziti}/>
      <Sortiment sortiment={sortiment}/>
