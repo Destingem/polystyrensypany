@@ -123,7 +123,7 @@ export default function OnasMobile(props) {
         </Text>
         </div>
         
-       <div style={{width: "30%"}}> <Image src="/images/risa.jpg" width={4} height={3} layout="responsive" /></div>
+       <div style={{width: "30%"}}> <image src="http://159.89.20.207:1337/uploads/risa_9b8675dba1.webp?width=1920&height=1440" width={4} height={3} layout="responsive" /></div>
         </div></>}
       </section>
       <section  style={{
