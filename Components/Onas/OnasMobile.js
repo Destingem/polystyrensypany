@@ -86,7 +86,7 @@ export default function OnasMobile(props) {
         >
           Byla by škoda nevyužít všechny vlastnosti a přednosti, které
           polystyren sypaný, drcený má.
-        </Text><Space h="xl" /><image src="http://159.89.20.207:1337/uploads/risa_9b8675dba1.webp?width=1920&height=1440" width={4} height={3} layout="responsive" /></>  :<> <Text size="xl" weight={500} sx={{ color: "#545454", fontSize: device ==! "laptop" ? "8vw" : "3rem", textAlign: device === "laptop" ? "left" : "center", margin: "0"  }} component="h2">
+        </Text><Space h="xl" /><Image src="http://159.89.20.207:1337/uploads/risa_9b8675dba1.webp?width=1920&height=1440" width={4} height={3} layout="responsive" /></>  :<> <Text size="xl" weight={500} sx={{ color: "#545454", fontSize: device ==! "laptop" ? "8vw" : "3rem", textAlign: device === "laptop" ? "left" : "center", margin: "0"  }} component="h2">
           Jak to všechno začalo
         </Text><div style={{display: "flex", justifyContent: "space-between", gap: "5vw"}}>
         <div style={{width: "70%", alignItems: "center", display: "flex"}}>
@@ -123,7 +123,7 @@ export default function OnasMobile(props) {
         </Text>
         </div>
         
-       <div style={{width: "30%"}}> <image src="http://159.89.20.207:1337/uploads/risa_9b8675dba1.webp?width=1920&height=1440" width={4} height={3} layout="responsive" /></div>
+       <div style={{width: "30%"}}> <Image src="http://159.89.20.207:1337/uploads/risa_9b8675dba1.webp?width=1920&height=1440" width={4} height={3} layout="responsive" /></div>
         </div></>}
       </section>
       <section  style={{
