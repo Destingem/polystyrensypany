@@ -130,6 +130,22 @@ export default function RecyklaceMobile(props) {
             Povolení Magistrátu hlavního města Prahy nakládání s odpady
           </Text>
         </a>
+        <a
+          href="/documents/norma_značeníEPS.pdf"
+          download={"norma_značeníEPS.pdf"}
+        >
+          <Text
+            weight={600}
+            size="xl"
+            sx={{
+              color: "rgb(25, 95, 0)",
+              fontSize: "1rem",
+              textAlign: device !== "laptop" ? "center" :"left",
+            }}
+          >
+            Norma Značení EPS
+          </Text>
+        </a>
         <Text
           size="xl"
           weight={700}

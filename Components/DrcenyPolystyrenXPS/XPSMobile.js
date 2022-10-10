@@ -58,6 +58,7 @@ export default function XPSMobile(props) {
             <Grid.Col span={6} sx={{maxWidth: "25% !important", justifyContent: "center", marginTop: "auto", marginBottom: "auto"}}>
             <Image src="/images/pytle_xps.jpg" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
+          
             </Grid> }
         </div>
         <Footer />

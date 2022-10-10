@@ -10,7 +10,6 @@ export default async function handler(req, res) {
     prijmeni,
     spolecnost,
     produkt,
-    ciselne_hodnoceni,
     slovni_hodnoceni,
   } = hodnoceni;
   res.status(201).send("OK");
@@ -36,16 +35,14 @@ export default async function handler(req, res) {
     prijmeni.replace(/<[^>]*>?/gm, "") +
     "</p> <p>Společnost: " +
     spolecnost.replace(/<[^>]*>?/gm, "") +
-    "</p> <p>Produkt: " +
+    "</p> <p>Účel použití: " +
     produkt.replace(/<[^>]*>?/gm, "") +
-    "</p> <p>Číselné hodnocení: " +
-    ciselne_hodnoceni +
     "</p> <p>Slovní hodnocení: " +
     slovni_hodnoceni.replace(/<[^>]*>?/gm, "") +
     "</p>";
   let info = await transporter.sendMail({
-    from: '"Polystyren sypaný - objednávky bot" <obednavkybot@example.com>', // sender address
-    to: "ondrej.zaplatilek@gmail.com", // list of receivers
+    from: '"Polystyren sypaný - Hodnocení" <obednavkybot@example.com>', // sender address
+    to: "info@polystyrensypany.cz", // list of receivers
     subject, // Subject line
     text: html, // plain text body
     html, // html body

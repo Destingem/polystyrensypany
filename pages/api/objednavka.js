@@ -61,8 +61,8 @@ console.log(objednavka);
     email +
     "</p>";
   let info = await transporter.sendMail({
-    from: '"Polystyren sypaný - objednávky bot" <obednavkybot@example.com>', // sender address
-    to: "ondrej.zaplatilek@gmail.com", // list of receivers
+    from: '"Polystyren sypaný - Poptávka" <obednavkybot@example.com>', // sender address
+    to: "info@polystyrensypany.cz", // list of receivers
     subject, // Subject line
     text: html, // plain text body
     html, // html body

@@ -16,19 +16,7 @@ export default function SortimentVyuziti(props) {
           
             Stavebnictví
           </SubHeading1>
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.25rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
-            Sypaný polystyren
-          </Text>
+          
           <SortimentText>
             Sypaný polystyren využíváme ve stavebnictví jako tepelnou izolaci.
             Sypaná tepelná izolace je vhodná k zateplení domu, do všech špatně
@@ -45,19 +33,7 @@ export default function SortimentVyuziti(props) {
             které mají problém s vlhkostí. Vzduch mezi kuličkami odvádí vlhkost
             až do ztracena. Stavba tzv. dýchá a nevytváří se plísně.
           </SortimentText>
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.25rem",
-              marginRight: "auto",
-              marginLeft: "auto",
-              textAlign: "center",
-            }}
-          >
-            Drcený polystyren
-          </Text>
+         
           <SortimentText>
             Drcený polystyren nemusíte složitě vyměřovat nebo řezat. Prostor k
             zateplení jednoduše zasypete nebo zafoukáte a to bez zbytků. Sypaná
@@ -171,18 +147,7 @@ export default function SortimentVyuziti(props) {
             Stavebnictví
           </SubHeading1>
           <Space h="md" />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.25rem",
-              marginRight: "auto",
-              textAlign: "left",
-            }}
-          >
-            Sypaný polystyren
-          </Text>
+          
           <Space h="md" />
           <Text size="xl" sx={{textAlign: "left"}}>
             Sypaný polystyren využíváme ve stavebnictví jako tepelnou izolaci.
@@ -196,19 +161,7 @@ export default function SortimentVyuziti(props) {
             až do ztracena. Stavba tzv. dýchá a nevytváří se plísně.
           </Text>
           <Space h="xl" />
-          <Text
-            weight={400}
-            size="xl"
-            sx={{
-              color: "#545454",
-              fontSize: "1.25rem",
-              marginRight: "auto",
-              
-              textAlign: "left",
-            }}
-          >
-            Drcený polystyren
-          </Text>
+          
           <Space h="md" />
           <Text size="xl" sx={{textAlign: "left"}}>
             Drcený polystyren nemusíte složitě vyměřovat nebo řezat. Prostor k

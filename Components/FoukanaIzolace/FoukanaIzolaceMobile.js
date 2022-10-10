@@ -5,8 +5,12 @@ import SubheaderText from "../UI/SubheaderText";
 import Footer from "../UI/Footer";
 import Link from "next/link";
 import DefaultScreen from "../UI/DefaultScreen";
+import Image from "next/image";
 export default function FoukanaIzolaceMobile(props) {
   let { device, ceniky } = props;
+  if (device == undefined) {
+    device = "mobile";
+  }
   return (
     <div>
       <DefaultScreen
@@ -24,6 +28,8 @@ export default function FoukanaIzolaceMobile(props) {
           textAlign: "center",
         }}
       >
+       <div style={{display: "flex", flexDirection: device !== "mobile" ? "row" : "column"}}>
+        <div>
         <BasicText device={device}>
           Foukaná izolace patří mezi nejefektivnější variantu aplikace tepelných
           izolací. Foukaná izolace je vhodná k zateplení různých částí domu.
@@ -80,6 +86,9 @@ export default function FoukanaIzolaceMobile(props) {
           nákladů. Nabízíme Vám zápůjčku foukacího stroje včetně příslušenství a
           zaškolení k aplikaci foukané izolace svépomocí.
         </BasicText>
+        </div>
+        <div style={{maxWidth: device !== "mobile" ? "25%" : "100%", padding: "5vh 2vw", display: "flex", flexDirection: device !== "mobile" ? "column" : "row", gap: "1vw"}}><Image src="/images/foukani_strop.png" width={600} height={600}/> <Image src="/images/foukani_pricka.png" width={600} height={600}/></div>
+       </div>
         <Space h="xl" />
         <Text  weight={600}
           size="xl"

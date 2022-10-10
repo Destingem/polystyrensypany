@@ -25,7 +25,7 @@ export default function DuvodyMobile(){
         {duvody.map((duvod, index) => {
             
             return(
-            <DuvodMobile text={duvod} num={index + 1} />
+            <DuvodMobile text={duvod} num={index !== 7 ? index + 1: "+" } />
           )
           
         })}

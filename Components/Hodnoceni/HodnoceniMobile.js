@@ -7,6 +7,7 @@ import { useWindowScroll } from "@mantine/hooks";
 import { FiAlertTriangle } from "react-icons/fi";
 import DefaultScreen from "../UI/DefaultScreen";
 import Heading from "../UI/Heading";
+import Link from "next/link";
 export default function HodnoceniMobile(props) {
     const [scroll, setScroll] = useWindowScroll()
     const [feedback, setFeedback] = useState({type: "", message: ""});
@@ -63,7 +64,7 @@ export default function HodnoceniMobile(props) {
           weight={400}
           sx={{ color: "#545454", fontSize: "1rem", textAlign: "center", marginBottom: "3vh" }}
         >
-         Chcete-li nám poslat hodnocení, můžete k tomu využít <strong style={{color: "#195f00"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na Googlu zde.
+         Chcete-li nám poslat hodnocení, můžete k tomu využít <strong style={{color: "#195f00"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na <Link href="https://g.page/polystyrensypany/review?kd">Googlu</Link>.
         </Text>
         {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
        { feedback && feedback.type === "success" && <Alert type="success" color="green" icon={<FiAlertTriangle/>}>{feedback.message}</Alert>}
@@ -75,12 +76,12 @@ export default function HodnoceniMobile(props) {
             <Card shadow="xl" style={{ width: "100%", height: "100%", marginBottom: "3vh" }}>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "2vh", padding: "0" }}>
             <Group spacing="xs">
-            <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{recenze.produkt}</Text>
+            <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{recenze.ucel_pouziti}</Text>
             </Group>
             <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", padding: "0 0.5vw" }}>{recenze.slovni_hodnoceni}</Text>
             <Group>
             <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.2rem" }}>{recenze.jmeno_a_prijmeni}</Text>
-            {recenze.spolecnost && <Text weight={500} size="xl"  sx={{ color: "#545454", fontSize: "1rem" }}><i>{recenze.spolecnost}</i></Text>}
+            {recenze.spolecnost && <Text weight={500} size="xl"  sx={{ color: "#195f00", fontSize: "1rem" }}><i>{recenze.spolecnost}</i></Text>}
             </Group>
             </div>
             </Card>
@@ -103,16 +104,10 @@ export default function HodnoceniMobile(props) {
             <InputWrapper label="Společnost">
                 <Input    {...form.getInputProps('spolecnost')} />
             </InputWrapper>
-            <InputWrapper label="Číselné hnodnocení" required>
-                <NumberInput min={0} max={10} placeholder="od 0 do 10"   {...form.getInputProps('ciselne_hodnoceni')} value={form.values.ciselne_hodnoceni}  />
-            </InputWrapper>
-            <InputWrapper label="Produkt">
-                <Select data={produkty} placeholder="Vyberte produkt"    {...form.getInputProps('produkt')}
-      nothingFound="Produkt nebyl nalezen"
-      searchable
-      creatable
-      getCreateLabel={(query) => `+ Create ${query}`}
-      onCreate={(query) => setProdukty((current) => [...current, query])} />
+            
+            <InputWrapper label="Účel použití">
+                <Input placeholder="např. Zásyp do krovů"    {...form.getInputProps('produkt')}
+      />
             </InputWrapper>
             <InputWrapper label="Slovní hodnocení" required   >
                 <Textarea  {...form.getInputProps('slovni_hodnoceni')} autosize="true"/>
