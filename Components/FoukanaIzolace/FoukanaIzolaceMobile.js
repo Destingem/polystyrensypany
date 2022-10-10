@@ -6,7 +6,7 @@ import Footer from "../UI/Footer";
 import Link from "next/link";
 import DefaultScreen from "../UI/DefaultScreen";
 export default function FoukanaIzolaceMobile(props) {
-  let { device } = props;
+  let { device, ceniky } = props;
   return (
     <div>
       <DefaultScreen
@@ -93,35 +93,31 @@ export default function FoukanaIzolaceMobile(props) {
           Cena zápůjčky stroje vč. příslušenství
         </Text>
         <Space h="xl" />
-        <Table sx={device !== "laptop" ? {} : {width: "60%", height: "40vh", marginLeft: "auto", marginRight: "auto"}}>
-          <thead>
-            <tr>
-              <th>Množství sypaného polystyren</th>
-              <th>Cena bez DPH</th>
-              <th>Cena s DPH</th>
+        <Table striped>
+          <tbody>
+            <tr
+              style={{
+                backgroundColor: "rgba(50, 123, 98, 1)",
+                color: "white",
+              }}
+            >
+              <td>Množství sypaného polystyrenu</td> <td>Cena bez DPH</td>
+              <td>Cena s DPH</td>
             </tr>
-          </thead>
-          <tbody style={{ color: "#545454", fontWeight: "400" }}>
-            <tr>
-              <td>do 20,10m3</td>
-              <td>800,-Kč </td>
-              <td>968,-Kč</td>
-            </tr>
-            <tr>
-              <td>20,11 - 45,00m3</td>
-              <td>1.600,-Kč</td>
-              <td>1.936,-Kč</td>
-            </tr>
-            <tr>
-              <td>45,01 - 79,80m3</td>
-              <td>2.400,-Kč</td>
-              <td>2.904,-Kč</td>
-            </tr>
-            <tr>
-              <td>nad 79,81m3</td>
-              <td>neděle</td>
-              <td>neděle</td>
-            </tr>
+            {ceniky.map((cenik) => {
+              if(cenik.attributes.standardni_cenik_x_zapujcka_stroje == false || !cenik.attributes.radek_tabulky){
+                return
+              }
+              return cenik.attributes.radek_tabulky.map((radek) => {
+                return (
+                  <tr key={radek.id}>
+                    <td>{radek.nazev}</td>
+                    <td>{radek.cena_bez_dph}</td>
+                    <td>{radek.cena_s_dph}</td>
+                  </tr>
+                );
+              })
+            })}
           </tbody>
         </Table>
         <Link href="/ceny#foukana-izolace"><Button variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "15%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník</Button></Link>
