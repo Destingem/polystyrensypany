@@ -87,32 +87,36 @@ export default function Home(props) {
   );
 }
 export async function getStaticProps() {
-  let fetched = await fetch("http://159.89.20.207:1337/api/sortiment-karty?populate=*", {
+  try{
+    let fetched = await fetch("http://159.89.20.207:1337/api/sortiment-karty?populate=*", {
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   })
-  let data = await fetched.json()
+  var data = await fetched.json()
   let fetchedVyuziti = await fetch("http://159.89.20.207:1337/api/hlavni-strana-vyuziti?populate=*",{
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   })
-  let dataVyuziti = await fetchedVyuziti.json()
+  var dataVyuziti = await fetchedVyuziti.json()
 
   let fetchedPodnadpis = await fetch("http://159.89.20.207:1337/api/hlavni-strana-podnadpis?populate=*",{
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   })
-  let dataPodnadpis = await fetchedPodnadpis.json()
-  
+  var dataPodnadpis = await fetchedPodnadpis.json()
+  var props = {
+    sortiment: data.data ? data.data : [],
+    vyuziti: dataVyuziti.data ? dataVyuziti.data : [],
+    podnadpis: dataPodnadpis.data ? dataPodnadpis.data.attributes.Text : [],
+  } 
+  } catch(a){
+    var props = {sortiment:[] , vyuziti:[] , podnadpis: []}
+  }
     return {
-      props: {
-        sortiment: data.data ? data.data : [],
-        vyuziti: dataVyuziti.data ? dataVyuziti.data : [],
-        podnadpis: dataPodnadpis.data ? dataPodnadpis.data.attributes.Text : [],
-      },
+      props,
       revalidate: 10,
     };
   }

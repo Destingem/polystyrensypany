@@ -118,7 +118,7 @@ export default function OnasMobile(props) {
           Drcený polystyren se znovu vrací do stavebnictví ve formě plnohodnotné
           sypané izolace a nemusí končit na skládkách. Jsem rád, že tímto
           způsobem mohu přispět ke zlepšení životního prostředí.
-          Byla by škoda nevyužít všechny vlastnosti a přednosti, které
+          Byla by škoda nevyužít všechny <Link href="/drcenypolystyren-bily">vlastnosti a přednosti</Link>, které
           polystyren sypaný, drcený má.
         </Text>
         </div>
@@ -166,7 +166,7 @@ export default function OnasMobile(props) {
           sx={textSx}
         >
           
-          Od dubna 2012 poskytujeme <strong>strojové zafoukání</strong> naší izolace
+          Od dubna 2012 poskytujeme <Link href="/foukana-izolace">strojové zafoukání</Link> naší izolace
         </Text>
         <Space h="xl" />
         <Text size="lg" weight={400} sx={textSx}>Od roku 2013 jsme uvedeni v globální firemní databázi <Link href="https://cz.kompass.com/c/polystyren-sypany-richard-humes/cz046098/"><strong style={{color: "#e5312a"}}>KOMPASS <AiOutlineLink /></strong></Link>, která nám pomáhá zlepšit naše prodejní a marketingové aktivity.</Text>
@@ -174,7 +174,7 @@ export default function OnasMobile(props) {
         <Text size="lg" weight={400} sx={textSx}>V srpnu 2015 jsme obdrželi Certifikát - prověřená společnost". Tímto certifikátem se můžou pochlubit firmy, které nemají žádné negativní ohlasy od zákazníků a obchodních partnerů. Je to pro nás další ujištění, že to děláme dobře.</Text>
         <Space h="xl" />
         
-        <Text size="lg" weight={400} sx={textSx}>Od 3.11.2016 je náš výrobek Polystyren sypaný opět registrovaný v nové zelené úsporám pod číslem SVT5474</Text>
+        <Text size="lg" weight={400} sx={textSx}>Od 3.11.2016 je náš výrobek Polystyren sypaný opět registrovaný v nové zelené úsporám pod číslem <Link href="https://registrace.novazelenausporam.cz/vyhledavani/vyrobek/SVT5474/polystyren-sypany/">SVT5474</Link>.</Text>
         <Space h="xl" />
         <Image src="/images/nova_zelena_uspora.png"  width={456} height={49} layout={device !== "laptop" ? "responsive" : "fixed"} />
        
