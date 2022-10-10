@@ -1,10 +1,10 @@
 
 import PartneriMobile from "./PartneriMobile.js";
-export default function PartneriLaptop(){
+export default function PartneriLaptop(props){
 
     return(
         <>
-           <PartneriMobile device="laptop"/>
+           <PartneriMobile device="laptop" {...props}/>
         </>
     )
 }

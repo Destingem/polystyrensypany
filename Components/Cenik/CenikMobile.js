@@ -7,7 +7,7 @@ export default function CenikMobile(props) {
     let {device, ceniky} = props
     let h1Sx = { textAlign: device !== "laptop" ? "center" : "left", fontSize: "1.5rem", color: "#487b61" }
     let pSx = device !== "laptop" ? { padding: "0 5vw" } : { textAlign: "left" }
-    console.log(ceniky);
+    console.log(props);
   return (
     <>
       <MainScreen
@@ -99,9 +99,9 @@ export default function CenikMobile(props) {
           nebo vyplňte <Link href="/poptavka_form">poptávkový formulář</Link>
         </Text>
         <Text component="h1" style={h1Sx}>Polystyren sypaný - dodací lhůty</Text>
-        <Text component="p" style={pSx}>
-        Díky velkému počtu poptávek po sypaném polystyrenu máme materiál již pátým rokem na pořadník, z tohoto důvodu musíme dávat přednost klientům, kteří si sypaný polystyren závazně objednali. Abychom každému mohli vyjít vstříc, bylo by ideální, když budeme o vašem požadavku na sypaný polystyren vědět, alespoň 10dnů předem.
-        </Text>
+        {props.dodaciLhuty && <Text component="p" style={pSx}>
+            {props.dodaciLhuty.attributes.text}
+        </Text>}
       </div>
       <Footer />
     </>

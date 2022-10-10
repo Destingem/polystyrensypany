@@ -1,9 +1,9 @@
 import PartneriMobile from "./PartneriMobile";
 
 
-export default function PartneriTablet(){
+export default function PartneriTablet(props){
 
     return(
-        <PartneriMobile device="tablet"/>
+        <PartneriMobile device="tablet" {...props}/>
     )
 }

@@ -7,8 +7,12 @@ export default function Footer (){
     const [data, setData] = useState(null);
     useEffect(()=> {
         let fechFunction = async ()=>{
-            let data = await fetch("http://159.89.20.207/api/getKontakty")
-            if(!data.ok){
+           try {
+             let data = await fetch("http://159.89.20.207/api/getKontakty")
+           } catch (error) {
+            console.log(error);
+           }
+            if(!data || !data.ok){
                 return null
             }
             data = await data.json();

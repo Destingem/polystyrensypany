@@ -9,13 +9,13 @@ export default function Ceny(props) {
    <>
    
     <Media between={["zero", "mobile"]}>
-        <CenikMobile ceniky={ceniky} />
+        <CenikMobile {...props} />
     </Media>
     <Media between={["mobile", "tablet"]}>
-        <CenikTablet ceniky={ceniky} />
+        <CenikTablet {...props} />
     </Media>
     <Media between={["tablet", "laptop"]}>
-        <CenikLaptop ceniky={ceniky} />  
+        <CenikLaptop {...props} />  
     </Media>
    </>
   );
@@ -29,8 +29,15 @@ export async function getStaticProps(){
         }
     })
     let dataJson = await data.json()
+    let data2 = await fetch("http://159.89.20.207:1337/api/dodaci-lhuty?populate=*", {
+        headers: {
+            Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
+        }
+    })
+    let dodaciLhuty = await data2.json()
+
     return {
         props: {
-            ceniky: dataJson.data
+            ceniky: dataJson.data, dodaciLhuty: dodaciLhuty.data
         }}
 }

@@ -3,11 +3,11 @@ import HodnoceniMobile from "../../Components/Hodnoceni/HodnoceniMobile";
 import HodnoceniTablet from "../../Components/Hodnoceni/HodnoceniTablet";
 import HodnoceniLaptop from "../../Components/Hodnoceni/HodnoceniLaptop";
 import { useState } from "react";
-export default function Hodnoceni() {
+export default function Hodnoceni(props) {
   const [feedback, setFeedback] = useState({type: "", message: ""});
   async function handleSubmit(event) {
     
-    console.log(event);
+   
   try{
     var response = await fetch("/api/hodnoceni", {
       method: "POST",
@@ -28,17 +28,35 @@ export default function Hodnoceni() {
     setFeedback({type: "error", message: "Nepodařilo se odeslat formulář"});
   }
 }
+console.log(props);
   return (
     <>
       <Media between={["zero", "mobile"]}>
-        <HodnoceniMobile  handleSubmit={handleSubmit} feedback={feedback} />
+        <HodnoceniMobile  handleSubmit={handleSubmit} feedback={feedback} data={props.data}/>
       </Media>
       <Media between={["mobile", "tablet"]}>
-        <HodnoceniTablet  handleSubmit={handleSubmit} feedback={feedback} />
+        <HodnoceniTablet  handleSubmit={handleSubmit} feedback={feedback} data={props.data}/>
       </Media>
       <Media between={["tablet", "tv"]}>
-        <HodnoceniLaptop  handleSubmit={handleSubmit} feedback={feedback} />
+        <HodnoceniLaptop  handleSubmit={handleSubmit} feedback={feedback} data={props.data}/>
       </Media>
     </>
   );
+}
+export async function getStaticProps() {
+  try{
+    let fetched = await fetch("http://159.89.20.207:1337/api/hodnocenis?populate=*", {
+    headers: {
+    Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
+    }
+  });
+  let data = await fetched.json();
+  var props = {data}
+  } catch{
+    props = {}
+  }
+ 
+  return({
+    props: props
+  })
 }

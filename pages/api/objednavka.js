@@ -31,9 +31,9 @@ console.log(objednavka);
       pass: process.env.USER_pass, // generated ethereal password
     },
   });
-  let subject = "Objednávka - " + jmeno + " " + prijmeni;
+  let subject = "Poptávka - " + jmeno + " " + prijmeni;
   let html =
-    "<h1>Objednávka</h1><p>Ucel: " +
+    "<h1>Poptávka</h1><p>Ucel: " +
     ucel +
     "</p><p>Mnozstvi: " +
     mnozstvi +

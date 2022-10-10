@@ -22,7 +22,7 @@ export default function MobileMainScreen(props){
         </Text>
         <Text
           size="xl"
-          sx={{ color: "#195f00", fontSize: "12vw", marginTop: "0vh", marginRight: "10vw", marginBottom: 0 }}
+          sx={{ color: "#545454", fontSize: "12vw", marginTop: "0vh", marginRight: "10vw", marginBottom: 0 }}
           component="h1"
         >
           Sypaný

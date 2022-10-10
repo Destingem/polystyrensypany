@@ -10,7 +10,7 @@ import Heading from "../UI/Heading";
 export default function HodnoceniMobile(props) {
     const [scroll, setScroll] = useWindowScroll()
     const [feedback, setFeedback] = useState({type: "", message: ""});
-    let {device} = props;
+    let {device, data} = props;
     const form = useForm({
         initialValues: {
           jmeno: "",
@@ -49,7 +49,6 @@ export default function HodnoceniMobile(props) {
       
     }
     const [produkty, setProdukty] = useState(["Polystyren sypaný - EPS bílý", "Polystyren sypaný - EPS šedý", "Polystyren sypaný - XPS"])
-    const hodnoceni = [{jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "10", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}, {jmeno: "Ondřej", prijmeni: "Zaplatilek", hodnoceni: "9", zprava: "Dobrý partner, věřím, že Vám pomůžu s realizací svých zakázek. Děkuji.", zbozi: "Polystyren Polystyren sypaný - EPS bílý", firma: "Gogol a.s."}]
     return (
         <div>
         <DefaultScreen label="Hodnocení zákazníky" image="/images/polystyrenestructure.jpg" device={device} />
@@ -68,23 +67,20 @@ export default function HodnoceniMobile(props) {
         </Text>
         {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
        { feedback && feedback.type === "success" && <Alert type="success" color="green" icon={<FiAlertTriangle/>}>{feedback.message}</Alert>}
-        <Grid span={device !== "laptop" ? 12 : 3 }>
-        {hodnoceni && hodnoceni.map((item, index) => {
+        <Grid span={device !== "laptop" ? 12 : 3 } sx={{alignItems: "stretch"}} align="stretch">
+        {data && data.data && data.data.map((item, index) => {
+            let recenze = item.attributes
             return(
                 <Grid.Col span={device !== "laptop" ? 12 : 3 }>
-            <Card shadow="xl" style={{ width: "100%", height: "fitContent", marginBottom: "3vh" }}>
+            <Card shadow="xl" style={{ width: "100%", height: "100%", marginBottom: "3vh" }}>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "2vh", padding: "0" }}>
             <Group spacing="xs">
-            
-            <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{item.zbozi}</Text>
-            <Badge sx={{backgroundColor: "#28810870"}}><Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1rem" }}>{item.hodnoceni + "/10"}</Text></Badge>
+            <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{recenze.produkt}</Text>
             </Group>
-            
-            
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", padding: "0 3vw" }}>{item.zprava}</Text>
+            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", padding: "0 0.5vw" }}>{recenze.slovni_hodnoceni}</Text>
             <Group>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.2rem" }}>{item.jmeno} {item.prijmeni}</Text>
-            <Text weight={500} size="xl"  sx={{ color: "#545454", fontSize: "1rem" }}><i>{item.firma}</i></Text>
+            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.2rem" }}>{recenze.jmeno_a_prijmeni}</Text>
+            {recenze.spolecnost && <Text weight={500} size="xl"  sx={{ color: "#545454", fontSize: "1rem" }}><i>{recenze.spolecnost}</i></Text>}
             </Group>
             </div>
             </Card>
