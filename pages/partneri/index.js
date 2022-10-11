@@ -34,6 +34,8 @@ export async function getStaticProps() {
   }
  console.log(props);
   return({
-    props: props
-  })
+    props: props,
+    revalidate: 30,
+  }
+  )
 }

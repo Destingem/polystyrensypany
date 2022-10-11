@@ -37,5 +37,6 @@ export async function getStaticProps() {
       provozniDoby: provozniDoby.data && provozniDoby.data[0] ? provozniDoby.data[0].attributes.radek_tabulky : [],
       kontaktniUdaje: provozniUdaje.data ? provozniUdaje.data.attributes : [],
     },
+    revalidate: 30,
   };
 }

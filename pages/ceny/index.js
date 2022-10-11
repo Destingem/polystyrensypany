@@ -39,5 +39,6 @@ export async function getStaticProps(){
     return {
         props: {
             ceniky: dataJson.data, dodaciLhuty: dodaciLhuty.data
-        }}
+        },
+        revalidate: 30,}
 }

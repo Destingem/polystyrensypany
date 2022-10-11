@@ -8,7 +8,7 @@ export default function Footer (){
     useEffect(()=> {
         let fechFunction = async ()=>{
            try {
-             let data = await fetch("http://159.89.20.207/api/getKontakty")
+             var data = await fetch("https://polystyrensypany.cz/api/getKontakty")
            } catch (error) {
             console.log(error);
            }
@@ -24,6 +24,7 @@ export default function Footer (){
         }
         fechFunction().then(data => setData(data))
     }, [])
+    console.log(data);
     return(
       <>
          <Media between={["zero", "mobile"]}>

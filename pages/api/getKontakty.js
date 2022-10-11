@@ -1,12 +1,7 @@
 
 
 export default async function handler(req, res) {
-    let fetchedDoby = await fetch("http://159.89.20.207:1337/api/provozni-doby?populate=*", {
-    headers: {
-      Authorization: "Bearer "+ process.env.NEXT_PUBLIC_STRAPI_JWT,
-    }
-  });
-  let provozniDoby = await fetchedDoby.json();
+    
   let fetchedUdaje = await fetch("http://159.89.20.207:1337/api/kontaktni-udaje?populate=*", {
     headers: {
       Authorization: "Bearer "+ process.env.NEXT_PUBLIC_STRAPI_JWT,

@@ -27,6 +27,6 @@ let data = await fetched.json()
     props: {
       sortiment: data.data ? data.data : []
     },
-    revalidate: 10,
+    revalidate: 30,
   };
 }

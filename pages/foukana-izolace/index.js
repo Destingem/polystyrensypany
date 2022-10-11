@@ -28,5 +28,7 @@ export async function getStaticProps(){
   return {
       props: {
           ceniky: dataJson.data
-      }}
+      },
+      revalidate: 30,
+    }
 }
