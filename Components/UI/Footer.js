@@ -8,7 +8,7 @@ export default function Footer (){
     useEffect(()=> {
         let fechFunction = async ()=>{
            try {
-             var data = await fetch("https://polystyrensypany.cz/api/getKontakty")
+             var data = await fetch("https://www.polystyrensypany.cz/api/getKontakty")
            } catch (error) {
             console.log(error);
            }
