@@ -20,13 +20,13 @@ export default function Kontakty(props) {
 }
 
 export async function getStaticProps() {
-  let fetchedDobyty = await fetch("http://159.89.20.207:1337/api/provozni-doby?populate=*", {
+  let fetchedDobyty = await fetch("http://134.122.88.214:1337/api/provozni-doby?populate=*", {
     headers: {
       Authorization: "Bearer "+ process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   });
   let provozniDoby = await fetchedDobyty.json();
-  let fetchedUdaje = await fetch("http://159.89.20.207:1337/api/kontaktni-udaje?populate=*", {
+  let fetchedUdaje = await fetch("http://134.122.88.214:1337/api/kontaktni-udaje?populate=*", {
     headers: {
       Authorization: "Bearer "+ process.env.NEXT_PUBLIC_STRAPI_JWT,
     }

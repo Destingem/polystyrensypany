@@ -14,12 +14,12 @@ export default function Novinka(props){
        </div>
         <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", margin: device !== "laptop" ? "2vh 5vw 2vh 5vw" : "1vh 2vw 1vh 2vw" }}>{item.attributes.Obsah}</Text>
       
-        {item.attributes.Obrazek.data && <img alt={item.attributes.Obrazek.data.attributes.alternativeText} src={"http://159.89.20.207:1337" + item.attributes.Obrazek.data.attributes.formats.small.url} style={{ width: "100%", height: "80%", objectFit: "contain", maxHeight: "30vh" }} height={item.attributes.Obrazek.data.attributes.formats.small.height} width={item.attributes.Obrazek.data.attributes.formats.small.width}/>}
+        {item.attributes.Obrazek.data && <img alt={item.attributes.Obrazek.data.attributes.alternativeText} src={"http://134.122.88.214:1337" + item.attributes.Obrazek.data.attributes.formats.small.url} style={{ width: "100%", height: "80%", objectFit: "contain", maxHeight: "30vh" }} height={item.attributes.Obrazek.data.attributes.formats.small.height} width={item.attributes.Obrazek.data.attributes.formats.small.width}/>}
         {item.attributes.Priloha.data && <Button color="teal" onClick={()=> {setIsShown(prev => !prev)}}>{isShown ? "Skrýt přílohy" : "Zobrazit přílohy"}</Button>}
        <div style={{display: "flex", alignItems: "center", margin: "1vh 1vw", maxWidth: "100%", flexWrap: "wrap", gap: "2vw"}}>
         {isShown && item.attributes.Priloha.data && item.attributes.Priloha.data.map(priloha => {
             console.log(priloha)
-            return(<Badge color="lime"><Text key={priloha.id} component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "0.8rem", textAlign: "center", margin: "0" }}><a style={{color: "#545454"}} href={"http://159.89.20.207:1337" + priloha.attributes.url} download={"http://159.89.20.207:1337" + priloha.attributes.url} >{priloha.attributes.name}</a></Text></Badge>)
+            return(<Badge color="lime"><Text key={priloha.id} component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "0.8rem", textAlign: "center", margin: "0" }}><a style={{color: "#545454"}} href={"http://134.122.88.214:1337" + priloha.attributes.url} download={"http://134.122.88.214:1337" + priloha.attributes.url} >{priloha.attributes.name}</a></Text></Badge>)
         })}
         </div>
         </div>

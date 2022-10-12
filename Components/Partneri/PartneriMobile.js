@@ -26,7 +26,7 @@ export default function PartneriMobile(props){
                 let partner = item.attributes;
                 return(
                     <div style={{margin: "0 5vw", gap: "2vh", display: "flex", flexDirection: "column"}}>
-               {partner.logo && partner.logo.data && partner.logo.data.attributes && <Image src={"http://159.89.20.207:1337" + partner.logo.data.attributes.url}  width={partner.logo.data.attributes.width} height={partner.logo.data.attributes.height} layout="responsive" />}
+               {partner.logo && partner.logo.data && partner.logo.data.attributes && <Image src={"http://134.122.88.214:1337" + partner.logo.data.attributes.url}  width={partner.logo.data.attributes.width} height={partner.logo.data.attributes.height} layout="responsive" />}
                <Text size="xl" weight={600} sx={{ color: "#545454", fontSize: "1.5rem" }}>{partner.nazev}</Text>
                <Text size="xl" weight={400} sx={{ color: "#545454", fontSize: "1rem" }}>{partner.popis}</Text>
                {partner.link && <Link href={partner.link} >{partner.link}</Link>}

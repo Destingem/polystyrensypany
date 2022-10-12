@@ -67,20 +67,20 @@ export default function Home(props) {
 }
 export async function getStaticProps() {
   try{
-    let fetched = await fetch("http://159.89.20.207:1337/api/sortiment-karty?populate=*", {
+    let fetched = await fetch("http://134.122.88.214:1337/api/sortiment-karty?populate=*", {
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   })
   var data = await fetched.json()
-  let fetchedVyuziti = await fetch("http://159.89.20.207:1337/api/hlavni-strana-vyuziti?populate=*",{
+  let fetchedVyuziti = await fetch("http://134.122.88.214:1337/api/hlavni-strana-vyuziti?populate=*",{
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
   })
   var dataVyuziti = await fetchedVyuziti.json()
 
-  let fetchedPodnadpis = await fetch("http://159.89.20.207:1337/api/hlavni-strana-podnadpis?populate=*",{
+  let fetchedPodnadpis = await fetch("http://134.122.88.214:1337/api/hlavni-strana-podnadpis?populate=*",{
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }

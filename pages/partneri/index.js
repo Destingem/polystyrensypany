@@ -21,7 +21,7 @@ export default function Partneri(props) {
 }
 export async function getStaticProps() {
   try{
-    let fetched = await fetch("http://159.89.20.207:1337/api/partneris?populate=*", {
+    let fetched = await fetch("http://134.122.88.214:1337/api/partneris?populate=*", {
     headers: {
     Authorization: "Bearer " + process.env.NEXT_PUBLIC_STRAPI_JWT,
     }
