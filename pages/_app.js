@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import {MantineProvider} from "@mantine/core"
 import { MediaContextProvider } from "../Components/Media"
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 function MyApp({ Component, pageProps }) {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED='0'
   const [showChild, setShowChild] = useState(false);
@@ -48,6 +49,22 @@ function MyApp({ Component, pageProps }) {
       colorScheme: "light",
     }}
   >
+  <Head>
+
+  <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-27461326-2', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+
+  </Head>
   <Component {...pageProps} />
   </MantineProvider>
   </MediaContextProvider>
