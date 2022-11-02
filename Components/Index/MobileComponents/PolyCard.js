@@ -13,6 +13,7 @@ export default function PolyCard(props){
             width={device !== "laptop" ? 4 : 4}
             alt={image.alt}
             layout="responsive"
+            loading="lazy"
           />
         </Card.Section>
   
