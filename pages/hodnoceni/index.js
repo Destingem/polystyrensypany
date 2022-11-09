@@ -51,6 +51,7 @@ export async function getStaticProps() {
     }
   });
   let data = await fetched.json();
+  data.data = data.data.reverse()
   var props = {data}
   } catch{
     props = {}

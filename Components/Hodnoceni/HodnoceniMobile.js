@@ -3,13 +3,15 @@ import {Text, Card, Space, Divider, Grid, Group, Badge, Input, InputWrapper, Tex
 import Footer from "../UI/Footer";
 import { useForm } from "@mantine/form";
 import { useEffect, useRef, useState } from "react";
-import { useWindowScroll } from "@mantine/hooks";
+import { useScrollIntoView, useWindowScroll } from "@mantine/hooks";
 import { FiAlertTriangle } from "react-icons/fi";
 import DefaultScreen from "../UI/DefaultScreen";
 import Heading from "../UI/Heading";
 import Link from "next/link";
 export default function HodnoceniMobile(props) {
     const [scroll, setScroll] = useWindowScroll()
+    const { scrollIntoView, targetRef } = useScrollIntoView({ offset: 180 });
+
     const [feedback, setFeedback] = useState({type: "", message: ""});
     let {device, data} = props;
     const form = useForm({
@@ -64,7 +66,7 @@ export default function HodnoceniMobile(props) {
           weight={400}
           sx={{ color: "#545454", fontSize: "1rem", textAlign: "center", marginBottom: "3vh" }}
         >
-         Chcete-li nám poslat hodnocení, můžete k tomu využít <strong style={{color: "#195f00"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na <Link href="https://g.page/polystyrensypany/review?kd">Googlu</Link>.
+         Chcete-li nám poslat hodnocení, můžete k tomu využít <strong onClick={()=> {scrollIntoView( {alignment: 'center'} )}} style={{color: "#195f00", cursor: "pointer"}}>formulář níže</strong> nebo můžete napsat recenzi přímo na <Link href="https://g.page/polystyrensypany/review?kd">Googlu</Link>.
         </Text>
         {feedback && feedback.type === "error" && <Alert color="red" type="error" title="Formulář se nepodařilo odeslat" icon={<FiAlertTriangle/>}>Možná jste bez internetu, nebo se vyskytl problém na naší straně. Zkuste to prosím znovu. Pokud i nadále bude problém přetrvávat kontaktujte nás na email info@polystyrensypany.cz</Alert>}
        { feedback && feedback.type === "success" && <Alert type="success" color="green" icon={<FiAlertTriangle/>}>{feedback.message}</Alert>}
@@ -92,7 +94,7 @@ export default function HodnoceniMobile(props) {
         })}
         </Grid>
         <Heading device={device} align="center">Formulář</Heading>
-        <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {} : {display: "flex", flexDirection: "column", alignItems: "right", width: "50%", gap: "1vh", alignSelf: "center"}}>
+        <form onSubmit={form.onSubmit(submitHandler)} style={device !== "laptop" ? {} : {display: "flex", flexDirection: "column", alignItems: "right", width: "50%", gap: "1vh", alignSelf: "center"}} ref={targetRef}>
             <div style={{display: "flex", gap : "5vw"}}>
             <InputWrapper label="Jméno" required sx={{width: "50%"}}>
                 <Input    {...form.getInputProps('jmeno')}/>
