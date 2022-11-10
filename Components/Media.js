@@ -5,7 +5,7 @@ const ExampleAppMedia = createMedia({
     zero: 0,
    mobile: 429,
    tablet: 821,
-   laptop:2500,
+   laptop:8000,
    tv: 6000
 
   },
