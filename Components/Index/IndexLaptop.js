@@ -28,7 +28,7 @@ export default function IndexLaptop(props) {
     
       
       <main className={styles.main}>
-      <div style={{backgroundImage: "url('/images/backgroundBall1.png')", backgroundSize: "cover", backgroundPosition: "bottom" }}>
+      <div style={{backgroundImage: "url('/images/bckball3.png')", backgroundSize: "100% auto", backgroundPosition: "top", backgroundRepeat: "no-repeat" }}>
       <nav><NavBar /> </nav>
        <MainScreen />
        </div>
