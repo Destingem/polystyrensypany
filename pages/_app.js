@@ -4,6 +4,7 @@ import { MediaContextProvider } from "../Components/Media"
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { GoogleAnalytics } from "nextjs-google-analytics";
+import Script from 'next/script'
 function MyApp({ Component, pageProps }) {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED='0'
   const [showChild, setShowChild] = useState(false);
@@ -57,18 +58,18 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="icon" href="/images/finalLogo.png" />
       </Head>
-      <script
+      <Script
         type="text/javascript"
         async=""
         defer=""
         src="//ifirmy.cz/pxstats/piwik.js"
-      ></script>
-      <script async="" src="//www.google-analytics.com/analytics.js"></script>
-      <script
+      ></Script>
+      <Script async="" src="//www.google-analytics.com/analytics.js"></Script>
+      <Script
         type="text/javascript"
         async=""
         src="https://ssl.google-analytics.com/ga.js"
-      ></script>
+      ></Script>
   <GoogleAnalytics trackPageViews gaMeasurementId="UA-27461326-2"/>
   <Component {...pageProps} />
   </MantineProvider>
