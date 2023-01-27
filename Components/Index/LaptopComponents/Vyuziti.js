@@ -65,6 +65,7 @@ export default function Vyuziti(props){
         </div>
         <div style={{ minWidth: "30%", marginTop: "auto", marginBottom: "5vh" }}>
           <Image
+          alt="Zafoukávání podlahy polystyrenem"
             src="/images/podlaha.jpg"
             layout="responsive"
             width="100px"

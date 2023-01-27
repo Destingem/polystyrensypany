@@ -34,7 +34,7 @@ export default function EPSJemnyMobile(props){
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", gap: "3vh", minHeight: "30vh"}}>
         
            <div style={{width: "50%", height: "50%"}}>
-           <Image src="/images/jemny1.png" width={device !== "laptop" ? "100%" : "160"} height={device !== "laptop" ? "93" : "93"} alt="Polystyren sypaný EPS jemný" layout="responsive" />
+           <Image src="/images/jemny1.png"  width={device !== "laptop" ? "100%" : "160"} height={device !== "laptop" ? "93" : "93"} alt="Polystyren sypaný EPS jemný" layout="responsive" />
         
            </div>
            <div style={{width: "50%", height: "50%"}}>

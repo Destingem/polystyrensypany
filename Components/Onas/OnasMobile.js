@@ -176,7 +176,7 @@ export default function OnasMobile(props) {
         
         <Text size="lg" weight={400} sx={textSx}>Od 3.11.2016 je náš výrobek Polystyren sypaný opět registrovaný v nové zelené úsporám pod číslem <Link href="https://registrace.novazelenausporam.cz/vyhledavani/vyrobek/SVT5474/polystyren-sypany/">SVT5474</Link>.</Text>
         <Space h="xl" />
-        <Image src="/images/nova_zelena_uspora.png"  width={456} height={49} layout={device !== "laptop" ? "responsive" : "fixed"} />
+        <Image src="/images/nova_zelena_uspora.png" alt="Dotace nová zelená úspora"  width={456} height={49} layout={device !== "laptop" ? "responsive" : "fixed"} />
        
       </section>
       <Footer />

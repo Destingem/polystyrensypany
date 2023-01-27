@@ -87,7 +87,7 @@ export default function FoukanaIzolaceMobile(props) {
           zaškolení k aplikaci foukané izolace svépomocí.
         </BasicText>
         </div>
-        <div style={{maxWidth: device !== "mobile" ? "25%" : "100%", padding: "5vh 2vw", display: "flex", flexDirection: device !== "mobile" ? "column" : "row", gap: "1vw"}}><Image src="/images/foukani_strop.png" width={600} height={600}/> <Image src="/images/foukani_pricka.png" width={600} height={600}/></div>
+        <div style={{maxWidth: device !== "mobile" ? "25%" : "100%", padding: "5vh 2vw", display: "flex", flexDirection: device !== "mobile" ? "column" : "row", gap: "1vw"}}><Image src="/images/foukani_strop.png" alt="Zafoukávání stropu polystyrenem" width={600} height={600}/> <Image src="/images/foukani_pricka.png" alt="Zafoukávání půdy polystyrenem" width={600} height={600}/></div>
        </div>
         <Space h="xl" />
         <Text  weight={600}

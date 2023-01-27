@@ -29,10 +29,46 @@ function MyApp({ Component, pageProps }) {
       colorScheme: "light",
     }}
   >
-  <Head>
+    <Head>
+        <title>Polystyren sypaný | Ta Pravá Izolace</title>
+        <meta
+          name="google-site-verification"
+          content="9K0ynxdvhSHvYMmvn3-3L3_VxCv9eFsGau7yWg_jYRI"
+        />
+        <meta name="generator" content="Bluefish 2.2.3" />
+        <meta name="author" content="Humes" />
+        <meta
+          name="keywords"
+          content="Polystyren, polystyren sypaný, polystyreny, polystyrenové kuličky, izolace, zateplení domu, foukaná izolace"
+        />
+        <meta
+          name="description"
+          content="Polystyren sypaný pro zateplení domu je ta pravá izolace. Doporučíme jak izolaci polystyren sypaný použít k zateplení domu se značnou úsporou nákladů."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="Copyright" content="Copyright© 2022 Polystyren sypaný" />
+        <meta  content="text/html; charset=UTF-8" />
+        <meta
+          
+          content="application/xhtml+xml; charset=UTF-8"
+        />
+        <meta  content="text/css" />
+        <meta  content="0" />
 
-
-  </Head>
+        <link rel="icon" href="/images/finalLogo.png" />
+      </Head>
+      <script
+        type="text/javascript"
+        async=""
+        defer=""
+        src="//ifirmy.cz/pxstats/piwik.js"
+      ></script>
+      <script async="" src="//www.google-analytics.com/analytics.js"></script>
+      <script
+        type="text/javascript"
+        async=""
+        src="https://ssl.google-analytics.com/ga.js"
+      ></script>
   <GoogleAnalytics trackPageViews gaMeasurementId="UA-27461326-2"/>
   <Component {...pageProps} />
   </MantineProvider>
@@ -40,5 +76,7 @@ function MyApp({ Component, pageProps }) {
   )
 }
 }
-
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
 export default MyApp

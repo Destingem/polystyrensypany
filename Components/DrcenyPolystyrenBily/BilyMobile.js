@@ -101,19 +101,19 @@ export default function BilyMobile(props) {
         
            <Link href="/ceny#polystyren-sypany-EPS-bily"><Button variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "15%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník</Button></Link>
             {device == "mobile" ? <><Image src="/images/bily.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
-            <Image src="/images/EPS_bily.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/EPS_bily.png" alt="Polystyren EPS bílý" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             
-            <Image src="/images/polystyren_jemny_detail.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
-            <Image src="/images/polystyren_jemny_detail2.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></>:
+            <Image src="/images/polystyren_jemny_detail.png" alt="Polystyren jemný" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/polystyren_jemny_detail2.png" alt="Polystyren jemný" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></>:
             <Grid>
             <Grid.Col span={4}>
-            <Image src="/images/EPS_bily.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/EPS_bily.png" layout="responsive" alt="Polystyren EPS bílý" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             <Grid.Col span={4}>
-            <Image src="/images/polystyren_jemny_detail.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/polystyren_jemny_detail.png" alt="Polystyren jemný" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             <Grid.Col span={4}>
-            <Image src="/images/Polystyren_sypany_bily.jpg" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/Polystyren_sypany_bily.jpg" alt="Polystyren bílý" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             </Grid>}
         </div>

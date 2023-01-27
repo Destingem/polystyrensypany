@@ -49,18 +49,18 @@ export default function SedyMobile(props) {
             </List>
             </div>
             <div style={{minWidth: "30%", marginTop: "auto", marginBottom: "auto"}}>
-                <Image src="/images/sedy_zatepleni.jpg" layout="responsive" width={4} height={3} />
+                <Image src="/images/sedy_zatepleni.jpg" alt="Ukázka zateplení šedým polystyrenem" layout="responsive" width={4} height={3} />
             </div>
            </div>
             <Link href="/ceny#polystyren-sypany-EPS-sedy"><Button variant="gradient" gradient={{from: "#327b62", to: "teal"}} size="lg" sx={{ width: device !== "laptop" ? "100%" : "15%" , marginTop: "3vh", marginLeft: "auto" }}>Ceník</Button></Link>
             {device == "mobile" ? <><Image src="/images/sedy.png" layout="responsive" width={4} height={3} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
-            <Image src="/images/sedy_pytel.png" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></> : 
+            <Image src="/images/sedy_pytel.png" alt="Pytel šedého polystyrenu" layout="responsive" width={299} height={448} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} /></> : 
             <Grid sx={{justifyContent: "center"}}>
             <Grid.Col span={6}  sx={{maxWidth: "30% !important"}}>
-            <Image src="/images/sedy.png" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/sedy.png" alt="Polystyren šedý" layout="responsive" width={640} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             <Grid.Col span={6} sx={{maxWidth: "30% !important"}}>
-            <Image src="/images/sedy_pytel.png" layout="responsive" width={600} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
+            <Image src="/images/sedy_pytel.png" alt="Pytel šedého polystyrenu"  layout="responsive" width={600} height={435} sx={{ width: "100%", height: "auto", marginRight: "auto", marginLeft: "auto", textAlign: "center" }} />
             </Grid.Col>
             
             

@@ -14,6 +14,7 @@ export default function PolyCard(props){
             alt={image.alt}
             layout="responsive"
             loading="lazy"
+            
           />
         </Card.Section>
   

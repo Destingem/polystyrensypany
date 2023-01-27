@@ -71,8 +71,8 @@ export default function RecyklaceMobile(props) {
             })}
         </List>
         <div style={{ display: "flex", justifyContent: "center", gap: "3%", margin: "5vh 0"}}>
-          <div style={{minWidth: "25%",}}><Image src="/images/polystyren_recyklace.jpg"  style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
-          <div style={{minWidth: "25%"}}><Image src="/images/recyklace_odpad.jpg"  style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
+          <div style={{minWidth: "25%",}}><Image src="/images/polystyren_recyklace.jpg" alt="Recyklace polystyrenu" style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
+          <div style={{minWidth: "25%"}}><Image src="/images/recyklace_odpad.jpg" alt="Recyklace polystyrenového odpadu"  style={{ borderRadius: "3px", maxWidth: "100%", maxHeight: "100%" }}  layout="responsive" width={4} height={3} /></div>
         </div>
         <Space h="xl" />
        <div style={{display: "flex"}}>
