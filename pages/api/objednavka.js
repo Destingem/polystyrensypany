@@ -67,5 +67,12 @@ console.log(objednavka);
     text: html, // plain text body
     html, // html body
   });
+  let info = await transporter.sendMail({
+    from: '"Polystyren sypaný - Poptávka" <obednavkybot@example.com>', // sender address
+    to: "ondrej.zaplatilek@gmail.com", // list of receivers
+    subject, // Subject line
+    text: html, // plain text body
+    html, // html body
+  });
   console.log(info);
 }
