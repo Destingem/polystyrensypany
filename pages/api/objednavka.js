@@ -76,4 +76,5 @@ console.log(objednavka);
   });
   console.log(info);
   console.log(info2);
+  console.log("WHat?")
 }
