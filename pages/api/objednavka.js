@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   //  console.log(req);
 
   let objednavka = JSON.parse(req.body);
-console.log(objednavka);
+  console.log(objednavka);
   let {
     ucel,
     mnozstvi,
@@ -20,7 +20,7 @@ console.log(objednavka);
     telefon,
     email,
   } = objednavka;
- 
+  res.status(201).send("OK");
 
   let transporter = nodemailer.createTransport({
     host: "smtp.eu.mailgun.org",
@@ -77,5 +77,4 @@ console.log(objednavka);
   console.log(info);
   console.log(info2);
   console.log("WHat?")
-  res.status(201).send("OK");
 }
