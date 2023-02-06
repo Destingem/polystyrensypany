@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     produkt,
     slovni_hodnoceni,
   } = hodnoceni;
-  res.status(201).send("OK");
+ 
 
   let transporter = nodemailer.createTransport({
     host: "smtp.eu.mailgun.org",
@@ -48,4 +48,5 @@ export default async function handler(req, res) {
     html, // html body
   });
   console.log(info);
+  res.status(201).send("OK");
 }
