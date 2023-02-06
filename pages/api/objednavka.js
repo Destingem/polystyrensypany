@@ -1,7 +1,12 @@
 const nodemailer = require("nodemailer");
-
+const querystring = require("querystring");
+const formData = require('form-data');
+const Mailgun = require('mailgun.js');
+const mailgun = new Mailgun(formData);
+const mg = mailgun.client({username: 'api', key: process.env.MAIL_API, url: 'https://api.eu.mailgun.net'});
 export default async function handler(req, res) {
-  //  console.log(req);
+
+
 
   let objednavka = JSON.parse(req.body);
   console.log(objednavka);
@@ -20,17 +25,12 @@ export default async function handler(req, res) {
     telefon,
     email,
   } = objednavka;
-  res.status(201).send("OK");
+ 
+ 
 
-  let transporter = nodemailer.createTransport({
-    host: "smtp.eu.mailgun.org",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: process.env.USER_mail, // generated ethereal user
-      pass: process.env.USER_pass, // generated ethereal password
-    },
-  });
+  let sender_email = "Poptávky <poptavka@polystyrensypany.cz>"
+ 
+  let receiver_email = ["info@polystyrensypany.cz", "ondrej.zaplatilek@gmail.com"]
   let subject = "Poptávka - " + jmeno + " " + prijmeni;
   let html =
     "<h1>Poptávka</h1><p>Ucel: " +
@@ -60,21 +60,15 @@ export default async function handler(req, res) {
     "</p><p>Email: " +
     email +
     "</p>";
-  let info = await transporter.sendMail({
-    from: '"Polystyren sypaný - Poptávka" <obednavkybot@example.com>', // sender address
-    to: "info@polystyrensypany.cz", // list of receivers
-    subject, // Subject line
-    text: html, // plain text body
-    html, // html body
-  });
-  let info2 = await transporter.sendMail({
-    from: '"Polystyren sypaný - Poptávka" <obednavkybot@example.com>', // sender address
-    to: "ondrej.zaplatilek@gmail.com", // list of receivers
-    subject, // Subject line
-    text: html, // plain text body
-    html, // html body
-  });
-  console.log(info);
-  console.log(info2);
-  console.log("WHat?")
+
+    mg.messages.create('polystyrensypany.artilea.eu', {
+      from: sender_email,
+      to: receiver_email,
+      subject: subject,
+     
+      html: html
+    })
+    .then(msg => console.log(msg)) // logs response data
+    .catch(err => console.error(err)); // logs any error
+    res.status(201).send("OK");
 }
