@@ -50,7 +50,7 @@ export default function SortimentMobile(props) {
         }}
       >
         <Text
-          element="p"
+          component="p"
           weight={400}
           size="xl"
           sx={{

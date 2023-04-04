@@ -8,7 +8,7 @@ let duvody = ["lepší tepelné vlastnosti než v pevné podobě", " téměř ž
     return(
         <div className={styles.third}>
           <Text
-            element="h2"
+            component="h2"
             size="xl"
             sx={{
               fontWeight: 600,

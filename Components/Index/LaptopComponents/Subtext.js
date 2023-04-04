@@ -7,7 +7,7 @@ export default function Subtext(props) {
         <div className={styles.second}>
          <div style={{width: "80%", backgroundColor: "rgba(63,123,99,1)", padding:" 5vh 35vw 5vh 5vw"}}>
            
-         <Text size="xl" element="p" sx={{ fontWeight: 400, color: "#eeee" }}>
+         <Text size="xl" component="p" sx={{ fontWeight: 400, color: "#eeee" }}>
             {props.podnadpis}
           </Text>
           

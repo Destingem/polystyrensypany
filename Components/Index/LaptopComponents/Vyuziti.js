@@ -13,7 +13,7 @@ export default function Vyuziti(props){
         <div className={styles.fourth}>
         <div>
           <Text
-            element="h2"
+            component="h2"
             size="xl"
             sx={{
               fontWeight: 600,
@@ -24,30 +24,30 @@ export default function Vyuziti(props){
           >
             Využití
           </Text>
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
             
           </Text>
 
          <HeadingWithIcon icon={<IoConstruct style={{ color: "#fff", fontSize: "2em" }}/>}>Stavebnictví</HeadingWithIcon>
         
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
           {vyuziti.attributes.Stavebnictvi}
           </Text>
          
           <HeadingWithIcon icon={<TbBrandAirtable style={{ color: "#fff", fontSize: "2em" }}/>}>Nábytkářský průmysl</HeadingWithIcon>
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
           {vyuziti.attributes.Nabytkarsky_prumysl}
           </Text>
           <HeadingWithIcon icon={<SiGumtree style={{ color: "#fff", fontSize: "2em" }}/>}>Zahrádkářství</HeadingWithIcon>
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
           {vyuziti.attributes.Zahradkarstvi}
           </Text>
           <HeadingWithIcon icon={<BsSnow style={{ color: "#fff", fontSize: "2em" }}/>}>Zábavní průmysl</HeadingWithIcon>
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
           {vyuziti.attributes.Zabavni_prumysl}
           </Text>
           <Text
-        element="h3"
+        component="h3"
         size="xl"
         sx={{
           fontWeight: 600,
@@ -57,7 +57,7 @@ export default function Vyuziti(props){
       >
         A další
       </Text>
-          <Text size="xl" element="p" sx={{ fontWeight: 400, color: "" }}>
+          <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
           {vyuziti.attributes.Dalsi}
 
           </Text>

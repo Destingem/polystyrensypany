@@ -27,7 +27,7 @@ export default function HeadingWithIcon(props) {
        
       </div>
       <Text
-        element="h3"
+        component="h3"
         size="xl"
         sx={{
           fontWeight: 600,
