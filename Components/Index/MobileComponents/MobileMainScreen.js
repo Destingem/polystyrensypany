@@ -69,7 +69,7 @@ export default function MobileMainScreen(props){
                 padding: "fit-content",
               }}
             >
-              <Text sx={{ fontsize: "10vw" }}>O nás</Text>
+              <Text component="p" sx={{ fontsize: "10vw" }}>O nás</Text>
             </Button>
           </Link>
         </div>

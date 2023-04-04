@@ -6,7 +6,7 @@ export default function SortimentMobile(props) {
   let {device, button_text, sortiment} = props;
   return (
     <div className={styles.sixthSection} style={{ backgroundColor: "white" }}>
-      {button_text && <Text size="xl" weight={600} sx={device !== "laptop" ? { color: "black", fontSize: "12vw" } : { color: "black", fontSize: "3em", marginRight: "auto", color: "rgb(84, 84, 84)" }}>
+      {button_text && <Text component="p" size="xl" weight={600} sx={device !== "laptop" ? { color: "black", fontSize: "12vw" } : { color: "black", fontSize: "3em", marginRight: "auto", color: "rgb(84, 84, 84)" }}>
         Sortiment
       </Text>}
       <Grid

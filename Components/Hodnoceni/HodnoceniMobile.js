@@ -62,6 +62,7 @@ export default function HodnoceniMobile(props) {
           flexDirection: "column",
           padding: "3vh 5vw 3vh 5vw",
         }}><Text
+        component="p"
           size="lg"
           weight={400}
           sx={{ color: "#545454", fontSize: "1rem", textAlign: "center", marginBottom: "3vh" }}
@@ -78,12 +79,12 @@ export default function HodnoceniMobile(props) {
             <Card shadow="xl" style={{ width: "100%", height: "100%", marginBottom: "3vh" }}>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "2vh", padding: "0" }}>
             <Group spacing="xs">
-            <Text weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{recenze.ucel_pouziti}</Text>
+            <Text component="p" weight={700} size="xl" sx={{ color: "#545454", fontSize: "1.5rem" }}>{recenze.ucel_pouziti}</Text>
             </Group>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", padding: "0 0.5vw" }}>{recenze.slovni_hodnoceni}</Text>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", padding: "0 0.5vw" }}>{recenze.slovni_hodnoceni}</Text>
             <Group>
-            <Text weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.2rem" }}>{recenze.jmeno_a_prijmeni}</Text>
-            {recenze.spolecnost && <Text weight={500} size="xl"  sx={{ color: "#195f00", fontSize: "1rem" }}><i>{recenze.spolecnost}</i></Text>}
+            <Text component="p" weight={600} size="xl" sx={{ color: "#545454", fontSize: "1.2rem" }}>{recenze.jmeno_a_prijmeni}</Text>
+            {recenze.spolecnost && <Text component="p" weight={500} size="xl"  sx={{ color: "#195f00", fontSize: "1rem" }}><i>{recenze.spolecnost}</i></Text>}
             </Group>
             </div>
             </Card>

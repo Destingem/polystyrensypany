@@ -91,6 +91,7 @@ export default function FoukanaIzolaceMobile(props) {
        </div>
         <Space h="xl" />
         <Text  weight={600}
+        component="p"
           size="xl"
           sx={{
             color: "#545454",

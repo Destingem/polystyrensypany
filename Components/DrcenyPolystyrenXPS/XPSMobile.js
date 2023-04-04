@@ -18,10 +18,10 @@ export default function XPSMobile(props) {
             <Heading device={device}>
             Polystyren sypaný, drcený - XPS
             </Heading>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Polystyren sypaný XPS (extrudovaný) je vodě odolný. Tuto izolaci doporučujeme pod úroveň terénu - zasypání drenážních trubek, zásyp do podlahy, izolace okolo bazénů.
             </Text>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Výroba extrudovaného sypaného polystyrenu je náročnější než u standardního EPS polystyrenu, proto je i cena vyšší
 
 
@@ -36,7 +36,7 @@ export default function XPSMobile(props) {
             {items && items.map((item, index) => {
                 return (
                     <ListItem key={index}>
-                        <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: "auto", textAlign: "left" }}>
+                        <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: "auto", textAlign: "left" }}>
                             {item}
                         </Text>
                     </ListItem>

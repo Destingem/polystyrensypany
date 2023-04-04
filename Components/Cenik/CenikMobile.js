@@ -52,7 +52,7 @@ export default function CenikMobile(props) {
           </tbody>
         </Table>
         <Text
-          component="h1"
+          component="h2"
           style={h1Sx}
         >
           Cena zápůjčky stroje vč. příslušenství
@@ -85,7 +85,7 @@ export default function CenikMobile(props) {
           </tbody>
         </Table>
         <Text
-          component="h1"
+          component="h2"
           style={h1Sx}
         >
           Cena dopravy
@@ -98,7 +98,7 @@ export default function CenikMobile(props) {
           </Link>{" "}
           nebo vyplňte <Link href="/poptavka_form">poptávkový formulář</Link>
         </Text>
-        <Text component="h1" style={h1Sx}>Polystyren sypaný - dodací lhůty</Text>
+        <Text component="h2" style={h1Sx}>Polystyren sypaný - dodací lhůty</Text>
         {props.dodaciLhuty && <Text component="p" style={pSx}>
             {props.dodaciLhuty.attributes.text}
         </Text>}

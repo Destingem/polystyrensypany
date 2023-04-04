@@ -45,6 +45,7 @@ export default function BilyMobile(props) {
               return (
                 <ListItem icon={item.icon}>
                   <Text
+                  component="p"
                     weight={400}
                     size="xl"
                     sx={{
@@ -71,6 +72,7 @@ export default function BilyMobile(props) {
               return (
                 <ListItem icon={item.icon}>
                   <Text
+                  component="p"
                     weight={400}
                     size="xl"
                     sx={{

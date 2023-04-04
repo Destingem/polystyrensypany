@@ -18,15 +18,15 @@ export default function SedyMobile(props) {
             <Heading device={device}>
             Polystyren sypaný, drcený - Polystyren sypaný - EPS šedý
             </Heading>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Polystyren sypaný Polystyren sypaný - EPS šedý obsahuje grafit, který odráží teplo zpět k jeho zdroji a tak zvyšuje izolační účinek. Šedý polystyren je vhodný pro dodatečné zateplení starších domů, pasivních a nízkoenergetických domů.U této izolace jsou deklarovány lepší tepelně izolační vlastnosti.
             </Text>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Možnosti použití a aplikace jsou shodné jako u bílého EPS.
 
 
             </Text>
-            <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
+            <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: device !== "laptop" ? "auto" : "", textAlign: "left" }}>
             Při aplikaci a skladování je nutné se vyhnout přímému slunečnímu záření.
             </Text>
             <Heading device={device}>
@@ -39,7 +39,7 @@ export default function SedyMobile(props) {
             {items && items.map((item, index) => {
                 return (
                     <ListItem key={index}>
-                        <Text weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: "auto", textAlign: "left" }}>
+                        <Text component="p" weight={400} size="xl" sx={{ color: "#545454", fontSize: "1rem", marginRight: "auto", marginLeft: "auto", textAlign: "left" }}>
                             {item}
                         </Text>
                     </ListItem>

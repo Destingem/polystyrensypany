@@ -4,6 +4,7 @@ export default  function SubTextMobile(props) {
     return <div className={styles.secondSection}>
 
       <Text
+        component="h2"
         size="sm"
         sx={{
           color: "#e5e5e5",
