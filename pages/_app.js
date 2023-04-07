@@ -72,7 +72,8 @@ function MyApp({ Component, pageProps }) {
         src="https://ssl.google-analytics.com/ga.js"
       ></Script>
   <GoogleAnalytics trackPageViews gaMeasurementId="UA-27461326-2"/>
-  <CookieConsent>  <Component {...pageProps} /></CookieConsent>
+  <CookieConsent> </CookieConsent>
+  <Component {...pageProps} />
 
 
   </MantineProvider>
