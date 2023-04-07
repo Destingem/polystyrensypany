@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import Script from 'next/script'
+import CookieConsent from '../Components/CookiesConsent';
 function MyApp({ Component, pageProps }) {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED='0'
   const [showChild, setShowChild] = useState(false);
@@ -71,7 +72,9 @@ function MyApp({ Component, pageProps }) {
         src="https://ssl.google-analytics.com/ga.js"
       ></Script>
   <GoogleAnalytics trackPageViews gaMeasurementId="UA-27461326-2"/>
-  <Component {...pageProps} />
+  <CookieConsent>  <Component {...pageProps} /></CookieConsent>
+
+
   </MantineProvider>
   </MediaContextProvider>
   )
