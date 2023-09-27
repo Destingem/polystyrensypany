@@ -31,20 +31,20 @@ export default function Vyuziti(props){
          <HeadingWithIcon icon={<IoConstruct style={{ color: "#fff", fontSize: "2em" }}/>}>Stavebnictví</HeadingWithIcon>
         
           <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
-          {vyuziti.attributes.Stavebnictvi}
+          {vyuziti?.attributes?.Stavebnictvi}
           </Text>
          
           <HeadingWithIcon icon={<TbBrandAirtable style={{ color: "#fff", fontSize: "2em" }}/>}>Nábytkářský průmysl</HeadingWithIcon>
           <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
-          {vyuziti.attributes.Nabytkarsky_prumysl}
+          {vyuziti?.attributes?.Nabytkarsky_prumysl}
           </Text>
           <HeadingWithIcon icon={<SiGumtree style={{ color: "#fff", fontSize: "2em" }}/>}>Zahrádkářství</HeadingWithIcon>
           <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
-          {vyuziti.attributes.Zahradkarstvi}
+          {vyuziti?.attributes?.Zahradkarstvi}
           </Text>
           <HeadingWithIcon icon={<BsSnow style={{ color: "#fff", fontSize: "2em" }}/>}>Zábavní průmysl</HeadingWithIcon>
           <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
-          {vyuziti.attributes.Zabavni_prumysl}
+          {vyuziti?.attributes?.Zabavni_prumysl}
           </Text>
           <Text
         component="h3"

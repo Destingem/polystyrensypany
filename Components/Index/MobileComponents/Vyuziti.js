@@ -29,7 +29,7 @@ console.log(vyuziti);
                   textAlign: "center",
                 }}
               >
-                 {vyuziti.attributes.Stavebnictvi}
+                 {vyuziti?.attributes?.Stavebnictvi}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -46,7 +46,7 @@ console.log(vyuziti);
                   textAlign: "center",
                 }}
               >
-         {vyuziti.attributes.Nabytkarsky_prumysl}
+         {vyuziti?.attributes?.Nabytkarsky_prumysl}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -63,7 +63,7 @@ console.log(vyuziti);
                   textAlign: "center",
                 }}
               >
-               {vyuziti.attributes.Zahradkarstvi}
+               {vyuziti?.attributes?.Zahradkarstvi}
               </Text>
               </SplideSlide>
              <SplideSlide className={styles.slide}>
@@ -80,7 +80,7 @@ console.log(vyuziti);
                   textAlign: "center",
                 }}
               >
-                 {vyuziti.attributes.Zabavni_prumysl}
+                 {vyuziti?.attributes?.Zabavni_prumysl}
               </Text>
               </SplideSlide>
               <SplideSlide className={styles.slide}>
@@ -97,7 +97,7 @@ console.log(vyuziti);
                   textAlign: "center",
                 }}
               >
-                 {vyuziti.attributes.Dalsi}
+                 {vyuziti?.attributes?.Dalsi}
               </Text>
               </SplideSlide>
        </SplideTrack>
