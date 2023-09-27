@@ -58,7 +58,7 @@ export default function Vyuziti(props){
         A další
       </Text>
           <Text size="xl" component="p" sx={{ fontWeight: 400, color: "" }}>
-          {vyuziti.attributes.Dalsi}
+          {vyuziti.attributes?.Dalsi}
 
           </Text>
           
