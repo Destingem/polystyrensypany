@@ -77,6 +77,7 @@ export default function FooterMobile(props) {
           </Text>
         </div>
          </div>
+         <a href="https://www.bytedev.cz">Vytvořil tým ByteDev</a>
          </div>
     </div>
   );

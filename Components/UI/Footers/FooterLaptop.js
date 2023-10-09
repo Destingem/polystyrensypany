@@ -125,6 +125,7 @@ export default function FooterLaptop(props) {
           >
             {info && info.nazev_spolecnosti}
           </Text>
+          <a href="https://www.bytedev.cz">Vytvořil tým ByteDev</a>
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "column", maxHeight: "100%", flexWrap: "wrap", marginTop: "-3vh" }}>
@@ -176,6 +177,7 @@ export default function FooterLaptop(props) {
           );
         })}
       </div>
+
       <div style={{ backgroundColor: "#61AC5B", width: "" }}></div>
     </div>
   );
